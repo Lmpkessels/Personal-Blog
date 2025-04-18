@@ -1,9 +1,11 @@
-#About This Repository
+# About This Repository
+
 This Repo contains code for my personal blog, 
 
 Where I will share my process of wealth creation. 
 
-#About Me
+## About Me
+
 I'm Luuk Kessels, 25 years old.
 
 My working journey began at 11, cleaning the parking lot at a local supermarket. At 15, I got into welding and did that until around 23—then I decided to go all-in on the digital world.
