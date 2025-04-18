@@ -1,9 +1,15 @@
+<!-- 
+  This file renders the blog's homepage.
+  It is responsible for displaying short previews 
+  (leads) of the most recent blog posts.
+  Do not use it for full posts or other content types.
+-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="images/WhiteLogok3.png" , type="icon/png" />
+    <link rel="icon" href="Images/white-logo-k3.png" , type="icon/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,12 +19,18 @@
     <title>Luke Blog Homepage</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <!-- Main header blog -->
+  <body id="top">
+    <!-- Main header section blog -->
     <header class="main-header">
-      <h1><a href="index.html">Luke</a></h1>
+      <!-- Title blog -->
+      <div>
+        <h1><a href="homepage.html">Luke</a></h1>
+        <a href="homepage.html" id="w-t-learn">Writing to learn</a>
+      </div>
+      <!-- Navbar + Links socials -->
       <nav class="social-navbar">
         <ul>
+          <li class="subject">Socials:</li>
           <li>
             <a
               href="https://github.com/Lmpkessels"
@@ -55,20 +67,24 @@
             </a>
           </li>
           <li>
-            <a href="aboutMe.html" class="nav-a-tag">About me </a>
+            <a href="about-me.html" class="nav-a-tag">About me </a>
           </li>
         </ul>
       </nav>
     </header>
-    <main>
-      <section>
-        <div></div>
-        <div></div>
-        <div>
-          <a href=""></a>
-        </div>
-      </section>
-    </main>
-    <footer></footer>
+    <!-- Subject navbar -->
+    <header class="subject-navbar">
+      <nav>
+        <ul>
+          <li class="subject">Subject:</li>
+          <li><a href="blockchain.html">Blockchain</a></li>
+          <li><a href="smart-contracts.html">Smart contracts</a></li>
+          <li><a href="wallets.html">Wallets</a></li>
+          <li><a href="health.html">Health</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="#top" id="back-to-top">Back to Top</a></li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>

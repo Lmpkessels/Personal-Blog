@@ -1,0 +1,93 @@
+/* Full page styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff54;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* Main header styling */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 144px;
+  border-bottom: 2px solid #dcdcdc;
+}
+
+.main-header a {
+  text-decoration: none;
+}
+
+.main-header h1 a {
+  color: #4f69c4;
+}
+
+/* Subheading writing to learn */
+#w-t-learn {
+  color: #dcdcdc;
+  font-style: italic;
+}
+
+/* Header navbar */
+.social-navbar ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  gap: 12px;
+}
+
+/* Main color + hover effect */
+.nav-a-tag {
+  color: #dcdcdc;
+  transition: 0.3s ease;
+}
+
+.nav-a-tag:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+/* Subject navbar styling */
+.subject-navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 12px;
+  border-bottom: 1px solid #dcdcdc;
+  gap: 28px;
+  justify-content: center;
+}
+
+/* Hover effect subject navbar */
+.subject-navbar a {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: 0.3s ease;
+  position: sticky;
+  top: 50px;
+}
+
+.subject-navbar a:hover {
+  color: #4f69c4;
+}
+
+.subject {
+  color: #4f69c4;
+  margin: 0;
+  padding: 0;
+}
+
+#back-to-top {
+  text-decoration: underline;
+  transition: 0s;
+}
+
+#back-to-top:hover {
+  color: #f69c3d;
+  text-decoration: underline;
+}
