@@ -68,8 +68,6 @@ body {
   text-decoration: none;
   color: #dcdcdc;
   transition: 0.3s ease;
-  position: sticky;
-  top: 50px;
 }
 
 .subject-navbar a:hover {
