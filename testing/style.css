@@ -1,0 +1,77 @@
+/* Page settings */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #000000;
+}
+
+body.dark-mode {
+  background-color: #333;
+  color: white;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+  padding: 10px;
+}
+
+/* Sun icon */
+.sun {
+  width: 62px;
+}
+
+/* Moon icon */
+.moon {
+  width: 62px;
+}
+
+/* Toggle wrapper button - light mode */
+.toggle-wrapper {
+  width: 144px;
+  height: 66px;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  background-color: goldenrod;
+}
+
+/* Knob inside toggle wrapper - dark mode */
+.knob {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: 5px;
+  left: 6px;
+  border-radius: 50%;
+  background: #fff;
+  transition: left 0.5s ease, background-color 0.3s ease;
+}
+
+/* Toggle wrapper button - dark mode */
+body.dark-mode .toggle-wrapper {
+  width: 144px;
+  height: 66px;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  background-color: #4f69c4;
+}
+
+/* Knob inside wrapper - light mode */
+body.dark-mode .knob {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: 5px;
+  left: 82px;
+  border-radius: 50%;
+  background: #fff;
+}

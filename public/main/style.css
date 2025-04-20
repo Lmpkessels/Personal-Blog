@@ -63,7 +63,7 @@ body {
   justify-content: center;
 }
 
-/* Hover effect subject navbar */
+/* Subject navbar */
 .subject-navbar a {
   text-decoration: none;
   color: #dcdcdc;
@@ -72,6 +72,12 @@ body {
 
 .subject-navbar a:hover {
   color: #4f69c4;
+  text-decoration: underline;
+}
+
+#new-section {
+  color: #4f69c4;
+  text-decoration: underline;
 }
 
 .subject {
