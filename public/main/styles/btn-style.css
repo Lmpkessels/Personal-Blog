@@ -1,0 +1,75 @@
+/* Color background - default mode */
+body.default-mode {
+  background: #ffffff54;
+  color: #000000;
+}
+
+/* Toggle wrapper button - default mode */
+body.default-mode .toggle-wrapper {
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  background-color: #f69c3d;
+}
+
+/* Knob inside toggle wrapper - default mode */
+body.default-mode .knob {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 2px;
+  right: 20px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+/* Color background - dark mode */
+body {
+  background-color: #333;
+  color: white;
+}
+
+/* Toggle wrapper button - dark mode */
+.toggle-wrapper {
+  width: 40px;
+  height: 22px;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  background-color: #4f69c4;
+}
+
+/* Knob inside wrapper - light mode */
+.knob {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 2px;
+  right: 2px;
+  border-radius: 50%;
+  background: #fff;
+  transition: right 0.5s ease, background-color 0.3s ease;
+}
+
+/* Settings toggle */
+.toggle {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  padding-left: 10px;
+  gap: 1px;
+}
+
+/* Icons */
+/* Sun icon */
+.sun {
+  width: 18px;
+}
+
+/* Moon icon */
+.moon {
+  width: 18px;
+}

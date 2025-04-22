@@ -1,31 +1,26 @@
-<!-- 
-  This file renders the blog's homepage.
-  It is responsible for displaying short previews 
-  (leads) of the most recent blog posts.
-  Do not use it for full posts or other content types.
--->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="Images/white-logo-k3.png" , type="icon/png" />
+    <link rel="icon" href="../images/white-logo-k3.png" type="icon/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Luke Blog Homepage</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Luke - Subject: Blockchain</title>
+    <link rel="stylesheet" href="../styles/main-style.css" />
+    <link rel="stylesheet" href="../styles/btn-style.css" />
   </head>
-  <body id="top">
+  <body class="default-mode" id="navbar">
     <!-- Main header section blog -->
     <header class="main-header">
       <!-- Title blog -->
       <div>
         <h1><a href="homepage.html">Luke</a></h1>
-        <a href="homepage.html" id="w-t-learn">Writing to learn</a>
+        <a href="homepage.html" id="main-sub-heading">Writing to learn</a>
       </div>
       <!-- Navbar + Links socials -->
       <nav class="social-navbar">
@@ -66,6 +61,46 @@
               >E-mail
             </a>
           </li>
+          <li>
+            <!-- Sun icon -->
+            <div class="toggle">
+              <svg
+                class="sun"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                />
+              </svg>
+
+              <!-- Toggle button -->
+              <div class="toggle-wrapper">
+                <div class="knob"></div>
+              </div>
+
+              <!-- Moon icon -->
+              <svg
+                class="moon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                />
+              </svg>
+            </div>
+          </li>
         </ul>
       </nav>
     </header>
@@ -74,16 +109,17 @@
       <nav>
         <ul>
           <li class="subject">Subject:</li>
-          <li><a href="new-homepage.html" id="new-section">New</a></li>
-          <li><a href="web-three.html">Web3</a></li>
-          <li><a href="health.html">Health</a></li>
-          <li><a href="books.html">Books</a></li>
+          <li><a href="/">New</a></li>
+          <li><a href="/">Web3</a></li>
+          <li><a href="/">Health</a></li>
+          <li><a href="/">Books</a></li>
           <li>
-            <a href="about-me.html">About me </a>
+            <a href="/">About me </a>
           </li>
           <li><a href="#top" id="back-to-top">Back to Top</a></li>
         </ul>
       </nav>
     </header>
   </body>
+  <script src="../js/script.js"></script>
 </html>
