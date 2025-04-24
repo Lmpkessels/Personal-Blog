@@ -16,14 +16,14 @@ document.addEventListener("click", (e) => {
 });
 
 // Inject navbar
-fetch("../components/navbar.html")
+fetch("main/components/navbar.html")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("main-header").innerHTML = data;
   });
 
 // Inject subject navbar
-fetch("../components/subject-navbar.html")
+fetch("main/components/subject-navbar.html")
   .then((response) => response.text())
   .then((data) => {
     document.getElementById("subject-navbar").innerHTML = data;
