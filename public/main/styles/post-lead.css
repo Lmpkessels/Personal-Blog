@@ -1,0 +1,45 @@
+/* Delete when asigned to main-style.css */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* Hover lead heading */
+.lead-heading {
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.lead-heading:hover {
+  color: #4f69c4;
+}
+
+/* Hover effect - links lead content */
+.anchor-content {
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.anchor-content:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+/* Main blog - alignment settings */
+.main-blog-section {
+  display: flex;
+  max-width: 700px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+/* Setting padding - date, heading, p */
+.date,
+.lead-heading,
+.lead-content {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
