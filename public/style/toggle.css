@@ -28,7 +28,7 @@ body.default-mode .knob {
 /* Color background - dark mode */
 body {
   background-color: #333;
-  color: white;
+  color: #ffffff;
 }
 
 /* Toggle wrapper button - dark mode */

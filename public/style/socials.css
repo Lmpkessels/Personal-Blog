@@ -1,0 +1,39 @@
+/* Main header default settings */
+.social-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top: 1px solid #dcdcdc;
+  border-bottom: 2px solid #dcdcdc;
+  padding: 22px;
+}
+
+.socials {
+  color: #4f69c4;
+}
+
+/* Main header styling */
+.social-navbar a {
+  color: #4f69c4;
+  text-decoration: none;
+}
+
+/* Main color - navbar socials */
+.social-navbar .nav-a-tag {
+  color: #dcdcdc;
+  transition: 0.3s ease;
+}
+
+/* Hover effect - navbar socials */
+.nav-a-tag:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+/* Header navbar */
+.social-navbar ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  gap: 30px;
+}

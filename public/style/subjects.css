@@ -1,0 +1,40 @@
+/* Subject navbar styling */
+.subject {
+  color: #4f69c4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling anchor - Subject navbar */
+.subject-navbar a {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: 0.3s ease;
+}
+
+.subject-navbar a:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+/* Anchor styling - Back to top */
+#back-to-top {
+  text-decoration: underline;
+  transition: 0s;
+}
+
+#back-to-top:hover {
+  color: #f69c3d;
+  text-decoration: underline;
+}
+
+/* Default settings - ul subject navbar */
+.subject-navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 22px;
+  border-top: 2px solid #dcdcdc;
+  gap: 30px;
+  justify-content: center;
+}
