@@ -50,4 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       document.getElementById("lead-post-one").innerHTML = data;
     });
+  fetch("../partials/toggle.html")
+    .then((response) => response.text())
+    .then((data) => {
+      document.querySelector(".mode-toggle").innerHTML = data;
+    });
 });

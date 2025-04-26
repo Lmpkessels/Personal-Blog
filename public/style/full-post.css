@@ -1,0 +1,34 @@
+.full-article {
+  width: 750px;
+}
+
+.above-section {
+  display: flex;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.bellow-section {
+  display: flex;
+  padding-top: 18px;
+}
+
+.mode-toggle {
+  display: flex;
+  padding-top: 18px;
+  justify-content: flex-end;
+  position: absolute;
+  width: 750px;
+}
+
+.header-three-article {
+  padding-top: 22px;
+}
+
+.link-back-all {
+  display: flex;
+  position: absolute;
+  padding-top: 12px;
+  justify-content: flex-end;
+  width: 750px;
+}
