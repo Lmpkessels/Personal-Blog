@@ -1,0 +1,50 @@
+<!-- 
+  This file renders the blog's homepage.
+  It is responsible for displaying short previews 
+  (leads) of the most recent blog posts.
+  Do not use it for full posts or other content types.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="dist/white-logo-k3 4.webp" type="icon/webp" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000"
+      rel="stylesheet"
+    />
+    <title>Luke Blog | Homepage</title>
+    <link
+      rel="preload"
+      href="dist/main.min.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="dist/main.min.css" /></noscript>
+  </head>
+
+  <!-- Body home page -->
+  <body>
+    <!-- Header home page -->
+    <header class="navbar">
+      <div class="ti-to-header">
+        <div id="header"></div>
+        <div id="li-da-mode-toggle"></div>
+      </div>
+      <div>
+        <div id="subjects"></div>
+        <div id="socials"></div>
+      </div>
+    </header>
+
+    <!-- Lead section home page -->
+    <section id="post-lead-section">
+      <div id="lead-post-one"></div>
+    </section>
+  </body>
+  <script src="dist/script.min.js" defer></script>
+</html>
