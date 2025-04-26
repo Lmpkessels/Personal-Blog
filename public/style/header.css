@@ -1,13 +1,13 @@
 /* Styling luke header */
-#luke-heading {
+.luke-heading {
   color: #4f69c4;
 }
 
-#main-sub-heading {
+.main-sub-heading {
   color: #dcdcdc;
 }
 
-#luke-heading,
-#main-sub-heading {
+.luke-heading,
+.main-sub-heading {
   text-decoration: none;
 }

@@ -22,15 +22,28 @@ body {
   width: 750px;
 }
 
-#post-lead-section {
+.lead-section {
   width: 675px;
   margin-top: 22px;
 }
 
-#li-da-mode-toggle {
+.toggle-section {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-top: 22px;
   padding-bottom: 22px;
+}
+
+@media (max-width: 480px) {
+  .navbar,
+  .lead-section {
+    width: 90%;
+    justify-content: space-between;
+    margin-left: 0%;
+  }
+  .ti-to-header {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
 }

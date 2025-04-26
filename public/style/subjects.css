@@ -17,17 +17,6 @@
   text-decoration: underline;
 }
 
-/* Anchor styling - Back to top */
-#back-to-top {
-  text-decoration: underline;
-  transition: 0s;
-}
-
-#back-to-top:hover {
-  color: #f69c3d;
-  text-decoration: underline;
-}
-
 /* Default settings - ul subject navbar */
 .subject-navbar ul {
   display: flex;
@@ -37,4 +26,10 @@
   border-top: 2px solid #dcdcdc;
   gap: 30px;
   justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .subject-navbar ul {
+    gap: 12px;
+  }
 }

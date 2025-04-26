@@ -37,3 +37,9 @@
   flex-direction: row;
   gap: 30px;
 }
+
+@media (max-width: 480px) {
+  .social-navbar ul {
+    gap: 12px;
+  }
+}
