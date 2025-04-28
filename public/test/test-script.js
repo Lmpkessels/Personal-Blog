@@ -21,36 +21,36 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Load HTML parts into your page
-  fetch("../partials/header.html")
+  fetch("partials/header.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("header").innerHTML = data;
     });
 
-  fetch("../partials/toggle.html")
+  fetch("partials/toggle.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("li-da-mode-toggle").innerHTML = data;
     });
 
-  fetch("../partials/socials.html")
+  fetch("partials/socials.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("socials").innerHTML = data;
     });
 
-  fetch("../partials/subjects.html")
+  fetch("partials/subjects.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("subjects").innerHTML = data;
     });
 
-  fetch("../template/post-lead.html")
+  fetch("template/post-lead.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("lead-post-one").innerHTML = data;
     });
-  fetch("../partials/toggle.html")
+  fetch("partials/toggle.html")
     .then((response) => response.text())
     .then((data) => {
       document.querySelector(".mode-toggle").innerHTML = data;

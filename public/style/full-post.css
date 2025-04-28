@@ -41,8 +41,20 @@
   margin-right: 22px;
 }
 
+@media (max-width: 768px) {
+  .link-back-all {
+    color: #4f69c4;
+    text-decoration: underline;
+  }
+}
 @media (max-width: 480px) {
   .full-article {
     width: 95%;
+  }
+}
+@media (max-width: 480px) {
+  .link-back-all {
+    color: #4f69c4;
+    text-decoration: underline;
   }
 }
