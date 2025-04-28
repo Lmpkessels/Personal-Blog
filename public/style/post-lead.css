@@ -9,6 +9,7 @@
   text-decoration: none;
 }
 
+/* Check future - maybe needs to be removed */
 /* Main blog - alignment settings */
 .main-blog-section {
   display: flex;
@@ -18,7 +19,7 @@
 
 .date {
   color: #888;
-  font-size: 0.9rem;
+  font-size: 14px;
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -29,4 +30,9 @@
 .lead-content {
   padding-top: 12px;
   padding-bottom: 12px;
+}
+
+.full-article-lead {
+  padding-left: 22px;
+  padding-right: 22px;
 }

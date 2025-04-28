@@ -1,3 +1,10 @@
+/* 
+This file is used for minifi preferences, there is no structure in it just copy
+and paste from all ordered individual CSS files.
+
+For this I use the tool: https://www.toptal.com/developers/cssminifier
+*/
+
 /* Header content - default mode (light) */
 body.default-mode .header-content {
   color: #000000;
@@ -201,6 +208,7 @@ body {
   text-decoration: none;
 }
 
+/* Check future - maybe needs to be removed */
 /* Main blog - alignment settings */
 .main-blog-section {
   display: flex;
@@ -210,7 +218,7 @@ body {
 
 .date {
   color: #888;
-  font-size: 0.9rem;
+  font-size: 14px;
   margin-bottom: 0.5rem;
   display: block;
 }
@@ -222,6 +230,12 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
 }
+
+.full-article-lead {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
 /* Main header default settings */
 .social-navbar {
   display: flex;
