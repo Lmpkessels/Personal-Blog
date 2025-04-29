@@ -15,25 +15,25 @@ body {
 .ti-to-header {
   display: flex;
   justify-content: space-between;
-  margin: 22px;
-  margin-right: 15px;
+  margin: 1.5rem;
+  margin-right: 1rem;
 }
 
 .navbar {
-  width: 750px;
+  width: 46.875rem;
 }
 
 .lead-section {
-  width: 675px;
-  margin-top: 22px;
+  width: 43.75rem;
+  margin-top: 1.5rem;
 }
 
 .toggle-section {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 @media (max-width: 480px) {

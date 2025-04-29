@@ -5,7 +5,7 @@
   justify-content: space-around;
   border-top: 1px solid #dcdcdc;
   border-bottom: 2px solid #dcdcdc;
-  padding: 22px;
+  padding: 1.5rem;
 }
 
 .subject {
@@ -30,7 +30,7 @@
   display: flex;
   list-style: none;
   flex-direction: row;
-  gap: 30px;
+  gap: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -41,6 +41,6 @@
 
 @media (max-width: 480px) {
   .social-navbar ul {
-    gap: 12px;
+    gap: 0.75rem;
   }
 }
