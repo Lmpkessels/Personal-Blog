@@ -1,24 +1,24 @@
 /* Subject navbar styling */
-.subject {
+#subject-pointer {
   color: #4f69c4;
   margin: 0;
   padding: 0;
 }
 
 /* Styling anchor - Subject navbar */
-.subject-navbar a {
+.subject-section {
   text-decoration: none;
   color: #dcdcdc;
   transition: 0.3s ease;
 }
 
-.subject-navbar a:hover {
+.subject-section:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
 
 /* Default settings - ul subject navbar */
-.subject-navbar ul {
+.list-section {
   display: flex;
   flex-direction: row;
   list-style: none;
@@ -29,7 +29,7 @@
 }
 
 @media (max-width: 480px) {
-  .subject-navbar ul {
+  .list-section {
     gap: 12px;
   }
 }

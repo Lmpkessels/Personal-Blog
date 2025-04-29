@@ -44,26 +44,10 @@ body:not(.default-mode) .anchor-content:hover {
 @media (max-width: 768px) {
   body.default-mode .anchor-content,
   body:not(.default-mode) .anchor-content {
-    color: #4f69c4;
     text-decoration: underline;
   }
 }
 @media (max-width: 768px) {
-  body.default-mode .header-content,
-  body:not(.default-mode) .header-content {
-    color: #4f69c4;
-    text-decoration: none;
-  }
-}
-
-@media (max-width: 480px) {
-  body.default-mode .anchor-content,
-  body:not(.default-mode) .anchor-content {
-    color: #4f69c4;
-    text-decoration: underline;
-  }
-}
-@media (max-width: 480px) {
   body.default-mode .header-content,
   body:not(.default-mode) .header-content {
     color: #4f69c4;

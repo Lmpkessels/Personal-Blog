@@ -8,19 +8,14 @@
   padding: 22px;
 }
 
-.socials {
+.subject {
   color: #4f69c4;
-}
-
-/* Main header styling */
-.social-navbar a {
-  color: #4f69c4;
-  text-decoration: none;
 }
 
 /* Main color - navbar socials */
-.social-navbar .nav-a-tag {
+.nav-a-tag {
   color: #dcdcdc;
+  text-decoration: none;
   transition: 0.3s ease;
 }
 
@@ -36,6 +31,12 @@
   list-style: none;
   flex-direction: row;
   gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .nav-a-tag {
+    color: #dcdcdc;
+  }
 }
 
 @media (max-width: 480px) {
