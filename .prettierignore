@@ -1,5 +1,3 @@
-# public/dist
-# public/index.html
-# public/about/index.html
-# public/test/script.min.js
-# public/test/main.min.css
+public/dist
+public/test/script.min.js
+public/test/main.min.css
