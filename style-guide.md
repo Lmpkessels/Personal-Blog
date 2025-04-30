@@ -14,6 +14,8 @@
 - **Grey (links):** `#dcdcdc`
 - **Blue:** `#4f69c4`
 - **Orange:** `#f69c3d`
+<!-- When visited link -->
+- **Purple** `#800080`
 
 ## Font
 
