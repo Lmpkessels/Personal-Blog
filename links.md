@@ -1,1 +1,0 @@
-cat public/style/anchor.css public/style/full-post.css public/style/header.css public/style/main.css public/style/post-lead.css public/style/socials.css public/style/subjects.css public/style/toggle.css > public/style/main.min.css
