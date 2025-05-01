@@ -4,16 +4,23 @@
   max-width: 750px;
 }
 
-.above-section {
+.mode-toggle {
+  display: flex;
+  justify-content: flex-end;
+  width: 750px;
+  margin-top: 22px;
+}
+
+.header-three-article {
+  border-bottom: 2px solid #888;
+}
+/* .above-section {
   display: flex;
   justify-content: space-between;
   max-width: 750px;
-  padding: 1.5rem;
-  padding-right: 1rem;
-  padding-top: 2.75rem;
-  padding-bottom: 2.75rem;
+  padding-bottom: 0.5rem;
   border-bottom: 2px solid #dcdcdc;
-}
+} */
 
 .bellow-section {
   display: flex;
@@ -27,7 +34,7 @@
   font-size: 0.875rem;
   color: #888;
   transition: 0.3s ease;
-  margin: 1.5rem;
+  padding-top: 0.5rem;
   display: block;
 }
 
@@ -37,8 +44,7 @@
 }
 
 .content-article {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-top: 0.75rem;
 }
 
 @media (max-width: 768px) {

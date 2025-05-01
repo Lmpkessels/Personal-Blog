@@ -25,7 +25,14 @@ body {
 
 .lead-section {
   width: 750px;
-  margin-top: 1.5rem;
+  margin: 1.5rem;
+  margin-top: 2rem;
+}
+
+.article-section {
+  margin-top: 0.75rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .toggle-section {
