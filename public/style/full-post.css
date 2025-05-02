@@ -1,18 +1,33 @@
 .full-article {
   display: flex;
   flex-direction: column;
-  max-width: 750px;
+  max-width: 46.875rem;
 }
 
 .mode-toggle {
   display: flex;
   justify-content: flex-end;
-  width: 750px;
+  width: 46.875rem;
   margin-top: 22px;
 }
 
-.header-three-article {
-  border-bottom: 2px solid #888;
+.navbar {
+  border-bottom: 3px solid #dcdcdc;
+}
+
+.back-to-hq {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #dcdcdc;
+  width: 44.125rem;
+  transition: 0.3s ease;
+}
+
+.back-to-hq:hover {
+  color: #4f69c4;
+  text-decoration: underline;
 }
 /* .above-section {
   display: flex;

@@ -22,15 +22,17 @@
       rel="stylesheet"
     />
 
-    <title>Web3 | Luke blog</title>
+    <title>Full-post | Luke blog</title>
 
     <!-- Development links -->
     <link rel="stylesheet" href="/public/style/anchor.css" />
+    <link rel="stylesheet" href="/public/style/back-to-hq.css" />
     <link rel="stylesheet" href="/public/style/full-post.css" />
     <link rel="stylesheet" href="/public/style/header.css" />
     <link rel="stylesheet" href="/public/style/link-list.css" />
     <link rel="stylesheet" href="/public/style/main.css" />
     <link rel="stylesheet" href="/public/style/post-lead.css" />
+    <link rel="stylesheet" href="/public/style/real-full-post.css" />
     <link rel="stylesheet" href="/public/style/socials.css" />
     <link rel="stylesheet" href="/public/style/subjects.css" />
     <link rel="stylesheet" href="/public/style/toggle.css" />
@@ -41,15 +43,7 @@
 
   <body>
     <header class="whole-header">
-      <div class="title-toggle-header">
-        <div class="title-header">
-          <!-- 
-          Main heading + sub-heading, 
-          use anchor tags so user goes home when heading clicked 
-          -->
-          <h1><a href="index.html" class="luke-heading">Luke</a></h1>
-          <a href="index.html" class="main-sub-heading">Books</a>
-        </div>
+      <div class="toggle-header">
         <!-- Sun icon -->
         <div class="whole-toggle">
           <!-- 
@@ -96,97 +90,17 @@
           </svg>
         </div>
       </div>
-      <div>
-        <!-- Whole navbar, contains: subject navbar + socials navbar -->
-        <nav class="whole-navbar">
-          <!-- 
-          Social navbar, link to main post section with leads on main subject 
-          page to full post 
-          -->
-          <nav class="subject-navbar">
-            <ul class="link-list">
-              <li class="navbar-eye-catcher">Subject:</li>
-              <li>
-                <a href="/public/index.html" class="navbar-link">HQ</a>
-              </li>
-              <li>
-                <a href="/public/posts/web3/index.html" class="navbar-link"
-                  >Web3</a
-                >
-              </li>
-              <li>
-                <a
-                  href="/public/posts/philosophy/index.html"
-                  class="navbar-link"
-                  >Philosophy
-                </a>
-              </li>
-              <li>
-                <a href="/public/posts/books/index.html" class="navbar-link"
-                  >Books</a
-                >
-              </li>
-              <li>
-                <!-- Development link -->
-                <a href="/public/about/index.html" class="navbar-link"
-                  >About me</a
-                >
-                <!-- Production link -->
-                <!-- <a href="/about/" class="subject-section">About me</a> -->
-              </li>
-            </ul>
-          </nav>
-
-          <!-- 
-          Social navbar, link to main post section with leads on main subject 
-          page to full post 
-          -->
-          <nav class="social-navbar">
-            <ul class="link-list">
-              <li class="navbar-eye-catcher">Socials:</li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/luuk-kessels"
-                  class="navbar-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/lukefi_"
-                  class="navbar-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >X/Twitter
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Lmpkessels"
-                  class="navbar-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:luuk@lukefi.com"
-                  class="navbar-link"
-                  rel="noopener noreferrer"
-                  >E-mail
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </nav>
+      <div class="title-section">
+        <h2 class="title-full-post">Hello world!</h2>
+      </div>
+      <div class="sub-section">
+        <time datetime="yyyy-mm-dd" class="date">yyyy-mm-dd</time>
+        <a href="/public/index.html" class="to-all-articles">All articles</a>
       </div>
     </header>
     <!-- 
     Post lead section - Note: add good lead + short section that describes the,
-    post.
+    post
 
     For anchor links:
     - in title, use: class="header-content"

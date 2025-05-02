@@ -1,12 +1,11 @@
 /* Main header default settings */
-.social-navbar {
+/* .social-navbar {
   display: flex;
   align-items: center;
   justify-content: space-around;
   border-top: 1px solid #dcdcdc;
-  border-bottom: 2px solid #dcdcdc;
   padding: 1.5rem;
-}
+} */
 
 .subject {
   color: #4f69c4;
@@ -25,13 +24,13 @@
   text-decoration: underline;
 }
 
-/* Header navbar */
+/* Header navbar
 .social-navbar ul {
   display: flex;
   list-style: none;
   flex-direction: row;
   gap: 2rem;
-}
+} */
 
 @media (max-width: 768px) {
   .nav-a-tag {

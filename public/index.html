@@ -8,6 +8,7 @@
       content="L3 is a blog for future-minded creators mastering Web3, wealth, health, and self-education — with clear, practical, no-fluff insights."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Development link -->
     <link rel="icon" href="dist/white-logo-k3-4.webp" type="icon/webp" />
     <!-- Production link -->
@@ -20,12 +21,14 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000"
       rel="stylesheet"
     />
+
     <title>Home | Luke blog</title>
 
     <!-- Development links -->
     <link rel="stylesheet" href="style/anchor.css" />
     <link rel="stylesheet" href="style/full-post.css" />
     <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/link-list.css" />
     <link rel="stylesheet" href="style/main.css" />
     <link rel="stylesheet" href="style/post-lead.css" />
     <link rel="stylesheet" href="style/socials.css" />
@@ -35,22 +38,29 @@
     <!-- Production link -->
     <!-- <link rel="stylesheet" href="/dist/main.min.css" /> -->
   </head>
+
   <body>
-    <header class="navbar">
-      <div class="ti-to-header">
-        <div>
-          <!-- Link back to homepage + content -->
-          <h1><a href="homepage.html" class="luke-heading">Luke</a></h1>
-          <a href="homepage.html" class="main-sub-heading">Writing to learn</a>
+    <header class="whole-header">
+      <div class="title-toggle-header">
+        <div class="title-header">
+          <!-- 
+          Main heading + sub-heading, 
+          use anchor tags so user goes home when heading clicked 
+          -->
+          <h1><a href="index.html" class="luke-heading">Luke</a></h1>
+          <a href="index.html" class="main-sub-heading">Writing to learn</a>
         </div>
         <!-- Sun icon -->
-        <div class="toggle">
+        <div class="whole-toggle">
+          <!-- 
+          Display following text if user it's browser doesn't allow JS
+           -->
           <noscript>
             Toggle light-dark-mode not shown, your browsers doesn't supper
             JavaScript.
           </noscript>
           <svg
-            class="sun"
+            class="toggle-sun"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -64,14 +74,14 @@
             />
           </svg>
 
-          <!-- Toggle button -->
+          <!-- Toggle wrapper + toggle knob -->
           <div class="toggle-wrapper">
-            <div class="knob"></div>
+            <div class="toggle-knob"></div>
           </div>
 
           <!-- Moon icon -->
           <svg
-            class="moon"
+            class="toggle-moon"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -85,84 +95,84 @@
             />
           </svg>
         </div>
-        <!-- Main luke header -->
       </div>
       <div>
-        <!-- Subject navbar -->
-        <header class="subject-navbar">
-          <nav>
-            <ul class="list-section">
-              <!-- Eye catcher -->
-              <li id="subject-pointer">Subject:</li>
-              <!-- Subject links -->
+        <!-- Whole navbar, contains: subject navbar + socials navbar -->
+        <nav class="whole-navbar">
+          <!-- 
+          Social navbar, link to main post section with leads on main subject 
+          page to full post 
+          -->
+          <nav class="subject-navbar">
+            <ul class="link-list">
+              <li class="navbar-eye-catcher">Subject:</li>
               <li>
-                <a href="index.html" class="subject-section">HQ</a>
+                <a href="index.html" class="navbar-link">HQ</a>
               </li>
               <li>
-                <a href="posts/web3/index.html" class="subject-section"
-                  >Web3
-                </a>
+                <a href="posts/web3/index.html" class="navbar-link">Web3</a>
               </li>
               <li>
-                <a href="posts/philosophy/index.html" class="subject-section"
+                <a href="posts/philosophy/index.html" class="navbar-link"
                   >Philosophy
                 </a>
               </li>
               <li>
-                <a href="posts/books/index.html" class="subject-section"
-                  >Books
-                </a>
+                <a href="posts/books/index.html" class="navbar-link">Books</a>
               </li>
               <li>
                 <!-- Development link -->
-                <a href="about/index.html" class="subject-section">About me</a>
+                <a href="about/index.html" class="navbar-link">About me</a>
                 <!-- Production link -->
                 <!-- <a href="/about/" class="subject-section">About me</a> -->
               </li>
             </ul>
           </nav>
-        </header>
-        <nav class="social-navbar">
-          <ul>
-            <!-- Eye cathcer -->
-            <li class="subject">Socials:</li>
-            <li>
-              <!-- Links to socials -->
-              <a
-                href="https://www.linkedin.com/in/luuk-kessels"
-                class="nav-a-tag"
-                target="_blank"
-                rel="noopener noreferrer"
-                >LinkedIn
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://x.com/lukefi_"
-                class="nav-a-tag"
-                target="_blank"
-                rel="noopener noreferrer"
-                >X/Twitter
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/Lmpkessels"
-                class="nav-a-tag"
-                target="_blank"
-                rel="noopener noreferrer"
-                >GitHub
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:luuk@lukefi.com"
-                class="nav-a-tag"
-                rel="noopener noreferrer"
-                >E-mail
-              </a>
-            </li>
-          </ul>
+
+          <!-- 
+          Social navbar, link to main post section with leads on main subject 
+          page to full post 
+          -->
+          <nav class="social-navbar">
+            <ul class="link-list">
+              <li class="navbar-eye-catcher">Socials:</li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/luuk-kessels"
+                  class="navbar-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/lukefi_"
+                  class="navbar-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >X/Twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Lmpkessels"
+                  class="navbar-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:luuk@lukefi.com"
+                  class="navbar-link"
+                  rel="noopener noreferrer"
+                  >E-mail
+                </a>
+              </li>
+            </ul>
+          </nav>
         </nav>
       </div>
     </header>
@@ -174,59 +184,10 @@
     - in title, use: class="header-content"
     - in paragraph, use: class="anchor-content"
     -->
-    <section class="lead-section">
-      <article class="article-section">
-        <time datetime="yyyy-mm-dd" class="date">yyyy-mm-dd</time>
-        <h3>
-          <a href="/public/posts/#" class="header-content"
-            >Lorem ipsum, dolor sit</a
-          >
-        </h3>
-        <div class="lead-content">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
-            impedit vero ipsum atque sapiente voluptates eius sint illo,
-            excepturi expedita quis modi sequi temporibus, libero fugit vel
-            dignissimos quod ipsa.
-          </p>
-        </div>
-      </article>
-      <article class="article-section">
-        <time datetime="yyyy-mm-dd" class="date">yyyy-mm-dd</time>
-        <h3>
-          <a href="/public/posts/#" class="header-content"
-            >Lorem ipsum, dolor sit</a
-          >
-        </h3>
-        <div class="lead-content">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
-            impedit vero ipsum atque sapiente voluptates eius sint illo,
-            excepturi expedita quis modi sequi temporibus, libero fugit vel
-            dignissimos quod ipsa.
-          </p>
-        </div>
-      </article>
-      <article class="article-section">
-        <time datetime="yyyy-mm-dd" class="date">yyyy-mm-dd</time>
-        <h3>
-          <a href="/public/posts/#" class="header-content"
-            >Lorem ipsum, dolor sit</a
-          >
-        </h3>
-        <div class="lead-content">
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
-            impedit vero ipsum atque sapiente voluptates eius sint illo,
-            excepturi expedita quis modi sequi temporibus, libero fugit vel
-            dignissimos quod ipsa.
-          </p>
-        </div>
-      </article>
-    </section>
+    <section class="lead-section"></section>
   </body>
   <!-- Development link -->
-  <script src="script/script.js"></script>
+  <script src="/public/script/script.js"></script>
   <!-- Production link -->
   <!-- <script src="/dist/script.min.js" defer></script> -->
 </html>

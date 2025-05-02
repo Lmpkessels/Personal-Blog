@@ -1,55 +1,55 @@
 /* Header content - default mode (light) */
-body.default-mode .header-content {
+body.default-mode .header-link {
   color: #000000;
   text-decoration: none;
 }
 
-body.default-mode .header-content:hover {
+body.default-mode .header-link:hover {
   color: #4f69c4;
 }
 
 /* Header content - dark */
-body:not(.default-mode) .header-content {
+body:not(.default-mode) .header-link {
   color: #ffffff;
   text-decoration: none;
 }
 
-body:not(.default-mode) .header-content:hover {
+body:not(.default-mode) .header-link:hover {
   color: #4f69c4;
 }
 
 /* Default mode (light) */
-body.default-mode .anchor-content {
+body.default-mode .post-link {
   color: #000000;
   text-decoration: none;
 }
 
-body.default-mode .anchor-content:hover {
+body.default-mode .post-link:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
 
 /* Dark mode */
-body:not(.default-mode) .anchor-content {
+body:not(.default-mode) .post-link {
   color: #ffffff;
   text-decoration: none;
 }
 
-body:not(.default-mode) .anchor-content:hover {
+body:not(.default-mode) .post-link:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
 
 /* Taking away hover effect tablet/phone */
 @media (max-width: 768px) {
-  body.default-mode .anchor-content,
-  body:not(.default-mode) .anchor-content {
+  body.default-mode .post-link,
+  body:not(.default-mode) .post-link {
     text-decoration: underline;
   }
 }
 @media (max-width: 768px) {
-  body.default-mode .header-content,
-  body:not(.default-mode) .header-content {
+  body.default-mode .post-link,
+  body:not(.default-mode) .post-link {
     color: #4f69c4;
     text-decoration: none;
   }

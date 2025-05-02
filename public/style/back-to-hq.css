@@ -1,0 +1,19 @@
+.back-to-hq-section {
+  display: flex;
+  justify-content: flex-end;
+  width: 750px;
+}
+
+.to-hq-link {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  padding-top: 8px;
+  color: #dcdcdc;
+  transition: 0.3s ease;
+}
+
+.to-hq-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}

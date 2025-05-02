@@ -1,0 +1,38 @@
+/* Spacing && alignment navbar */
+.whole-navbar {
+  padding-top: 1.5rem;
+}
+
+.link-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2.125rem;
+}
+
+.subject-navbar .link-list {
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 1.5rem;
+}
+
+.social-navbar .link-list {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid #dcdcdc;
+}
+
+/* Navbar decoration */
+.navbar-eye-catcher {
+  color: #4f69c4;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}

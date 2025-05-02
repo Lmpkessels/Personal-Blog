@@ -23,7 +23,7 @@
   flex-direction: row;
   list-style: none;
   padding: 1.5rem;
-  border-top: 2px solid #dcdcdc;
+  border-top: 3px solid #dcdcdc;
   gap: 2rem;
   justify-content: center;
 }

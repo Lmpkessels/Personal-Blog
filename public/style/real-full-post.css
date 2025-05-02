@@ -1,0 +1,31 @@
+.toggle-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.75rem;
+  margin-bottom: 0.406rem;
+}
+
+.title-full-post {
+  padding-bottom: 0.25rem;
+  border-bottom: 3px solid #dcdcdc;
+}
+
+.sub-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.to-all-articles {
+  color: #888;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  display: block;
+}
+
+.to-all-articles:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
