@@ -10,9 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Development link -->
-    <link rel="icon" href="dist/white-logo-k3-4.webp" type="icon/webp" />
+    <!-- <link rel="icon" href="dist/white-logo-k3-4.webp" type="icon/webp" /> -->
     <!-- Production link -->
-    <!-- <link rel="icon" href="/dist/white-logo-k3-4.webp" type="icon/webp" /> -->
+    <link rel="icon" href="/dist/white-logo-k3-4.webp" type="icon/webp" />
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,10 +22,10 @@
       rel="stylesheet"
     />
 
-    <title>Web3 | Luke blog</title>
+    <title>About me | Luke blog</title>
 
     <!-- Development links -->
-    <link rel="stylesheet" href="/public/style/anchor.css" />
+    <!-- <link rel="stylesheet" href="/public/style/anchor.css" />
     <link rel="stylesheet" href="/public/style/back-to-hq.css" />
     <link rel="stylesheet" href="/public/style/full-post.css" />
     <link rel="stylesheet" href="/public/style/header.css" />
@@ -34,10 +34,10 @@
     <link rel="stylesheet" href="/public/style/post-lead.css" />
     <link rel="stylesheet" href="/public/style/socials.css" />
     <link rel="stylesheet" href="/public/style/subjects.css" />
-    <link rel="stylesheet" href="/public/style/toggle.css" />
+    <link rel="stylesheet" href="/public/style/toggle.css" /> -->
 
     <!-- Production link -->
-    <!-- <link rel="stylesheet" href="/dist/main.min.css" /> -->
+    <link rel="stylesheet" href="/dist/main.min.css" />
   </head>
 
   <body>
@@ -48,8 +48,12 @@
           Main heading + sub-heading, 
           use anchor tags so user goes home when heading clicked 
           -->
-          <h1><a href="index.html" class="luke-heading">Luke</a></h1>
-          <a href="index.html" class="main-sub-heading">About me</a>
+          <!-- Development links -->
+          <!-- <h1><a href="index.html" class="luke-heading">Luke</a></h1>
+          <a href="index.html" class="main-sub-heading">About me</a> -->
+          <!-- Production links -->
+          <h1><a href="/index.html" class="luke-heading">Luke</a></h1>
+          <a href="/index.html" class="main-sub-heading">About me</a>
         </div>
         <!-- Sun icon -->
         <div class="whole-toggle">
@@ -99,7 +103,10 @@
       </div>
     </header>
     <div class="back-to-hq-section">
-      <a href="/public/index.html" class="to-hq-link">Back to HQ</a>
+      <!-- Development link -->
+      <!-- <a href="/public/index.html" class="to-hq-link">Back to HQ</a> -->
+      <!-- Production link -->
+      <a href="/index.html" class="to-hq-link">Back to HQ</a>
     </div>
 
     <!-- 
@@ -110,10 +117,34 @@
     - in title, use: class="header-content"
     - in paragraph, use: class="anchor-content"
     -->
-    <section class="lead-section"></section>
+    <section class="lead-section">
+      <div class="date-section">
+        <time datetime="yyyy-mm-dd" class="date"></time>
+      </div>
+      <div class="post-header-section">
+        <h2><a href="/public/posts/#" class="header-link"></a></h2>
+      </div>
+      <!-- Anchor tag class="post-link" -->
+      <div class="content-section">
+        <p class="content-article">
+          Hello great you're here! I'm Luuk Kessels, 25. Focus creating value in
+          Web3, while sharing my progress. I'll be updating you by giving you
+          key-insights of my biggest lessons. If you want to find out more,
+          follow these links:
+          <a href="https://x.com/lukefi_" class="post-link">X/Twitter</a>
+          or
+          <a href="https://www.linkedin.com/in/luuk-kessels/" class="post-link"
+            >LinkedIn</a
+          >
+          here I update you daily, and tell you when I deploy a blog, so you
+          stay updated. Leave a follow and let's build a relationship! See you
+          there.
+        </p>
+      </div>
+    </section>
   </body>
   <!-- Development link -->
-  <script src="/public/script/script.js"></script>
+  <!-- <script src="/public/script/script.js"></script> -->
   <!-- Production link -->
-  <!-- <script src="/dist/script.min.js" defer></script> -->
+  <script src="/dist/script.min.js" defer></script>
 </html>

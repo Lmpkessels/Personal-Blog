@@ -1,58 +1,77 @@
 /* Header content - default mode (light) */
-body.default-mode .header-content {
+body.default-mode .header-link {
   color: #000000;
   text-decoration: none;
 }
 
-body.default-mode .header-content:hover {
+body.default-mode .header-link:hover {
   color: #4f69c4;
 }
 
 /* Header content - dark */
-body:not(.default-mode) .header-content {
+body:not(.default-mode) .header-link {
   color: #ffffff;
   text-decoration: none;
 }
 
-body:not(.default-mode) .header-content:hover {
+body:not(.default-mode) .header-link:hover {
   color: #4f69c4;
 }
 
 /* Default mode (light) */
-body.default-mode .anchor-content {
+body.default-mode .post-link {
   color: #000000;
   text-decoration: none;
 }
 
-body.default-mode .anchor-content:hover {
+body.default-mode .post-link:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
 
 /* Dark mode */
-body:not(.default-mode) .anchor-content {
+body:not(.default-mode) .post-link {
   color: #ffffff;
   text-decoration: none;
 }
 
-body:not(.default-mode) .anchor-content:hover {
+body:not(.default-mode) .post-link:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
 
 /* Taking away hover effect tablet/phone */
 @media (max-width: 768px) {
-  body.default-mode .anchor-content,
-  body:not(.default-mode) .anchor-content {
+  body.default-mode .post-link,
+  body:not(.default-mode) .post-link {
     text-decoration: underline;
   }
 }
 @media (max-width: 768px) {
-  body.default-mode .header-content,
-  body:not(.default-mode) .header-content {
+  body.default-mode .post-link,
+  body:not(.default-mode) .post-link {
     color: #4f69c4;
     text-decoration: none;
   }
+}
+.back-to-hq-section {
+  display: flex;
+  justify-content: flex-end;
+  width: 750px;
+}
+
+.to-hq-link {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  padding-top: 8px;
+  color: #dcdcdc;
+  transition: 0.3s ease;
+}
+
+.to-hq-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
 }
 .full-article {
   display: flex;
@@ -142,6 +161,49 @@ body:not(.default-mode) .anchor-content:hover {
 .main-sub-heading {
   text-decoration: none;
 }
+
+.title-header {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+/* Spacing && alignment navbar */
+.whole-navbar {
+  padding-top: 1.5rem;
+}
+
+.link-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2.125rem;
+}
+
+.subject-navbar .link-list {
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 1.5rem;
+}
+
+.social-navbar .link-list {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid #dcdcdc;
+}
+
+/* Navbar decoration */
+.navbar-eye-catcher {
+  color: #4f69c4;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
 /* Default page settings */
 * {
   margin: 0%;
@@ -156,14 +218,16 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
-.ti-to-header {
+.title-toggle-header {
   display: flex;
   justify-content: space-between;
-  margin: 1.5rem;
-  margin-right: 1rem;
+  /* margin-top: 22px; */
+  /* margin: 1.5rem; */
+  /* margin-right: 1rem; */
+  border-bottom: 3px solid #dcdcdc;
 }
 
-.navbar {
+.whole-header {
   width: 750px;
 }
 
@@ -173,22 +237,22 @@ body {
   margin-top: 2rem;
 }
 
-.article-section {
+/* .article-section {
   margin-top: 0.75rem;
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-}
+} */
 
-.toggle-section {
+/* .toggle-section {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
+} */
 
 @media (max-width: 480px) {
-  .navbar,
+  .whole-navbar,
   .lead-section {
     width: 95%;
     justify-content: space-between;
@@ -224,22 +288,53 @@ body {
 .date,
 .lead-heading,
 .lead-content {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  /* padding-top: 0.75rem;
+  padding-bottom: 0.75rem; */
 }
 
 .full-article-lead {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+.toggle-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.75rem;
+  margin-bottom: 0.406rem;
+}
+
+.title-full-post {
+  padding-bottom: 0.25rem;
+  border-bottom: 3px solid #dcdcdc;
+}
+
+.sub-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.to-all-articles {
+  color: #888;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  display: block;
+}
+
+.to-all-articles:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
 /* Main header default settings */
-.social-navbar {
+/* .social-navbar {
   display: flex;
   align-items: center;
   justify-content: space-around;
   border-top: 1px solid #dcdcdc;
   padding: 1.5rem;
-}
+} */
 
 .subject {
   color: #4f69c4;
@@ -258,13 +353,13 @@ body {
   text-decoration: underline;
 }
 
-/* Header navbar */
+/* Header navbar
 .social-navbar ul {
   display: flex;
   list-style: none;
   flex-direction: row;
   gap: 2rem;
-}
+} */
 
 @media (max-width: 768px) {
   .nav-a-tag {
@@ -313,13 +408,23 @@ body {
     padding: 1rem;
   }
 }
-/* Color background - default mode */
+/* 
+Set whole toggle in alignment, 
+leave room between objects 
+*/
+.whole-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Default mode - color background */
 body.default-mode {
   background: #ffffff54;
   color: #000000;
 }
 
-/* Toggle wrapper button - default mode */
+/* Default mode - toggle wrapper button */
 body.default-mode .toggle-wrapper {
   width: 44px;
   height: 22px;
@@ -329,8 +434,8 @@ body.default-mode .toggle-wrapper {
   background-color: #f69c3d;
 }
 
-/* Knob inside toggle wrapper - default mode */
-body.default-mode .knob {
+/* Default mode - knob inside toggle wrapper */
+body.default-mode .toggle-knob {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -341,18 +446,18 @@ body.default-mode .knob {
   transition: all 0.3s ease;
 }
 
-body.default-mode:active .knob {
+body.default-mode:active .toggle-knob {
   left: 2px;
   border-radius: 99px;
 }
 
-/* Color background - dark mode */
+/* Dark mode - color background */
 body {
   background-color: #333;
   color: #ffffff;
 }
 
-/* Toggle wrapper button - dark mode */
+/* Dark mode - toggle wrapper button */
 .toggle-wrapper {
   width: 44px;
   height: 22px;
@@ -362,14 +467,14 @@ body {
   background-color: #4f69c4;
 }
 
-.toggle-wrapper:active .knob {
+.toggle-wrapper:active .toggle-knob {
   width: 34px;
   right: 2px;
   border-radius: 99px;
 }
 
-/* Knob inside wrapper - light mode */
-.knob {
+/* Light mode - knob inside wrapper */
+.toggle-knob {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -381,7 +486,7 @@ body {
 }
 
 /* Settings toggle */
-.toggle {
+.toggle-knob {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -391,11 +496,11 @@ body {
 
 /* Icons */
 /* Sun icon */
-.sun {
+.toggle-sun {
   width: 18px;
 }
 
 /* Moon icon */
-.moon {
+.toggle-moon {
   width: 18px;
 }
