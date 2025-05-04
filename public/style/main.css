@@ -1,10 +1,11 @@
-/* Default page settings */
+/* HTML page default settings*/
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 
+/* HTML page body default settings */
 body {
   display: flex;
   flex-direction: column;
@@ -12,41 +13,28 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
-.title-toggle-header {
-  display: flex;
-  justify-content: space-between;
-  /* margin-top: 22px; */
-  /* margin: 1.5rem; */
-  /* margin-right: 1rem; */
-  border-bottom: 3px solid #dcdcdc;
-}
-
+/* Width whole heading */
 .whole-header {
   width: 750px;
 }
 
+/* Sight settings overall luke/subheading, and toggle */
+.title-toggle-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #dcdcdc;
+}
+
+/* Sight settings lead section */
 .lead-section {
-  width: 750px;
+  width: 680px;
   margin: 1.5rem;
   margin-top: 2rem;
 }
 
-/* .article-section {
-  margin-top: 0.75rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-} */
-
-/* .toggle-section {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-} */
-
+/* Sight settings media */
 @media (max-width: 480px) {
-  .whole-navbar,
+  .whole-header,
   .lead-section {
     width: 95%;
     justify-content: space-between;

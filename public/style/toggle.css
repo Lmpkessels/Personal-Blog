@@ -60,6 +60,7 @@ body {
 .toggle-wrapper:active .toggle-knob {
   width: 34px;
   right: 2px;
+
   border-radius: 99px;
 }
 

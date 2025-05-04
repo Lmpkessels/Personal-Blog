@@ -1,19 +1,22 @@
-/* Styling luke header */
+/* Styling luke h1 header */
 .luke-heading {
   color: #4f69c4;
 }
 
+/* Styling subheading luke */
 .main-sub-heading {
   color: #dcdcdc;
   font-style: italic;
 }
 
+/* Taking away underline from anchor link */
 .luke-heading,
 .main-sub-heading {
   text-decoration: none;
 }
 
+/* --snip-- */
 .title-header {
-  margin-top: 22px;
-  margin-bottom: 22px;
+  margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
 }

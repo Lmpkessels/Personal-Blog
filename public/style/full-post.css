@@ -1,9 +1,11 @@
+/* Sight settings for how full articles are displayed*/
 .full-article {
   display: flex;
   flex-direction: column;
   max-width: 46.875rem;
 }
 
+/* Settings for where toggle is displayed on the page */
 .mode-toggle {
   display: flex;
   justify-content: flex-end;
@@ -11,38 +13,19 @@
   margin-top: 22px;
 }
 
+/* Navbar border bottom */
 .navbar {
   border-bottom: 3px solid #dcdcdc;
 }
 
-.back-to-hq {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 0.5rem;
-  text-decoration: none;
-  color: #dcdcdc;
-  width: 44.125rem;
-  transition: 0.3s ease;
-}
-
-.back-to-hq:hover {
-  color: #4f69c4;
-  text-decoration: underline;
-}
-/* .above-section {
-  display: flex;
-  justify-content: space-between;
-  max-width: 750px;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #dcdcdc;
-} */
-
+/* Section of header bellow the border */
 .bellow-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Sight settings link back to all, and date post */
 .link-back-all,
 .date-post {
   text-decoration: none;
@@ -53,22 +36,29 @@
   display: block;
 }
 
+/* Hover effect for link back to all */
 .link-back-all:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
 
+/* Space between heading and content paragraph */
 .content-article {
   margin-top: 0.75rem;
 }
 
+/* Meadia link back all setting, instead of hover */
 @media (max-width: 768px) {
   .link-back-all {
+    color: #dcdcdc;
     text-decoration: underline;
   }
 }
+
+/* Width settings phone */
 @media (max-width: 480px) {
-  .full-article {
+  .full-article,
+  .mode-toggle {
     width: 95%;
   }
 }

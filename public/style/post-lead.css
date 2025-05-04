@@ -17,22 +17,10 @@
   flex-direction: column;
 }
 
+/* Date settings for posts && leads */
 .date {
   color: #888;
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
   display: block;
-}
-
-/* Setting padding - date, heading, p */
-.date,
-.lead-heading,
-.lead-content {
-  /* padding-top: 0.75rem;
-  padding-bottom: 0.75rem; */
-}
-
-.full-article-lead {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }

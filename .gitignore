@@ -1,0 +1,8 @@
+public/archive
+public/dist
+public/images
+public/posts
+public/template
+public/trash
+.prettierignore
+shell-commands.txt

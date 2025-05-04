@@ -1,9 +1,11 @@
+/* Visibility back to hq section */
 .back-to-hq-section {
   display: flex;
   justify-content: flex-end;
   width: 750px;
 }
 
+/* Alignment + styling link back to hq */
 .to-hq-link {
   display: flex;
   justify-content: flex-end;
@@ -13,7 +15,47 @@
   transition: 0.3s ease;
 }
 
+/* Hover decoration */
 .to-hq-link:hover {
   color: #4f69c4;
   text-decoration: underline;
+}
+
+/* Styling + positioning - back to hq full post link */
+.back-to-hq {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #dcdcdc;
+  width: 44.125rem;
+  transition: 0.3s ease;
+}
+
+/* Hover effect - back to hq full post link */
+.back-to-hq:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+/* Media visibility */
+@media (max-width: 768px) {
+  /* Link styling */
+  .to-hq-link,
+  .back-to-hq {
+    text-decoration: underline;
+  }
+}
+
+/* Media visibility */
+@media (max-width: 480px) {
+  .back-to-hq-section,
+  .back-to-hq {
+    width: 95%;
+  }
+  /* Link styling */
+  .to-hq-link,
+  .back-to-hq {
+    text-decoration: underline;
+  }
 }

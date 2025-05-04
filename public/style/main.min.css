@@ -54,12 +54,14 @@ body:not(.default-mode) .post-link:hover {
     text-decoration: none;
   }
 }
+/* Visibility back to hq section */
 .back-to-hq-section {
   display: flex;
   justify-content: flex-end;
   width: 750px;
 }
 
+/* Alignment + styling link back to hq */
 .to-hq-link {
   display: flex;
   justify-content: flex-end;
@@ -69,27 +71,13 @@ body:not(.default-mode) .post-link:hover {
   transition: 0.3s ease;
 }
 
+/* Hover decoration */
 .to-hq-link:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
-.full-article {
-  display: flex;
-  flex-direction: column;
-  max-width: 46.875rem;
-}
 
-.mode-toggle {
-  display: flex;
-  justify-content: flex-end;
-  width: 46.875rem;
-  margin-top: 22px;
-}
-
-.navbar {
-  border-bottom: 3px solid #dcdcdc;
-}
-
+/* Styling + positioning - back to hq full post link */
 .back-to-hq {
   display: flex;
   justify-content: flex-end;
@@ -100,24 +88,61 @@ body:not(.default-mode) .post-link:hover {
   transition: 0.3s ease;
 }
 
+/* Hover effect - back to hq full post link */
 .back-to-hq:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
-/* .above-section {
-  display: flex;
-  justify-content: space-between;
-  max-width: 750px;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #dcdcdc;
-} */
 
+/* Media visibility */
+@media (max-width: 768px) {
+  /* Link styling */
+  .to-hq-link,
+  .back-to-hq {
+    text-decoration: underline;
+  }
+}
+
+/* Media visibility */
+@media (max-width: 480px) {
+  .back-to-hq-section,
+  .back-to-hq {
+    width: 95%;
+  }
+  /* Link styling */
+  .to-hq-link,
+  .back-to-hq {
+    text-decoration: underline;
+  }
+}
+/* Sight settings for how full articles are displayed*/
+.full-article {
+  display: flex;
+  flex-direction: column;
+  max-width: 46.875rem;
+}
+
+/* Settings for where toggle is displayed on the page */
+.mode-toggle {
+  display: flex;
+  justify-content: flex-end;
+  width: 46.875rem;
+  margin-top: 22px;
+}
+
+/* Navbar border bottom */
+.navbar {
+  border-bottom: 3px solid #dcdcdc;
+}
+
+/* Section of header bellow the border */
 .bellow-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Sight settings link back to all, and date post */
 .link-back-all,
 .date-post {
   text-decoration: none;
@@ -128,49 +153,63 @@ body:not(.default-mode) .post-link:hover {
   display: block;
 }
 
+/* Hover effect for link back to all */
 .link-back-all:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
 
+/* Space between heading and content paragraph */
 .content-article {
   margin-top: 0.75rem;
 }
 
+/* Meadia link back all setting, instead of hover */
 @media (max-width: 768px) {
   .link-back-all {
+    color: #dcdcdc;
     text-decoration: underline;
   }
 }
+
+/* Width settings phone */
 @media (max-width: 480px) {
-  .full-article {
+  .full-article,
+  .mode-toggle {
     width: 95%;
   }
 }
-/* Styling luke header */
+/* Styling luke h1 header */
 .luke-heading {
   color: #4f69c4;
 }
 
+/* Styling subheading luke */
 .main-sub-heading {
   color: #dcdcdc;
   font-style: italic;
 }
 
+/* Taking away underline from anchor link */
 .luke-heading,
 .main-sub-heading {
   text-decoration: none;
 }
 
+/* --snip-- */
 .title-header {
-  margin-top: 22px;
-  margin-bottom: 22px;
+  margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
 }
 /* Spacing && alignment navbar */
 .whole-navbar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   padding-top: 1.5rem;
 }
 
+/* Styling links navbar list */
 .link-list {
   display: flex;
   list-style: none;
@@ -178,11 +217,16 @@ body:not(.default-mode) .post-link:hover {
   gap: 2.125rem;
 }
 
+/* Adding border line + space between element and margin */
 .subject-navbar .link-list {
   border-bottom: 1px solid #dcdcdc;
   padding-bottom: 1.5rem;
 }
 
+/*
+ Adding border line bottom + space between element and margin for top and,
+ bottom 
+*/
 .social-navbar .link-list {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -194,23 +238,35 @@ body:not(.default-mode) .post-link:hover {
   color: #4f69c4;
 }
 
+/* Styling navbar link */
 .navbar-link {
   text-decoration: none;
   color: #dcdcdc;
   transition: 0.3s ease;
 }
 
+/* Creating hover effect navbar */
 .navbar-link:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
-/* Default page settings */
+
+@media (max-width: 480px) {
+  .link-list {
+    gap: 0.75rem;
+  }
+  .whole-navbar {
+    width: 100%;
+  }
+}
+/* HTML page default settings*/
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 
+/* HTML page body default settings */
 body {
   display: flex;
   flex-direction: column;
@@ -218,41 +274,28 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 
-.title-toggle-header {
-  display: flex;
-  justify-content: space-between;
-  /* margin-top: 22px; */
-  /* margin: 1.5rem; */
-  /* margin-right: 1rem; */
-  border-bottom: 3px solid #dcdcdc;
-}
-
+/* Width whole heading */
 .whole-header {
   width: 750px;
 }
 
+/* Sight settings overall luke/subheading, and toggle */
+.title-toggle-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #dcdcdc;
+}
+
+/* Sight settings lead section */
 .lead-section {
-  width: 750px;
+  width: 680px;
   margin: 1.5rem;
   margin-top: 2rem;
 }
 
-/* .article-section {
-  margin-top: 0.75rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-} */
-
-/* .toggle-section {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-} */
-
+/* Sight settings media */
 @media (max-width: 480px) {
-  .whole-navbar,
+  .whole-header,
   .lead-section {
     width: 95%;
     justify-content: space-between;
@@ -277,25 +320,14 @@ body {
   flex-direction: column;
 }
 
+/* Date settings for posts && leads */
 .date {
   color: #888;
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
   display: block;
 }
-
-/* Setting padding - date, heading, p */
-.date,
-.lead-heading,
-.lead-content {
-  /* padding-top: 0.75rem;
-  padding-bottom: 0.75rem; */
-}
-
-.full-article-lead {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
+/* Settings toggle position - full post */
 .toggle-header {
   display: flex;
   justify-content: flex-end;
@@ -303,11 +335,13 @@ body {
   margin-bottom: 0.406rem;
 }
 
+/* Title full post, instead of luke with subheading + border bottom */
 .title-full-post {
   padding-bottom: 0.25rem;
   border-bottom: 3px solid #dcdcdc;
 }
 
+/* Sight sub-section, date + link back all */
 .sub-section {
   display: flex;
   flex-direction: row;
@@ -315,6 +349,7 @@ body {
   margin-top: 4px;
 }
 
+/* Styling link back to all articles */
 .to-all-articles {
   color: #888;
   font-size: 0.875rem;
@@ -323,89 +358,17 @@ body {
   display: block;
 }
 
+/* Hover effect link back to all articles */
 .to-all-articles:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
-/* Main header default settings */
-/* .social-navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-top: 1px solid #dcdcdc;
-  padding: 1.5rem;
-} */
 
-.subject {
-  color: #4f69c4;
-}
-
-/* Main color - navbar socials */
-.nav-a-tag {
-  color: #dcdcdc;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-/* Hover effect - navbar socials */
-.nav-a-tag:hover {
-  color: #4f69c4;
-  text-decoration: underline;
-}
-
-/* Header navbar
-.social-navbar ul {
-  display: flex;
-  list-style: none;
-  flex-direction: row;
-  gap: 2rem;
-} */
-
+/* Media link back to all styling instead of hover effect */
 @media (max-width: 768px) {
-  .nav-a-tag {
-    color: #dcdcdc;
-  }
-}
-
-@media (max-width: 480px) {
-  .social-navbar ul {
-    gap: 0.75rem;
-  }
-}
-/* Subject navbar styling */
-#subject-pointer {
-  color: #4f69c4;
-  margin: 0;
-  padding: 0;
-}
-
-/* Styling anchor - Subject navbar */
-.subject-section {
-  text-decoration: none;
-  color: #dcdcdc;
-  transition: 0.3s ease;
-}
-
-.subject-section:hover {
-  color: #4f69c4;
-  text-decoration: underline;
-}
-
-/* Default settings - ul subject navbar */
-.list-section {
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding: 1.5rem;
-  border-top: 3px solid #dcdcdc;
-  gap: 2rem;
-  justify-content: center;
-}
-
-@media (max-width: 480px) {
-  .list-section {
-    gap: 0.75rem;
-    padding: 1rem;
+  .to-all-articles {
+    color: #888;
+    text-decoration: underline;
   }
 }
 /* 
@@ -470,6 +433,7 @@ body {
 .toggle-wrapper:active .toggle-knob {
   width: 34px;
   right: 2px;
+
   border-radius: 99px;
 }
 
