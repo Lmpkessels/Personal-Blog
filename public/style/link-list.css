@@ -15,7 +15,7 @@
 }
 
 /* Adding border line + space between element and margin */
-.subject-navbar .link-list {
+.subject-navbar {
   border-bottom: 1px solid #dcdcdc;
   padding-bottom: 1.5rem;
 }
@@ -24,7 +24,7 @@
  Adding border line bottom + space between element and margin for top and,
  bottom 
 */
-.social-navbar .link-list {
+.social-navbar {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 3px solid #dcdcdc;
@@ -51,6 +51,8 @@
 @media (max-width: 480px) {
   .link-list {
     gap: 0.75rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
   .whole-navbar {
     width: 100%;
