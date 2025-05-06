@@ -1,0 +1,28 @@
+.subject {
+  color: #4f69c4;
+}
+
+/* Main color - navbar socials */
+.nav-a-tag {
+  color: #dcdcdc;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+/* Hover effect - navbar socials */
+.nav-a-tag:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .nav-a-tag {
+    color: #dcdcdc;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-navbar ul {
+    gap: 0.75rem;
+  }
+}
