@@ -1,3 +1,3 @@
 public/dist
-public/test/script.min.js
-public/test/main.min.css
+dist/main.min.css
+dist/script.min.js
