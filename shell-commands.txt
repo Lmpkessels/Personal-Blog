@@ -1,2 +1,1 @@
-#Merge CSS files
-cat public/style/anchor.css public/style/back-to-hq.css public/style/full-post.css public/style/header.css public/style/link-list.css public/style/main.css public/style/post-lead.css public/style/real-full-post.css public/style/toggle.css > public/style/main.min.css
+cat style/anchor.css style/back-to-hq.css style/full-post.css style/header.css style/link-list.css style/main.css style/post-lead.css style/real-full-post.css style/toggle.css > style/main.min.css

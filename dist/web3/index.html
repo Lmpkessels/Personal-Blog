@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      if (localStorage.getItem("theme") === "default") {
+        document.documentElement.classList.add("default-mode");
+      }
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="description" content="
     <meta

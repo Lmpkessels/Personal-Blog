@@ -9,13 +9,13 @@ leave room between objects
 }
 
 /* Default mode - color background */
-body.default-mode {
+html.default-mode body {
   background: #ffffff54;
   color: #000000;
 }
 
 /* Default mode - toggle wrapper button */
-body.default-mode .toggle-wrapper {
+html.default-mode .toggle-wrapper {
   width: 44px;
   height: 22px;
   border-radius: 999px;
@@ -25,7 +25,7 @@ body.default-mode .toggle-wrapper {
 }
 
 /* Default mode - knob inside toggle wrapper */
-body.default-mode .toggle-knob {
+html.default-mode .toggle-knob {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -36,13 +36,13 @@ body.default-mode .toggle-knob {
   transition: all 0.3s ease;
 }
 
-body.default-mode:active .toggle-knob {
+html.default-mode:active .toggle-knob {
   left: 2px;
   border-radius: 99px;
 }
 
 /* Dark mode - color background */
-body {
+html body {
   background-color: #333;
   color: #ffffff;
 }

@@ -1,55 +1,55 @@
 /* Header content - default mode (light) */
-body.default-mode .header-link {
+html.default-mode .header-link {
   color: #000000;
   text-decoration: none;
 }
 
-body.default-mode .header-link:hover {
+html.default-mode .header-link:hover {
   color: #4f69c4;
 }
 
 /* Header content - dark */
-body:not(.default-mode) .header-link {
+html:not(.default-mode) .header-link {
   color: #ffffff;
   text-decoration: none;
 }
 
-body:not(.default-mode) .header-link:hover {
+html:not(.default-mode) .header-link:hover {
   color: #4f69c4;
 }
 
 /* Default mode (light) */
-body.default-mode .post-link {
+html.default-mode .post-link {
   color: #000000;
   text-decoration: none;
 }
 
-body.default-mode .post-link:hover {
+html.default-mode .post-link:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
 
 /* Dark mode */
-body:not(.default-mode) .post-link {
+html:not(.default-mode) .post-link {
   color: #ffffff;
   text-decoration: none;
 }
 
-body:not(.default-mode) .post-link:hover {
+html:not(.default-mode) .post-link:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
 
 /* Taking away hover effect tablet/phone */
 @media (max-width: 768px) {
-  body.default-mode .post-link,
-  body:not(.default-mode) .post-link {
+  html.default-mode .post-link,
+  html:not(.default-mode) .post-link {
     text-decoration: underline;
   }
 }
 @media (max-width: 768px) {
-  body.default-mode .post-link,
-  body:not(.default-mode) .post-link {
+  html.default-mode .post-link,
+  html:not(.default-mode) .post-link {
     color: #4f69c4;
     text-decoration: none;
   }
@@ -384,13 +384,13 @@ leave room between objects
 }
 
 /* Default mode - color background */
-body.default-mode {
+html.default-mode body {
   background: #ffffff54;
   color: #000000;
 }
 
 /* Default mode - toggle wrapper button */
-body.default-mode .toggle-wrapper {
+html.default-mode .toggle-wrapper {
   width: 44px;
   height: 22px;
   border-radius: 999px;
@@ -400,7 +400,7 @@ body.default-mode .toggle-wrapper {
 }
 
 /* Default mode - knob inside toggle wrapper */
-body.default-mode .toggle-knob {
+html.default-mode .toggle-knob {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -411,13 +411,13 @@ body.default-mode .toggle-knob {
   transition: all 0.3s ease;
 }
 
-body.default-mode:active .toggle-knob {
+html.default-mode:active .toggle-knob {
   left: 2px;
   border-radius: 99px;
 }
 
 /* Dark mode - color background */
-body {
+html body {
   background-color: #333;
   color: #ffffff;
 }
