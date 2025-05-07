@@ -43,147 +43,107 @@
   </head>
 
   <body>
-    <header class="whole-header">
-      <div class="title-toggle-header">
-        <div class="title-header">
-          <!-- 
+    <div class="page-container">
+      <div class="content-wrapper">
+        <header class="whole-header">
+          <div class="title-toggle-header">
+            <div class="title-header">
+              <!-- 
           Main heading + sub-heading, 
           use anchor tags so user goes home when heading clicked 
           -->
-          <!-- Development links -->
-          <h1><a href="/index.html" class="luke-heading">Luke</a></h1>
-          <a href="/index.html" class="main-sub-heading">Web3</a>
-          <!-- Production links -->
-        </div>
-        <!-- Sun icon -->
-        <div class="whole-toggle">
-          <!-- 
-          Display following text if user it's browser doesn't allow JS
-           -->
-          <noscript>
-            Toggle light-dark-mode not shown, your browsers doesn't supper
-            JavaScript.
-          </noscript>
-          <svg
-            class="toggle-sun"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-            />
-          </svg>
-
-          <!-- Toggle wrapper + toggle knob -->
-          <div class="toggle-wrapper">
-            <div class="toggle-knob"></div>
+              <h1><a href="/index.html" class="luke-heading">Luke</a></h1>
+              <a href="/index.html" class="main-sub-heading">Web3</a>
+            </div>
+            <!-- Light - dark, mode toggle -->
+            <div
+              class="light-dark-toggle"
+              aria-label="Toggle light dark mode"
+            ></div>
           </div>
-
-          <!-- Moon icon -->
-          <svg
-            class="toggle-moon"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-            />
-          </svg>
-        </div>
-      </div>
-      <div>
-        <!-- Whole navbar, contains: subject navbar + socials navbar -->
-        <nav class="whole-navbar">
-          <!-- 
+          <div>
+            <!-- Whole navbar, contains: subject navbar + socials navbar -->
+            <div class="whole-navbar">
+              <!-- 
           Social navbar, link to main post section with leads on main subject 
           page to full post 
           -->
-          <nav class="subject-navbar">
-            <ul class="link-list">
-              <li class="navbar-eye-catcher">Subject:</li>
-              <li>
-                <a href="/index.html" class="navbar-link">HQ</a>
-              </li>
-              <li>
-                <a href="/web3/index.html" class="navbar-link">Web3</a>
-              </li>
-              <li>
-                <a href="/philosophy/index.html" class="navbar-link"
-                  >Philosophy
-                </a>
-              </li>
-              <li>
-                <a href="/books/index.html" class="navbar-link">Books</a>
-              </li>
-              <li>
-                <a href="/about/index.html" class="navbar-link">About me</a>
-              </li>
-              <li>
-                <a href="/hire-me/index.html" class="navbar-link"
-                  >Need help?
-                </a>
-              </li>
-            </ul>
-          </nav>
+              <nav class="subject-navbar" aria-label="Main subject navbar">
+                <ul class="link-list">
+                  <li class="navbar-eye-catcher">Subject:</li>
+                  <li>
+                    <a href="/index.html" class="navbar-link">HQ</a>
+                  </li>
+                  <li>
+                    <a href="/web3/index.html" class="navbar-link">Web3</a>
+                  </li>
+                  <li>
+                    <a href="/philosophy/index.html" class="navbar-link"
+                      >Philosophy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/books/index.html" class="navbar-link">Books</a>
+                  </li>
+                  <li>
+                    <a href="/about/index.html" class="navbar-link">About me</a>
+                  </li>
+                  <li>
+                    <a href="/hire-me/index.html" class="navbar-link"
+                      >Need help?</a
+                    >
+                  </li>
+                </ul>
+              </nav>
 
-          <!-- 
+              <!-- 
           Social navbar, link to main post section with leads on main subject 
           page to full post 
           -->
-          <nav class="social-navbar">
-            <ul class="link-list">
-              <li class="navbar-eye-catcher">Socials:</li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/luuk-kessels"
-                  class="navbar-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/lukefi_"
-                  class="navbar-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >X/Twitter
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Lmpkessels"
-                  class="navbar-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:luuk@lukefi.com"
-                  class="navbar-link"
-                  rel="noopener noreferrer"
-                  >E-mail
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </nav>
-      </div>
-    </header>
-    <!-- 
+              <nav class="social-navbar" aria-label="Social media navbar">
+                <ul class="link-list">
+                  <li class="navbar-eye-catcher">Socials:</li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/luuk-kessels"
+                      class="navbar-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >LinkedIn
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://x.com/lukefi_"
+                      class="navbar-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >X/Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/Lmpkessels"
+                      class="navbar-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >GitHub
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:luuk@lukefi.com"
+                      class="navbar-link"
+                      rel="noopener noreferrer"
+                      >E-mail
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <!-- 
     Post lead section - Note: add good lead + short section that describes the,
     post.
 
@@ -191,7 +151,14 @@
     - in title, use: class="header-content"
     - in paragraph, use: class="anchor-content"
     -->
-    <section class="lead-section"></section>
+        <main
+          class="main-lead-content-section"
+          aria-label="Lead content section"
+        >
+          <section class="lead-section"></section>
+        </main>
+      </div>
+    </div>
   </body>
   <!-- Development link -->
   <!-- <script src="/public/script/script.js"></script> -->

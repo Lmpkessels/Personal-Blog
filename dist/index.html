@@ -7,14 +7,8 @@
       name="description"
       content="L3 is a blog for future-minded creators mastering Web3, wealth, health, and self-education — with clear, practical, no-fluff insights."
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      href="/images/white-logo-k3-4.webp"
-      type="icon/webp"
-      alt="L3 favicon logo"
-    />
+    <link rel="icon" href="/images/white-logo-k3-4.webp" type="icon/webp" />
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +21,7 @@
     <title>HQ | Luke blog</title>
 
     <!-- Development links -->
-    <link rel="stylesheet" href="/style/anchor.css" />
+    <!-- <link rel="stylesheet" href="/style/anchor.css" />
     <link rel="stylesheet" href="/style/full-post.css" />
     <link rel="stylesheet" href="/style/header.css" />
     <link rel="stylesheet" href="/style/link-list.css" />
@@ -36,10 +30,10 @@
     <link rel="stylesheet" href="/style/socials.css" />
     <link rel="stylesheet" href="/style/subjects.css" />
     <link rel="stylesheet" href="/style/toggle.css" />
-    <link rel="stylesheet" href="/style/navbar-section.css" />
+    <link rel="stylesheet" href="/style/navbar-section.css" /> -->
 
     <!-- Production link -->
-    <!-- <link rel="stylesheet" href="main.min.css" /> -->
+    <link rel="stylesheet" href="main.min.css" />
   </head>
 
   <body>
@@ -56,16 +50,19 @@
               <a href="index.html" class="main-sub-heading">Head quarters</a>
             </div>
             <!-- Light - dark, mode toggle -->
-            <div class="light-dark-toggle"></div>
+            <div
+              class="light-dark-toggle"
+              aria-label="Toggle light dark mode"
+            ></div>
           </div>
           <div>
             <!-- Whole navbar, contains: subject navbar + socials navbar -->
-            <nav class="whole-navbar">
+            <div class="whole-navbar">
               <!-- 
           Social navbar, link to main post section with leads on main subject 
           page to full post 
           -->
-              <nav class="subject-navbar">
+              <nav class="subject-navbar" aria-label="Main subject navbar">
                 <ul class="link-list">
                   <li class="navbar-eye-catcher">Subject:</li>
                   <li>
@@ -97,7 +94,7 @@
           Social navbar, link to main post section with leads on main subject 
           page to full post 
           -->
-              <nav class="social-navbar">
+              <nav class="social-navbar" aria-label="Social media navbar">
                 <ul class="link-list">
                   <li class="navbar-eye-catcher">Socials:</li>
                   <li>
@@ -137,7 +134,7 @@
                   </li>
                 </ul>
               </nav>
-            </nav>
+            </div>
           </div>
         </header>
         <!-- 
@@ -148,14 +145,17 @@
     - in title, use: class="header-content"
     - in paragraph, use: class="anchor-content"
     -->
-        <section class="lead-section">
-          <h2></h2>
-        </section>
+        <main
+          class="main-lead-content-section"
+          aria-label="Lead content section"
+        >
+          <section class="lead-section"></section>
+        </main>
       </div>
     </div>
   </body>
   <!-- Development link -->
-  <script src="/script/toggle.js"></script>
+  <!-- <script src="script/toggle.js"></script> -->
   <!-- Production link -->
-  <!-- <script src="script.min.js" defer></script> -->
+  <script src="script.min.js" defer></script>
 </html>

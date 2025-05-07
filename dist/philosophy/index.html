@@ -37,102 +37,107 @@
   </head>
 
   <body>
-    <header class="whole-header">
-      <div class="title-toggle-header">
-        <div class="title-header">
-          <!-- 
+    <div class="page-container">
+      <div class="content-wrapper">
+        <header class="whole-header">
+          <div class="title-toggle-header">
+            <div class="title-header">
+              <!-- 
           Main heading + sub-heading, 
           use anchor tags so user goes home when heading clicked 
           -->
-          <h1><a href="/index.html" class="luke-heading">Luke</a></h1>
-          <a href="/index.html" class="main-sub-heading">Philosophy</a>
-        </div>
-        <!-- Light - dark, mode toggle -->
-        <div class="light-dark-toggle" style="visibility: hidden"></div>
-      </div>
-      <div>
-        <!-- Whole navbar, contains: subject navbar + socials navbar -->
-        <nav class="whole-navbar">
-          <!-- 
+              <h1><a href="/index.html" class="luke-heading">Luke</a></h1>
+              <a href="/index.html" class="main-sub-heading">Philosophy</a>
+            </div>
+            <!-- Light - dark, mode toggle -->
+            <div
+              class="light-dark-toggle"
+              aria-label="Toggle light dark mode"
+            ></div>
+          </div>
+          <div>
+            <!-- Whole navbar, contains: subject navbar + socials navbar -->
+            <div class="whole-navbar">
+              <!-- 
           Social navbar, link to main post section with leads on main subject 
           page to full post 
           -->
-          <nav class="subject-navbar">
-            <ul class="link-list">
-              <li class="navbar-eye-catcher">Subject:</li>
-              <li>
-                <a href="/index.html" class="navbar-link">HQ</a>
-              </li>
-              <li>
-                <a href="/web3/index.html" class="navbar-link">Web3</a>
-              </li>
-              <li>
-                <a href="/philosophy/index.html" class="navbar-link"
-                  >Philosophy
-                </a>
-              </li>
-              <li>
-                <a href="/books/index.html" class="navbar-link">Books</a>
-              </li>
-              <li>
-                <a href="/about/index.html" class="navbar-link">About me</a>
-              </li>
-              <li>
-                <a href="/hire-me/index.html" class="navbar-link"
-                  >Need help?
-                </a>
-              </li>
-            </ul>
-          </nav>
+              <nav class="subject-navbar" aria-label="Main subject navbar">
+                <ul class="link-list">
+                  <li class="navbar-eye-catcher">Subject:</li>
+                  <li>
+                    <a href="/index.html" class="navbar-link">HQ</a>
+                  </li>
+                  <li>
+                    <a href="/web3/index.html" class="navbar-link">Web3</a>
+                  </li>
+                  <li>
+                    <a href="/philosophy/index.html" class="navbar-link"
+                      >Philosophy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/books/index.html" class="navbar-link">Books</a>
+                  </li>
+                  <li>
+                    <a href="/about/index.html" class="navbar-link">About me</a>
+                  </li>
+                  <li>
+                    <a href="/hire-me/index.html" class="navbar-link"
+                      >Need help?</a
+                    >
+                  </li>
+                </ul>
+              </nav>
 
-          <!-- 
+              <!-- 
           Social navbar, link to main post section with leads on main subject 
           page to full post 
           -->
-          <nav class="social-navbar">
-            <ul class="link-list">
-              <li class="navbar-eye-catcher">Socials:</li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/luuk-kessels"
-                  class="navbar-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://x.com/lukefi_"
-                  class="navbar-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >X/Twitter
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Lmpkessels"
-                  class="navbar-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >GitHub
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:luuk@lukefi.com"
-                  class="navbar-link"
-                  rel="noopener noreferrer"
-                  >E-mail
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </nav>
-      </div>
-    </header>
-    <!-- 
+              <nav class="social-navbar" aria-label="Social media navbar">
+                <ul class="link-list">
+                  <li class="navbar-eye-catcher">Socials:</li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/luuk-kessels"
+                      class="navbar-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >LinkedIn
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://x.com/lukefi_"
+                      class="navbar-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >X/Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/Lmpkessels"
+                      class="navbar-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >GitHub
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:luuk@lukefi.com"
+                      class="navbar-link"
+                      rel="noopener noreferrer"
+                      >E-mail
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <!-- 
     Post lead section - Note: add good lead + short section that describes the,
     post.
 
@@ -140,7 +145,14 @@
     - in title, use: class="header-content"
     - in paragraph, use: class="anchor-content"
     -->
-    <section class="lead-section"></section>
+        <main
+          class="main-lead-content-section"
+          aria-label="Lead content section"
+        >
+          <section class="lead-section"></section>
+        </main>
+      </div>
+    </div>
   </body>
   <!-- Development link -->
   <!-- <script src="/public/script/script.js"></script> -->

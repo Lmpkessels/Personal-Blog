@@ -219,7 +219,6 @@ html:not(.default-mode) .post-link:hover {
 
 /* Adding border line + space between element and margin */
 .subject-navbar {
-  border-bottom: 1px solid #dcdcdc;
   padding-bottom: 1.5rem;
 }
 
@@ -230,7 +229,6 @@ html:not(.default-mode) .post-link:hover {
 .social-navbar {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 3px solid #dcdcdc;
 }
 
 /* Navbar decoration */
@@ -261,44 +259,55 @@ html:not(.default-mode) .post-link:hover {
     width: 100%;
   }
 }
-HTML page default settings * {
+/* HTML page default settings*/
+* {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 
-/* HTML page body default settings */
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Font family for every html file */
+html {
   font-family: "Nunito Sans", sans-serif;
 }
 
-/* Width whole heading */
-.whole-header {
+/* HTML page default settings */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.content-wrapper {
   width: 750px;
+  height: 100vh;
+  position: relative;
 }
 
 .light-dark-toggle {
   display: flex;
   justify-content: flex-end;
+  margin-top: 2.75rem;
+  width: 100%;
   position: absolute;
-  padding-top: 44px;
-  width: 750px;
+  top: 0;
+  right: 0;
 }
 /* Sight settings overall luke/subheading, and toggle */
 .title-toggle-header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 3px solid #dcdcdc;
+  align-items: center;
+  width: 100%;
 }
 
 /* Sight settings lead section */
 .lead-section {
-  width: 680px;
-  margin: 1.5rem;
-  margin-top: 2rem;
+  width: 91%;
+  margin: 2rem 1.5rem 1.5rem;
 }
 
 /* Sight settings media */
@@ -306,7 +315,11 @@ body {
   .whole-header,
   .lead-section {
     width: 95%;
-    justify-content: space-between;
+  }
+
+  .title-toggle-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 /* Hover lead heading */
@@ -474,4 +487,24 @@ html body {
 /* Moon icon */
 .toggle-moon {
   width: 18px;
+}
+.whole-navbar {
+  width: 750px;
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 3px solid #dcdcdc;
+  border-bottom: 3px solid #dcdcdc;
+}
+
+.subject-navbar {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.link-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
 }

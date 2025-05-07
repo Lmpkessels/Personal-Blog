@@ -6,7 +6,7 @@ if (localStorage.getItem("theme") === "default") {
 }
 
 // Fetch and insert the toggle from partials
-fetch("/partials/toggle.html")
+fetch("partials/toggle.html")
   .then((res) => res.text())
   .then((htmlContent) => {
     const container = document.querySelector(".light-dark-toggle");
