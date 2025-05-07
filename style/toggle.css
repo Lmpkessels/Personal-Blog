@@ -43,7 +43,7 @@ html.default-mode:active .toggle-knob {
 
 /* Dark mode - color background */
 html body {
-  background-color: #333;
+  background-color: #0a0f1c;
   color: #ffffff;
 }
 

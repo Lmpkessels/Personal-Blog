@@ -16,7 +16,6 @@
 
 /* Adding border line + space between element and margin */
 .subject-navbar {
-  border-bottom: 1px solid #dcdcdc;
   padding-bottom: 1.5rem;
 }
 
@@ -27,7 +26,6 @@
 .social-navbar {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  border-bottom: 3px solid #dcdcdc;
 }
 
 /* Navbar decoration */

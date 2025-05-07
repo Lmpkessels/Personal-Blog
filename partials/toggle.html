@@ -1,7 +1,13 @@
 <!-- Sun icon -->
-<div class="toggle">
+<div class="whole-toggle">
+  <!-- 
+  Display following text if user it's browser doesn't allow JS
+   -->
+  <noscript>
+    Toggle light-dark-mode not shown, your browsers doesn't supper JavaScript.
+  </noscript>
   <svg
-    class="sun"
+    class="toggle-sun"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
@@ -15,14 +21,14 @@
     />
   </svg>
 
-  <!-- Toggle button -->
+  <!-- Toggle wrapper + toggle knob -->
   <div class="toggle-wrapper">
-    <div class="knob"></div>
+    <div class="toggle-knob"></div>
   </div>
 
   <!-- Moon icon -->
   <svg
-    class="moon"
+    class="toggle-moon"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
