@@ -2,14 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="L3 is a blog for future-minded creators mastering Web3, wealth, health, and self-education — with clear, practical, no-fluff insights."
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon -->
     <link rel="icon" href="/images/white-logo-k3-4.webp" type="icon/webp" />
 
     <!-- Font -->
@@ -23,18 +21,15 @@
     <title>Need help? | Luke blog</title>
 
     <!-- Development links -->
-    <!-- <link rel="stylesheet" href="style/anchor.css" />
-    <link rel="stylesheet" href="style/full-post.css" />
-    <link rel="stylesheet" href="style/header.css" />
-    <link rel="stylesheet" href="style/link-list.css" />
-    <link rel="stylesheet" href="style/main.css" />
-    <link rel="stylesheet" href="style/post-lead.css" />
-    <link rel="stylesheet" href="style/socials.css" />
-    <link rel="stylesheet" href="style/subjects.css" />
-    <link rel="stylesheet" href="style/toggle.css" /> -->
+    <link rel="stylesheet" href="/style/anchor-light-dark.css" />
+    <link rel="stylesheet" href="/style/full-post.css" />
+    <link rel="stylesheet" href="/style/header.css" />
+    <link rel="stylesheet" href="/style/link-list.css" />
+    <link rel="stylesheet" href="/style/main.css" />
+    <link rel="stylesheet" href="/style/toggle.css" />
 
     <!-- Production link -->
-    <link rel="stylesheet" href="/main.min.css" />
+    <!-- <link rel="stylesheet" href="main.min.css" /> -->
   </head>
 
   <body>
@@ -43,12 +38,8 @@
         <header class="whole-header">
           <div class="title-toggle-header">
             <div class="title-header">
-              <!-- 
-          Main heading + sub-heading, 
-          use anchor tags so user goes home when heading clicked 
-          -->
-              <h1><a href="/index.html" class="luke-heading">Luke</a></h1>
-              <a href="/index.html" class="main-sub-heading">Need help?</a>
+              <h1><a href="/dist/index.html" class="luke-heading">Luke</a></h1>
+              <a href="/dist/index.html" class="main-sub-heading">Need help?</a>
             </div>
             <!-- Light - dark, mode toggle -->
             <div
@@ -59,42 +50,39 @@
           <div>
             <!-- Whole navbar, contains: subject navbar + socials navbar -->
             <div class="whole-navbar">
-              <!-- 
-          Social navbar, link to main post section with leads on main subject 
-          page to full post 
-          -->
+              <!-- Subject navbar section -->
               <nav class="subject-navbar" aria-label="Main subject navbar">
                 <ul class="link-list">
                   <li class="navbar-eye-catcher">Subject:</li>
                   <li>
-                    <a href="/index.html" class="navbar-link">HQ</a>
+                    <a href="/dist/index.html" class="navbar-link">HQ</a>
                   </li>
                   <li>
-                    <a href="/web3/index.html" class="navbar-link">Web3</a>
+                    <a href="/dist/web3/index.html" class="navbar-link">Web3</a>
                   </li>
                   <li>
-                    <a href="/philosophy/index.html" class="navbar-link"
+                    <a href="/dist/philosophy/index.html" class="navbar-link"
                       >Philosophy
                     </a>
                   </li>
                   <li>
-                    <a href="/books/index.html" class="navbar-link">Books</a>
+                    <a href="/dist/books/index.html" class="navbar-link"
+                      >Books</a
+                    >
                   </li>
                   <li>
-                    <a href="/about/index.html" class="navbar-link">About me</a>
+                    <a href="/dist/about/index.html" class="navbar-link"
+                      >About me</a
+                    >
                   </li>
                   <li>
-                    <a href="/hire-me/index.html" class="navbar-link"
+                    <a href="/dist/need-help/index.html" class="navbar-link"
                       >Need help?</a
                     >
                   </li>
                 </ul>
               </nav>
-
-              <!-- 
-          Social navbar, link to main post section with leads on main subject 
-          page to full post 
-          -->
+              <!-- Social media navbar section -->
               <nav class="social-navbar" aria-label="Social media navbar">
                 <ul class="link-list">
                   <li class="navbar-eye-catcher">Socials:</li>
@@ -139,24 +127,26 @@
           </div>
         </header>
         <!-- 
-    Post lead section - Note: add good lead + short section that describes the,
-    post.
-
-    For anchor links:
-    - in title, use: class="header-content"
-    - in paragraph, use: class="anchor-content"
-    -->
-        <main
-          class="main-lead-content-section"
-          aria-label="Lead content section"
-        >
-          <section class="lead-section"></section>
+        For anchor links:
+        - in title, use: class="header-content"
+        - in paragraph, use: class="anchor-content"
+        -->
+        <main class="post-lead-section" aria-label="Lead content section">
+          <ul class="post-lead-unordered-list">
+            <li class="post-lead-list-items">
+              <section class="">
+                <h2 class="header-link">
+                  This section is in development. Need help post coming soon.
+                </h2>
+              </section>
+            </li>
+          </ul>
         </main>
       </div>
     </div>
   </body>
   <!-- Development link -->
-  <!-- <script src="script/script.js"></script> -->
+  <script src="/script/toggle.js"></script>
   <!-- Production link -->
-  <script src="/script.min.js" defer></script>
+  <!-- <script src="script.min.js" defer></script> -->
 </html>
