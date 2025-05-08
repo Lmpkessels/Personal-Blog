@@ -23,7 +23,7 @@
 
 .whole-navbar {
   width: 750px;
-  height: 144px;
+  height: 9rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,6 +38,6 @@
 .link-list {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 9rem;
   list-style: none;
 }
