@@ -1,6 +1,6 @@
 /* Header content - default mode (light) */
 html.default-mode .header-link {
-  color: #000000;
+  color: #dcdcdc;
   text-decoration: none;
 }
 
@@ -20,7 +20,7 @@ html:not(.default-mode) .header-link:hover {
 
 /* Default mode (light) */
 html.default-mode .post-link {
-  color: #000000;
+  color: #dcdcdc;
   text-decoration: none;
 }
 

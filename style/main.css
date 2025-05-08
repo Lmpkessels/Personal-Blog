@@ -1,4 +1,4 @@
-/* HTML page default settings*/
+/* Page default settings*/
 * {
   margin: 0%;
   padding: 0%;
@@ -13,19 +13,29 @@ html {
 /* HTML page default settings */
 .page-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100vh;
 }
 
+/* Default settings content section each page */
 .content-wrapper {
+  display: flex;
+  flex-direction: column;
   width: 750px;
   height: 100vh;
   position: relative;
 }
 
+/* Sight settings overall luke/subheading, and toggle */
+.title-toggle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Position light dark toggle header */
 .light-dark-toggle {
   display: flex;
   justify-content: flex-end;
@@ -35,29 +45,19 @@ html {
   top: 0;
   right: 0;
 }
-/* Sight settings overall luke/subheading, and toggle */
-.title-toggle-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+
+.post-lead-section {
+  margin-top: 44px;
 }
 
-/* Sight settings lead section */
-.lead-section {
-  width: 91%;
-  margin: 2rem 1.5rem 1.5rem;
+/*  */
+.post-lead-list-items {
+  list-style: none;
 }
 
 /* Sight settings media */
 @media (max-width: 480px) {
-  .whole-header,
-  .lead-section {
-    width: 95%;
-  }
-
-  .title-toggle-header {
-    flex-direction: column;
-    align-items: flex-start;
+  .content-wrapper {
+    width: 94%;
   }
 }

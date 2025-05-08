@@ -20,3 +20,24 @@
   margin-top: 1.375rem;
   margin-bottom: 1.375rem;
 }
+
+.whole-navbar {
+  width: 750px;
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 3px solid #dcdcdc;
+  border-bottom: 3px solid #dcdcdc;
+}
+
+.subject-navbar {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.link-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+}
