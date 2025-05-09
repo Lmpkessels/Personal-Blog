@@ -1,8 +1,7 @@
-public/archive/
-public/dist/
-public/images/
+archive
+dist/images
 public/posts/
-public/template/
+template
 public/trash/
 .prettierignore
 shell-commands.txt
