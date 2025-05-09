@@ -1,1 +1,1 @@
-cat style/anchor.css style/back-to-hq.css style/full-post.css style/header.css style/link-list.css style/main.css style/post-lead.css style/real-full-post.css style/toggle.css > style/main.min.css
+cat style/anchor-light-dark.css style/full-post.css style/header.css style/link-list.css style/main.css style/nehe-abme.css style/toggle.css > style/main.min.css
