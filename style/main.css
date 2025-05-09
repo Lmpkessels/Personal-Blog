@@ -46,12 +46,17 @@ html {
   right: 0;
 }
 
-.post-lead-section {
+.post-section {
   margin-top: 2.75rem;
 }
 
+.anchor-content {
+  padding-top: 2.75rem;
+  color: #dcdcdc;
+}
+
 /* Styling post lead */
-.post-lead-list-items {
+.post-list-items {
   list-style: none;
 }
 
