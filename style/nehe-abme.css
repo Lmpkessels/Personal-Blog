@@ -7,14 +7,14 @@
   display: flex;
   list-style: none;
   justify-content: space-between;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 /* Stylling date */
 .date {
-  display: block;
   font-size: 0.875rem;
-  color: #dcdcdc;
+  color: #888;
+  margin-top: 0.5rem;
 }
 
 /* Styling back to HQ link */

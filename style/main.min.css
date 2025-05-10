@@ -54,49 +54,61 @@ html:not(.default-mode) .post-link:hover {
     text-decoration: none;
   }
 }
-/* Settings toggle position - full post */
-.toggle-header {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 2.75rem;
-  margin-bottom: 0.406rem;
+article {
+  max-width: px;
+  margin: 0 auto;
+  font-size: 1.125rem; /* ~18px */
+  line-height: 1.5;
 }
 
-/* Title full post, instead of luke with subheading + border bottom */
-.title-full-post {
-  padding-bottom: 0.25rem;
-  border-bottom: 3px solid #dcdcdc;
-}
-
-/* Sight sub-section, date + link back all */
-.sub-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 0.25rem;
-}
-
-/* Styling link back to all articles */
-.to-all-articles {
-  color: #888;
-  font-size: 0.875rem;
+.list-item-full-post {
+  list-style: none;
+  margin-top: 6.75rem;
   margin-bottom: 0.5rem;
-  text-decoration: none;
-  display: block;
 }
 
-/* Hover effect link back to all articles */
-.to-all-articles:hover {
+.post-unordered-list {
+  margin-bottom: 88px;
+}
+
+.sub-post-heading,
+.paragraph,
+.last-list-item {
+  margin-bottom: 22px;
+}
+
+.list-items-post {
+  margin-bottom: 4px;
+}
+
+.unordered-list-post {
+  margin-left: 44px;
+}
+
+.title-full-post {
+  font-weight: 400;
+}
+
+html.default-mode .full-post-link {
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+html.default-mode .full-post-link:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
 
-/* Media link back to all styling instead of hover effect */
-@media (max-width: 768px) {
-  .to-all-articles {
-    color: #888;
-    text-decoration: underline;
-  }
+html:not(.default-mode) .full-post-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+html:not(.default-mode) .full-post-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
 }
 /* Styling luke h1 header */
 .luke-heading {
@@ -276,14 +288,14 @@ html {
   display: flex;
   list-style: none;
   justify-content: space-between;
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 /* Stylling date */
 .date {
-  display: block;
   font-size: 0.875rem;
-  color: #dcdcdc;
+  color: #888;
+  margin-top: 0.5rem;
 }
 
 /* Styling back to HQ link */
