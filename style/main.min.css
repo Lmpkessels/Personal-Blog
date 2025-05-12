@@ -1,6 +1,6 @@
 /* Header content - default mode (light) */
 html.default-mode .header-link {
-  color: #dcdcdc;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -40,55 +40,6 @@ html:not(.default-mode) .post-link:hover {
   text-decoration: underline;
 }
 
-/* Taking away hover effect tablet/phone */
-@media (max-width: 768px) {
-  html.default-mode .post-link,
-  html:not(.default-mode) .post-link {
-    text-decoration: underline;
-  }
-}
-@media (max-width: 768px) {
-  html.default-mode .post-link,
-  html:not(.default-mode) .post-link {
-    color: #4f69c4;
-    text-decoration: none;
-  }
-}
-article {
-  max-width: px;
-  margin: 0 auto;
-  font-size: 1.125rem; /* ~18px */
-  line-height: 1.5;
-}
-
-.list-item-full-post {
-  list-style: none;
-  margin-top: 6.75rem;
-  margin-bottom: 0.5rem;
-}
-
-.post-unordered-list {
-  margin-bottom: 88px;
-}
-
-.sub-post-heading,
-.paragraph,
-.last-list-item {
-  margin-bottom: 22px;
-}
-
-.list-items-post {
-  margin-bottom: 4px;
-}
-
-.unordered-list-post {
-  margin-left: 44px;
-}
-
-.title-full-post {
-  font-weight: 400;
-}
-
 html.default-mode .full-post-link {
   color: #000000;
   text-decoration: none;
@@ -109,6 +60,66 @@ html:not(.default-mode) .full-post-link {
 html:not(.default-mode) .full-post-link:hover {
   color: #4f69c4;
   text-decoration: underline;
+}
+
+/* Taking away hover effect tablet/phone */
+@media (max-width: 768px) {
+  html.default-mode .post-link,
+  html:not(.default-mode) .post-link,
+  html.default-mode .full-post-link,
+  html:not(.default-mode) .full-post-link {
+    text-decoration: underline;
+  }
+}
+@media (max-width: 768px) {
+  html.default-mode .post-link,
+  html:not(.default-mode) .post-link,
+  html.default-mode .full-post-link,
+  html:not(.default-mode) .full-post-link {
+    color: #4f69c4;
+    text-decoration: none;
+  }
+}
+article {
+  max-width: px;
+  margin: 0 auto;
+  font-size: 1.125rem; /* ~18px */
+  line-height: 1.5;
+}
+
+.list-item-full-post {
+  list-style: none;
+  margin-top: 6.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-unordered-list {
+  margin-bottom: 5.5rem;
+}
+
+.sub-post-heading,
+.paragraph,
+.last-list-item {
+  margin-bottom: 1.5rem;
+}
+
+.list-items-post {
+  margin-bottom: 0.25rem;
+}
+
+.unordered-list-post {
+  margin-left: 2.75rem;
+}
+
+.title-full-post {
+  font-weight: 400;
+  max-width: 750px;
+}
+
+@media (max-width: 480px) {
+  .title-full-post {
+    max-width: 94%;
+  }
 }
 /* Styling luke h1 header */
 .luke-heading {
@@ -134,7 +145,7 @@ html:not(.default-mode) .full-post-link:hover {
 }
 
 .whole-navbar {
-  width: 750px;
+  max-width: 750px;
   height: 9rem;
   display: flex;
   flex-direction: column;
@@ -152,6 +163,17 @@ html:not(.default-mode) .full-post-link:hover {
   justify-content: center;
   gap: 9rem;
   list-style: none;
+}
+
+.header-link,
+.header-two {
+  font-weight: 400;
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.spacing-whole-header {
+  max-width: 750px;
 }
 /* Spacing && alignment navbar */
 .whole-navbar {
@@ -235,7 +257,7 @@ html {
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  width: 750px;
+  max-width: 750px;
   height: 100vh;
   position: relative;
 }
@@ -276,7 +298,7 @@ html {
 /* Sight settings media */
 @media (max-width: 480px) {
   .content-wrapper {
-    width: 94%;
+    max-width: 94%;
   }
 }
 .whole-header-about-help {

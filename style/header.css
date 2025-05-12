@@ -22,7 +22,7 @@
 }
 
 .whole-navbar {
-  width: 750px;
+  max-width: 750px;
   height: 9rem;
   display: flex;
   flex-direction: column;
@@ -40,4 +40,15 @@
   justify-content: center;
   gap: 9rem;
   list-style: none;
+}
+
+.header-link,
+.header-two {
+  font-weight: 400;
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.spacing-whole-header {
+  max-width: 750px;
 }

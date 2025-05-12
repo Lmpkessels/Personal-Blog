@@ -12,45 +12,30 @@ article {
 }
 
 .post-unordered-list {
-  margin-bottom: 88px;
+  margin-bottom: 5.5rem;
 }
 
 .sub-post-heading,
 .paragraph,
 .last-list-item {
-  margin-bottom: 22px;
+  margin-bottom: 1.5rem;
 }
 
 .list-items-post {
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
 }
 
 .unordered-list-post {
-  margin-left: 44px;
+  margin-left: 2.75rem;
 }
 
 .title-full-post {
   font-weight: 400;
+  max-width: 750px;
 }
 
-html.default-mode .full-post-link {
-  color: #000000;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-html.default-mode .full-post-link:hover {
-  color: #4f69c4;
-  text-decoration: underline;
-}
-
-html:not(.default-mode) .full-post-link {
-  color: #ffffff;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-html:not(.default-mode) .full-post-link:hover {
-  color: #4f69c4;
-  text-decoration: underline;
+@media (max-width: 480px) {
+  .title-full-post {
+    max-width: 94%;
+  }
 }

@@ -22,7 +22,7 @@ html {
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  width: 750px;
+  max-width: 750px;
   height: 100vh;
   position: relative;
 }
@@ -63,6 +63,6 @@ html {
 /* Sight settings media */
 @media (max-width: 480px) {
   .content-wrapper {
-    width: 94%;
+    max-width: 94%;
   }
 }
