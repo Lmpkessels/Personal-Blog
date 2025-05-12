@@ -6,7 +6,9 @@ if (localStorage.getItem("theme") === "default") {
 }
 
 // Fetch and insert the toggle from partials
+// Production
 // fetch("/toggle.html")
+// Development
 fetch("/partials/toggle.html")
   .then((res) => res.text())
   .then((htmlContent) => {
