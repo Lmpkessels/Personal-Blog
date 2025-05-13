@@ -60,6 +60,10 @@ html {
   list-style: none;
 }
 
+.lead-section {
+  margin-bottom: 2.75rem;
+}
+
 /* Sight settings media */
 @media (max-width: 480px) {
   .content-wrapper {
