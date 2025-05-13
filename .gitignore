@@ -1,6 +1,5 @@
 archive
 dist/images
-public/posts/
 template
 public/trash/
 .prettierignore

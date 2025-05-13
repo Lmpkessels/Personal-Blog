@@ -23,6 +23,3 @@ fetch("/partials/toggle.html")
       localStorage.setItem("theme", mode);
     });
   });
-
-// This is the line for html file =>
-// <div class="light-dark-toggle" style="visibility: hidden;"></div>
