@@ -1,0 +1,38 @@
+.whole-header-about-help {
+  border-bottom: 3px solid #dcdcdc;
+}
+
+/* Styling for date back/hq list */
+.date-back-hq-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+/* Stylling date */
+.date {
+  font-size: 0.875rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+/* Styling back to HQ link */
+.back-hq-link {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: 0.3s ease;
+}
+
+/* Hover effect back to HQ link */
+.back-hq-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+/* Media settings underline back to hq */
+@media (max-width: 768px) {
+  .back-hq-link {
+    text-decoration: underline;
+  }
+}

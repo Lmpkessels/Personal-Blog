@@ -1,0 +1,41 @@
+article {
+  max-width: px;
+  margin: 0 auto;
+  font-size: 1.125rem; /* ~18px */
+  line-height: 1.5;
+}
+
+.list-item-full-post {
+  list-style: none;
+  margin-top: 6.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-unordered-list {
+  margin-bottom: 5.5rem;
+}
+
+.sub-post-heading,
+.paragraph,
+.last-list-item {
+  margin-bottom: 1.5rem;
+}
+
+.list-items-post {
+  margin-bottom: 0.25rem;
+}
+
+.unordered-list-post {
+  margin-left: 2.75rem;
+}
+
+.title-full-post {
+  font-weight: 400;
+  max-width: 750px;
+}
+
+@media (max-width: 480px) {
+  .title-full-post {
+    max-width: 94%;
+  }
+}

@@ -1,0 +1,441 @@
+/* Header content - default mode (light) */
+html.default-mode .header-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+html.default-mode .header-link:hover {
+  color: #4f69c4;
+}
+
+/* Header content - dark */
+html:not(.default-mode) .header-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+html:not(.default-mode) .header-link:hover {
+  color: #4f69c4;
+}
+
+/* Default mode (light) */
+html.default-mode .post-link {
+  color: #dcdcdc;
+  text-decoration: none;
+}
+
+html.default-mode .post-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+/* Dark mode */
+html:not(.default-mode) .post-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+html:not(.default-mode) .post-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+html.default-mode .full-post-link {
+  color: #000000;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+html.default-mode .full-post-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+html:not(.default-mode) .full-post-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+html:not(.default-mode) .full-post-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+/* Taking away hover effect tablet/phone */
+@media (max-width: 768px) {
+  html.default-mode .post-link,
+  html:not(.default-mode) .post-link,
+  html.default-mode .full-post-link,
+  html:not(.default-mode) .full-post-link {
+    text-decoration: underline;
+  }
+}
+@media (max-width: 768px) {
+  html.default-mode .post-link,
+  html:not(.default-mode) .post-link,
+  html.default-mode .full-post-link,
+  html:not(.default-mode) .full-post-link {
+    color: #4f69c4;
+    text-decoration: none;
+  }
+}
+article {
+  max-width: px;
+  margin: 0 auto;
+  font-size: 1.125rem; /* ~18px */
+  line-height: 1.5;
+}
+
+.list-item-full-post {
+  list-style: none;
+  margin-top: 6.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.post-unordered-list {
+  margin-bottom: 5.5rem;
+}
+
+.sub-post-heading,
+.paragraph,
+.last-list-item {
+  margin-bottom: 1.5rem;
+}
+
+.list-items-post {
+  margin-bottom: 0.25rem;
+}
+
+.unordered-list-post {
+  margin-left: 2.75rem;
+}
+
+.title-full-post {
+  font-weight: 400;
+  max-width: 750px;
+}
+
+@media (max-width: 480px) {
+  .title-full-post {
+    max-width: 94%;
+  }
+}
+/* Styling luke h1 header */
+.luke-heading {
+  color: #4f69c4;
+}
+
+/* Styling subheading luke */
+.main-sub-heading {
+  color: #dcdcdc;
+  font-style: italic;
+}
+
+/* Taking away underline from anchor link */
+.luke-heading,
+.main-sub-heading {
+  text-decoration: none;
+}
+
+/* --snip-- */
+.title-header {
+  margin-top: 1.375rem;
+  margin-bottom: 1.375rem;
+}
+
+.whole-navbar {
+  max-width: 750px;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 3px solid #dcdcdc;
+  border-bottom: 3px solid #dcdcdc;
+}
+
+.subject-navbar {
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.link-list {
+  display: flex;
+  justify-content: center;
+  gap: 9rem;
+  list-style: none;
+}
+
+.header-link,
+.header-two {
+  font-weight: 400;
+  margin-top: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.spacing-whole-header {
+  max-width: 750px;
+}
+/* Spacing && alignment navbar */
+.whole-navbar {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1.5rem;
+}
+
+/* Styling links navbar list */
+.link-list {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 2.125rem;
+}
+
+/* Adding border line + space between element and margin */
+.subject-navbar {
+  padding-bottom: 1.5rem;
+}
+
+/*
+ Adding border line bottom + space between element and margin for top and,
+ bottom 
+*/
+.social-navbar {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Navbar decoration */
+.navbar-eye-catcher {
+  color: #4f69c4;
+}
+
+/* Styling navbar link */
+.navbar-link {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: 0.3s ease;
+}
+
+/* Creating hover effect navbar */
+.navbar-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .link-list {
+    gap: 0.75rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  .whole-navbar {
+    width: 100%;
+  }
+}
+/* Page default settings*/
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* Font family for every html file */
+html {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+/* HTML page default settings */
+.page-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Default settings content section each page */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  height: 100vh;
+  position: relative;
+}
+
+/* Sight settings overall luke/subheading, and toggle */
+.title-toggle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Position light dark toggle header */
+.light-dark-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2.75rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.post-section {
+  margin-top: 2.75rem;
+}
+
+.anchor-content {
+  padding-top: 2.75rem;
+  color: #dcdcdc;
+}
+
+/* Styling post lead */
+.post-list-items {
+  list-style: none;
+}
+
+.lead-section {
+  margin-bottom: 2.75rem;
+}
+
+/* Sight settings media */
+@media (max-width: 480px) {
+  .content-wrapper {
+    max-width: 94%;
+  }
+}
+.whole-header-about-help {
+  border-bottom: 3px solid #dcdcdc;
+}
+
+/* Styling for date back/hq list */
+.date-back-hq-list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+/* Stylling date */
+.date {
+  font-size: 0.875rem;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+/* Styling back to HQ link */
+.back-hq-link {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: 0.3s ease;
+}
+
+/* Hover effect back to HQ link */
+.back-hq-link:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+/* Media settings underline back to hq */
+@media (max-width: 768px) {
+  .back-hq-link {
+    text-decoration: underline;
+  }
+}
+/* 
+Set whole toggle in alignment, 
+leave room between objects 
+*/
+.whole-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Default mode - color background */
+html.default-mode body {
+  background: #ffffff54;
+  color: #000000;
+}
+
+/* Default mode - toggle wrapper button */
+html.default-mode .toggle-wrapper {
+  width: 44px;
+  height: 22px;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  background-color: #f69c3d;
+}
+
+/* Default mode - knob inside toggle wrapper */
+html.default-mode .toggle-knob {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 2px;
+  right: 24px;
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+html.default-mode:active .toggle-knob {
+  left: 2px;
+  border-radius: 99px;
+}
+
+/* Dark mode - color background */
+html body {
+  background-color: #0a0f1c;
+  color: #ffffff;
+}
+
+/* Dark mode - toggle wrapper button */
+.toggle-wrapper {
+  width: 44px;
+  height: 22px;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  background-color: #4f69c4;
+}
+
+.toggle-wrapper:active .toggle-knob {
+  width: 34px;
+  right: 2px;
+  border-radius: 99px;
+}
+
+/* Light mode - knob inside wrapper */
+.toggle-knob {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 2px;
+  right: 2px;
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.3s ease, right 1s ease, background-color 0.3s ease;
+}
+
+/* Settings toggle */
+.toggle-knob {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 10px;
+  gap: 1px;
+}
+
+/* Icons */
+/* Sun icon */
+.toggle-sun {
+  width: 18px;
+}
+
+/* Moon icon */
+.toggle-moon {
+  width: 18px;
+}
