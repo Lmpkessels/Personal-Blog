@@ -1,0 +1,12 @@
+# Folders
+archive
+
+# Templates
+shell-commands.txt
+template
+
+# Images
+dist/images
+
+# Styling for unifying code
+.prettierignore
