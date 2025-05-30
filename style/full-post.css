@@ -15,10 +15,15 @@ article {
   margin-bottom: 5.5rem;
 }
 
-.sub-post-heading,
-.paragraph,
-.last-list-item {
-  margin-bottom: 1.5rem;
+.sub-post-heading {
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.last-list-item,
+.paragraph {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .list-items-post {
@@ -27,9 +32,12 @@ article {
 
 .unordered-list-post {
   margin-left: 2.75rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .title-full-post {
+  margin-bottom: 12px;
   font-weight: 400;
   max-width: 750px;
 }

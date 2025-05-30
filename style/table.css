@@ -1,0 +1,22 @@
+.full-table {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+  width: 700px;
+  height: 250px;
+}
+
+.row-header-section {
+  justify-content: space-around;
+}
+
+.column-section {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 33px;
+  justify-content: space-around;
+}
