@@ -65,6 +65,15 @@ html {
   margin-right: 4.25rem;
 }
 
+/* For images and tables */
+.fig-caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  color: #666;
+  margin-top: 6px;
+}
+
 /* Sight settings media */
 @media (max-width: 480px) {
   .content-wrapper {
