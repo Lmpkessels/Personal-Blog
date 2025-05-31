@@ -5,6 +5,11 @@ archive
 shell-commands.txt
 template
 
+# Cheat sheet
+github.md
+gitIgnore.md
+markdown.md
+
 # Images
 dist/images
 
