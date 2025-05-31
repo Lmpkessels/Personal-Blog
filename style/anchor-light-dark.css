@@ -62,6 +62,24 @@ html:not(.default-mode) .full-post-link:hover {
   text-decoration: underline;
 }
 
+/* Table styling lines - dark mode*/
+html:not(.default-mode) .horizontal-row-top {
+  border-top: 1px solid #ffffff;
+}
+
+html:not(.default-mode) .partial-row-left {
+  border-left: 1px solid #ffffff;
+}
+
+html:not(.default-mode) .horizontal-row,
+.horizontal-row-top {
+  border-bottom: 1px solid #ffffff;
+}
+
+html:not(.default-mode) .partial-row {
+  border-right: 1px solid #ffffff;
+}
+
 /* Taking away hover effect tablet/phone */
 @media (max-width: 768px) {
   html.default-mode .post-link,
