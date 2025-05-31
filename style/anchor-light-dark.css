@@ -90,6 +90,8 @@ html:not(.default-mode) .partial-row {
   }
 }
 @media (max-width: 768px) {
+  html.default-mode .header-link,
+  html:not(.default-mode) .header-link,
   html.default-mode .post-link,
   html:not(.default-mode) .post-link,
   html.default-mode .full-post-link,

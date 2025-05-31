@@ -37,7 +37,7 @@ article {
 }
 
 .title-full-post {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   font-weight: 400;
   max-width: 750px;
 }
@@ -47,6 +47,6 @@ article {
     max-width: 94%;
   }
   .unordered-list-post {
-    margin-left: 28px;
+    margin-left: 1.75rem;
   }
 }
