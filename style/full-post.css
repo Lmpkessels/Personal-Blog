@@ -1,7 +1,7 @@
 article {
   max-width: px;
   margin: 0 auto;
-  font-size: 1.125rem; /* ~18px */
+  font-size: 1.125rem;
   line-height: 1.5;
 }
 
@@ -42,8 +42,11 @@ article {
   max-width: 750px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .title-full-post {
     max-width: 94%;
+  }
+  .unordered-list-post {
+    margin-left: 28px;
   }
 }
