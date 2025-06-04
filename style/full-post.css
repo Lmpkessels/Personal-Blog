@@ -11,8 +11,12 @@ article {
   margin-bottom: 0.5rem;
 }
 
-.post-unordered-list {
+.full-post-section {
   margin-bottom: 5.5rem;
+}
+
+.post-article-section {
+  list-style: none;
 }
 
 .sub-post-heading {
