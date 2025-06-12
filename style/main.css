@@ -50,6 +50,10 @@ html {
   margin-top: 2.75rem;
 }
 
+.post-unordered-list {
+  list-style: none;
+}
+
 .anchor-content {
   padding-top: 2.75rem;
   color: #dcdcdc;
