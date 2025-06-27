@@ -101,7 +101,7 @@ html:not(.default-mode) .partial-row {
   }
 }
 article {
-  max-width: px;
+  max-width: 750px;
   margin: 0 auto;
   font-size: 1.125rem;
   line-height: 1.5;
@@ -292,7 +292,7 @@ html {
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 750px;
+  width: 750px;
   height: 100vh;
   position: relative;
 }
@@ -318,6 +318,7 @@ html {
 
 .post-section {
   margin-top: 2.75rem;
+  padding-bottom: 3.75rem;
 }
 
 .post-unordered-list {
