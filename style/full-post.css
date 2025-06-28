@@ -46,6 +46,77 @@ article {
   max-width: 750px;
 }
 
+/* Row for full byte example */
+.display-row {
+  border: 1px solid #888888;
+  border-radius: 4px;
+  margin-left: 12px;
+  width: 350px;
+}
+
+.text {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Table to illustrate ASCII */
+.table-w {
+  border: 1px solid #888888;
+  width: 252px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 12px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1px solid #888888;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-left,
+.top-right,
+.left,
+.right {
+  border-bottom: 1px solid #888888;
+  width: 125px;
+}
+
+.top-left,
+.top-right {
+  padding: 4px;
+}
+
+.left,
+.bottom-left,
+.right,
+.bottom-right {
+  padding: 2px;
+}
+
+.top-left,
+.left,
+.bottom-left,
+.top-right,
+.right,
+.bottom-right {
+  display: flex;
+  justify-content: center;
+}
+
+.top-left,
+.left,
+.bottom-left {
+  border-right: 1px solid #888888;
+}
+
 @media (max-width: 768px) {
   .title-full-post {
     max-width: 94%;
