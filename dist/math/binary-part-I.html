@@ -22,20 +22,20 @@
     <title>Binary Part I</title>
 
     <!-- Development links -->
-    <!-- <link rel="stylesheet" href="/style/anchor-light-dark.css" />
+    <link rel="stylesheet" href="/style/anchor-light-dark.css" />
     <link rel="stylesheet" href="/style/full-post.css" />
     <link rel="stylesheet" href="/style/header.css" />
     <link rel="stylesheet" href="/style/link-list.css" />
     <link rel="stylesheet" href="/style/main.css" />
     <link rel="stylesheet" href="/style/nehe-abme.css" />
     <link rel="stylesheet" href="/style/table.css" />
-    <link rel="stylesheet" href="/style/toggle.css" /> -->
+    <link rel="stylesheet" href="/style/toggle.css" />
 
     <!-- Check link -->
     <!-- <link rel="stylesheet" href="/dist/main.min.css" /> -->
 
     <!-- Production link -->
-    <link rel="stylesheet" href="/main.min.css" />
+    <!-- <link rel="stylesheet" href="/main.min.css" /> -->
   </head>
 
   <body>
@@ -46,9 +46,7 @@
             <div class="header-full-post">
               <ul>
                 <li class="list-item-full-post">
-                  <h2 class="title-full-post">
-                    Part 1 of the Binary Series: Mastering Binary Addition
-                  </h2>
+                  <h2 class="title-full-post">--snip--</h2>
                 </li>
               </ul>
             </div>
@@ -61,7 +59,7 @@
         </header>
         <div>
           <ul class="date-back-hq-list">
-            <li><time datetime="2025-05-31" class="date">2025 May 31</time></li>
+            <li><time datetime="--snip--" class="date">--snip--</time></li>
             <li>
               <a href="/index.html" class="back-hq-link">Back to HQ</a>
             </li>
@@ -72,94 +70,92 @@
           <section class="post-unordered-list">
             <article class="post-list-items">
               <p class="paragraph-top">
-                What if I told you 00100110 + 01010111 = 01111101 — and it’s not
-                magic, it’s just binary. Here you learn what binary is and how
-                binary addition actually works.
+                Imagine you're about to time block 2 events for tomorrow. One
+                takes 120 minutes, the other 75. You want to know exactly how
+                much time it takes, you take your phone, use the calculator app,
+                and add up 120 + 75.
               </p>
-              <h4 class="sub-post-heading">What is binary?</h4>
+              <p class="paragraph">In binary that’s 01111000 + 01001011.</p>
               <p class="paragraph">
-                Binary is a base-2 number system. Each digit (called a bit)
-                holds a value of 1 or 0, think of it like an ON/OFF switch in an
-                electrical device.
-              </p>
-              <ul class="unordered-list-post">
-                <li class="list-items-post">1 = ON</li>
-                <li>0 = OFF</li>
-              </ul>
-              <p class="paragraph">
-                It’s the language used by computer components and almost all
-                modern electronic devices.
-              </p>
-              <h4 class="sub-post-heading">Why it matters</h4>
-              <p class="paragraph">
-                Take a 1GiB (gibibyte) of memory, like in your computer’s RAM
-                for example. <br />
-                That equals:
-              </p>
-              <ul class="unordered-list-post">
-                <li class="list-items-post">
-                  2<sup>30</sup> bytes = 1,073,741,824 bytes
-                </li>
-                <li class="list-items-post">
-                  Since each byte is 8 bits, that’s: <br />
-                  2<sup>30</sup> × 8 = 2<sup>33</sup> bits = 8,589,934,592 bits
-                </li>
-              </ul>
-              <p class="paragraph">
-                We want to make optimal use of this space so the computer is
-                created in a way to constantly do binary calculations, adding,
-                subtracting, and what you can think of is done by the components
-                of a computer.
+                At the end of today's blog you’ll have a deeper understanding of
+                how computers, and even your phone, think to make bit-by-bit
+                calculations in addition.
               </p>
               <p class="paragraph">
-                So it can figure out where it should point to in memory, and
-                what data should show up, once asked for. Numbers, letters,
-                emojis, images, and even the words you’re reading right now are
-                all stored in binary.
+                If you’re not familiar with binary check out
+                <a
+                  href="https://lukefi.com/math/binary-part-I"
+                  class="full-post-link"
+                  >Binary Part-0</a
+                >
+                where we dive into basic binary.
+              </p>
+              <h4 class="sub-post-heading">Binary addition under the hood</h4>
+              <p class="paragraph">
+                We have five components. Three to get to a total amount of bits,
+                and two to implement logic on the total amount of bits.
               </p>
               <p class="paragraph">
-                Let’s look at a 8-bit ripple carry addition trace, displayed
-                below containing five components to get to the end sum of 2
-                bytes added up together. It shows all input combinations and
-                their resulting byte, which you can read downwards in the sum
-                column.
+                To get to a total amount of bits we use, inp_a, inp_b, and
+                carry_in. Carry in is an overflow of the previous bit-by-bit
+                calculation.
               </p>
               <p class="paragraph">
-                Each row represents one bit, starting from the least significant
-                (right) to the most significant (left). The remaining byte is
-                built by repeating this process 8 times.
+                Sum is used to get a byte as the end result.
               </p>
-              <h4 class="sub-post-heading">The 5 components</h4>
-              <ul class="unordered-list-post">
-                <li class="list-items-post">
-                  <b>A = byte_1</b>, starting at the top of the column at the
-                  least significant bit.
-                </li>
-                <li class="list-items-post">
-                  <b>B = byte_2</b>, which also starts at the top of the column
-                  at the least significant bit.
-                </li>
-                <li class="list-items-post">
-                  <b>Carry_in</b> the overflow from the previous bit's addition,
-                  calculated as carry out divided by 2.
-                </li>
-                <li class="list-items-post">
-                  <b>Sum = (A + B + Carry_in) % 2</b>, and will represent from
-                  bit_0 to bit_7 the full byte displayed starting from the
-                  rightmost at (bit_0) (least significant) and moving left
-                  (bit_7).
-                </li>
-                <li class="list-items-post">
-                  <b>Carry_out = (A + B + Carry in) / 2</b>, this calculation is
-                  done so we know if we need to create a carry_in for the next
-                  bit addition.
-                </li>
-              </ul>
+              <p class="paragraph">Carry out to check if we have overflow.</p>
               <p class="paragraph">
-                NOTE: Because computers start at index 0 by default, we do so
-                bit_0 in base-10 would represent the number 1 so in total we
-                have 8 positions.
+                Sum and carry out use both logic, to get an output.
               </p>
+              <p class="paragraph">
+                To receive a byte as output and check if memory can allocate it
+                on the stack or heap, logic gates are used for carry_in and
+                carry_out.
+              </p>
+              <p class="paragraph">
+                Sum makes 2X use of a more complex logic gate named XOR.
+              </p>
+              <p class="paragraph">
+                XOR is created by basic gates called; AND, NOT, and OR. Here I
+                show you an XOR gate in a table using basic gates AND, NOT, and
+                OR:
+              </p>
+              <p class="paragraph">ADD EXAMPLE</p>
+              <figcaption class="fig-caption"></figcaption>
+              <p class="paragraph">Sum then looks look like:</p>
+              <p class="paragraph">ADD EXAMPLE</p>
+              <figcaption class="fig-caption"></figcaption>
+              <p class="paragraph">Now let’s move to carry out.</p>
+              <p class="paragraph">
+                Carry out is used to detect overflow, meaning, there’s no
+                storage left to point to.
+              </p>
+              <p class="paragraph">
+                Carry out is created using logic gates AND, and OR, here I
+                illustrate carry out using both gates:
+              </p>
+              <p class="paragraph">ADD EXAMPLE</p>
+              <figcaption class="fig-caption"></figcaption>
+              <p class="paragraph">
+                We use logic gates in addition because that’s exactly how our
+                CPU communicates: a CPU contains transistors which are the
+                starting point before each logic gate, when enough voltage is
+                received at the transistor it communicates ON, if no voltage,
+                OFF. Then it goes through the logic gate, depending on the gate
+                the right logic is used.
+              </p>
+              <p class="paragraph">
+                Let’s look at the full adder below using the five elements:
+                Inp_a, Inp_b, Carry_in, Sum and Carry_out.
+              </p>
+              <p class="paragraph">
+                Each row represents a bit-by-bit calculation, starting from
+                least significant bit (LSB) on the right hand side (bit_0 in the
+                full adder execution table) to the most significant bit (MSB)
+                left (bit_7 in the full adder execution table).
+              </p>
+              <p class="">ADD TABLE</p>
+              <figcaption class="fig-caption"></figcaption>
               <br />
               <figure>
                 <div class="table-wrapper">
@@ -168,8 +164,8 @@
                     <div class="partial-row">A</div>
                     <div class="partial-row">B</div>
                     <div class="partial-row">Carry in</div>
-                    <div class="partial-row">Sum (%2)</div>
-                    <div class="partial-row">Carry out (/2)</div>
+                    <div class="partial-row">Sum</div>
+                    <div class="partial-row">Carry out</div>
                   </div>
                   <div class="horizontal-row">
                     <div class="partial-row partial-row-left">Bit_0</div>
@@ -237,40 +233,44 @@
                   </div>
                 </div>
                 <figcaption class="fig-caption">
-                  8-bit ripple carry addition trace.
+                  8-bit full addr carry trace.
                 </figcaption>
               </figure>
               <br />
+              <p class="paragraph">
+                Note: Because computers start counting at index 0 we will do
+                that too, bit_0 therefore represents the first bit in the byte,
+                and bit_7 the last bit. In decimal, the total range would be
+                eight bits.
+              </p>
+              <p class="paragraph">
+                You can read the remaining byte that would be the return value
+                of a mathematical operation in the Sum column; the return value
+                is created by repeating the bit-by-bit addition process 8 times.
+              </p>
               <h4 class="sub-post-heading">The truth table explained</h4>
-
               <p class="paragraph">
-                <b>Carry_in</b> is the overflow of the previous calculation.
-                Once we have a carry_in we know that the previous
-                <b>Carry_out</b> calculation was 1 bit overflow, remember:
-                <br /><b>Carry_out is the total A + B + Carry_in / 2.</b>
+                Carry_in is the overflow of the previous calculation. Once we
+                have a carry_in we know that the previous Carry_out calculation
+                was 1 bit overflow.
               </p>
               <p class="paragraph">
-                NOTE: Overflow is the given location in RAM running out of
-                space.
+                If we at the end of the truth table end up with one bit overflow
+                we know the program may not compile for the user, or the CPU
+                adds another byte if memory allows.
               </p>
               <p class="paragraph">
-                The Sum, as you’ve read above, sums the whole to the remainder
-                of two, it’s used so we know what to write down when the full
-                truth table is completed. Which leaves us with the full byte.
+                The sum tells the CPU what value to store in the byte after
+                completing the full adder calculation which you will read on
+                your phone after doing the calculation as a decimal number.
               </p>
               <p class="paragraph">
-                In this case, 01111101 equals 125 in decimal numbers.
+                This is part I of a multi-part series exploring how binary logic
+                powers real computing. I’m sharing what I learn as I go, from
+                carry logic to CPUs and memory.
               </p>
               <p class="paragraph">
-                The maximum number of bits that can be held in a byte is 8 as
-                you probably already guessed, and if each value holds the number
-                1 then we have a total of 8 ones => 11111111, leaving us with
-                the number 255. Because each one calculated to the power of two
-                is; 128, 64, 32, 16, 8, 4, 2, 1. And all positions add up
-                together is 255.
-              </p>
-              <p class="paragraph">
-                That’s it for now, if you want to stay updated then follow me on
+                If you’re in binary, Rust, or systems thinking, follow me on
                 <a
                   href="https://www.linkedin.com/in/luuk-kessels"
                   class="full-post-link"
@@ -279,24 +279,23 @@
                 or
                 <a href="https://x.com/lukefi_" class="full-post-link"
                   >X/Twitter</a
-                >, both are also fine, here I’ll give you a note when part 2
-                follows, see you there.
+                >
+                here I’ll post when the next part goes live.
               </p>
               <hr />
               <p class="paragraph">
-                P.S. If you’d like to inspect my GitHub repository where I’ve
-                coded out bitwise addition and subtraction then you can follow
-                this link to
+                If you want to see how I simulate logic gates using Rust then
+                check out
                 <a
-                  href="https://github.com/Lmpkessels/rust101.git"
+                  href="https://github.com/Lmpkessels/binarySeries"
                   class="full-post-link"
-                  >GitHub</a
-                >
+                  >Click Here</a
+                >.
               </p>
               <p class="paragraph">
-                P.P.S. I used ChatGPT to fact-check, but we can both make
-                mistakes. If you spot one, or see an opportunity to improve,
-                feel free to reach out:
+                P.S. I used ChatGPT to fact-check, but ChatGPT and I can both
+                make mistakes. If you spot a mistake, or see an opportunity to
+                improve, feel free to reach out:
                 <a href="mailto:luuk@lukefi.com" class="full-post-link"
                   >Luuk@lukefi.com</a
                 >
