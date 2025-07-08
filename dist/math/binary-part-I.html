@@ -22,14 +22,7 @@
     <title>Binary Part I</title>
 
     <!-- Development links -->
-    <link rel="stylesheet" href="/style/anchor-light-dark.css" />
-    <link rel="stylesheet" href="/style/full-post.css" />
-    <link rel="stylesheet" href="/style/header.css" />
-    <link rel="stylesheet" href="/style/link-list.css" />
-    <link rel="stylesheet" href="/style/main.css" />
-    <link rel="stylesheet" href="/style/nehe-abme.css" />
-    <link rel="stylesheet" href="/style/table.css" />
-    <link rel="stylesheet" href="/style/toggle.css" />
+    <link rel="stylesheet" href="/style/00main.css" />
 
     <!-- Check link -->
     <!-- <link rel="stylesheet" href="/dist/main.min.css" /> -->
@@ -47,7 +40,7 @@
               <ul>
                 <li class="list-item-full-post">
                   <h2 class="title-full-post">
-                    How you're electronic device does binary addition
+                    How binary addition is done under the hood
                   </h2>
                 </li>
               </ul>
@@ -62,7 +55,7 @@
         <div>
           <ul class="date-back-hq-list">
             <li>
-              <time datetime="2025-07-06" class="date">2025 Jule 06</time>
+              <time datetime="2025-07-08" class="date">2025 Jule 08</time>
             </li>
             <li>
               <a href="/index.html" class="back-hq-link">Back to HQ</a>
@@ -74,56 +67,51 @@
           <section class="post-unordered-list">
             <article class="post-list-items">
               <p class="paragraph-top">
-                Imagine you're about to time block 2 events for tomorrow. One
-                takes 120 minutes, the other 75. You want to know exactly how
-                much time it takes, you take your phone, use the calculator app,
-                and add up 120 + 75.
+                Imagine you're about to time block 2 events for tomorrow.
+              </p>
+              <p class="paragraph">
+                One takes 120 minutes, the other 75. You want to know exactly
+                how much time it takes, you take your phone, use the calculator
+                app, and add up 120 + 75.
               </p>
               <p class="paragraph">In binary that’s 01111000 + 01001011.</p>
               <p class="paragraph">
-                At the end of today's blog you’ll have a deeper understanding of
-                how computers, and even your phone, think to make bit-by-bit
-                calculations in addition.
+                At the end of this blog you’ll have a deeper understanding of
+                how computers, and even your phone think, to make
+                <b>bit-by-bit calculations in addition.</b>
               </p>
               <p class="paragraph">
                 If you’re not familiar with binary check out
                 <a
                   href="https://lukefi.com/math/binary-part-I"
                   class="full-post-link"
-                  >Binary Part-0</a
+                  ><b>Binary Part-0</b></a
                 >
-                where we dive into basic binary.
+                where we dive into the basics of binary.
               </p>
-              <h4 class="sub-post-heading">The 5 Parts of Binary Addition</h4>
+              <h3 class="sub-post-heading">The 5 Parts of Binary Addition</h3>
               <p class="paragraph">
-                We have five components. Three to get to a total amount of bits,
-                and two to implement logic on the total amount of bits.
-              </p>
-              <p class="paragraph">
-                To get to a total amount of bits we use, inp_a, inp_b, and
-                carry_in. Carry in is an overflow of the previous bit-by-bit
-                calculation.
+                You have <b>input A, input B,</b> and <b>Carry In</b> to
+                calculate the total result. Carry In is the <b>overflow</b> from
+                the previous <b>bit-by-bit calculation.</b>
               </p>
               <p class="paragraph">
-                Sum is used to get a byte as the end result.
-              </p>
-              <p class="paragraph">Carry out to check if we have overflow.</p>
-              <p class="paragraph">
-                Sum and carry out use both logic, to get an output.
+                Then you have <b>Sum</b> and <b>Carry Out</b> both using
+                <b>Logic gates.</b> Sum represents the result bit, and Carry out
+                communicates if there’s overflow.
               </p>
               <p class="paragraph">
-                To receive a byte as output and check if memory can allocate it
-                on the stack or heap, logic gates are used for carry_in and
-                carry_out.
+                <b>Sum</b> uses the <b>XOR gate</b> twice.
               </p>
               <p class="paragraph">
-                Sum makes 2X use of a more complex logic gate named XOR.
+                <b>Carry Out</b> uses <b>AND, OR,</b> and <b>XOR</b>.
               </p>
-              <h4 class="sub-post-heading">What XOR Really Is</h4>
+              <h3 class="sub-post-heading">How XOR is created</h3>
               <p class="paragraph">
-                XOR is created by basic gates called; AND, NOT, and OR. Here I
-                show you an XOR gate in a table using basic gates AND, NOT, and
-                OR:
+                <b>XOR</b> is created by making use of all three basic gates;
+                <b>AND, NOT, and OR.</b> In figure 1.0 below I show you an
+                example of the <b>XOR</b>
+                logic gate using a diagram:
               </p>
               <img
                 src="/dist/images/XOR-logic-gate.png"
@@ -131,27 +119,59 @@
                 class="xor-gate"
               />
               <figcaption class="fig-caption">
-                XOR gate built using only basic gates: AND, OR, and NOT. Outputs
-                1 when A and B are different.
+                <b>Figure 1.0:</b> XOR gate built using only basic gates: AND,
+                OR, and NOT. Outputs 1 when A and B are different.
               </figcaption>
-              <p class="paragraph">Sum then looks like:</p>
+              <p class="paragraph">
+                Which is the definition of XOR: <b>a</b> is true if <b>b</b> is
+                false, and <b>b</b> is true if <b>a</b> is false, if <b>a</b> is
+                true and <b>b</b> is true then the output is false. Same in, if
+                <b>a</b> is false and <b>b</b> is false then the output is
+                false.
+              </p>
+              <p class="paragraph">
+                Next, let’s explore how the Sum logic works.
+              </p>
+              <h3 class="sub-post-heading">How Sum Works Under the Hood</h3>
+              <p class="paragraph">
+                <b>Sum</b> looks a bit more complex under the hood, but its only
+                difference is that it uses the <b>XOR gate twice</b>, as shown
+                in figure 1.1.
+              </p>
               <img
                 src="/dist/images/logic_gate_2x_XOR=SUM.png"
                 alt="Sum simulation using logic gates"
                 class="sum-gate"
               />
               <figcaption class="fig-caption">
-                Sum output of a 1-bit full adder. Built by chaining two XOR
-                gates: (A XOR B) XOR CarryIn.
+                <b>Figure 1.1:</b> This XOR circuit follows the logical
+                expression: ((a AND NOT b) OR (b AND NOT a)).
               </figcaption>
-              <p class="paragraph">Now let’s move to carry out.</p>
               <p class="paragraph">
-                Carry out is used to detect overflow, meaning, there’s no
-                storage left to point to.
+                This <b>Sum circuit follows the logical expression</b>: (a AND
+                NOT b) OR (b AND NOT a) = Output, then (CarryIn AND NOT output)
+                OR (NOT output AND CarryIn).
               </p>
               <p class="paragraph">
-                Carry out is created using logic gates AND, and OR, here I
-                illustrate carry out using both gates:
+                So simply put, the
+                <b>Sum circuit follows 2X the logical expression:</b> ((a XOR b)
+                XOR carry in).
+              </p>
+              <p class="paragraph">
+                When the <b>output of Sum</b> is received it’s
+                <b>stored in memory.</b>
+              </p>
+              <p class="paragraph">
+                Now, let’s move to the last layer of the full adder.
+              </p>
+              <h3 class="sub-post-heading">Carry out the last layer</h3>
+              <p class="paragraph">
+                <b>Carry out</b> is used to detect <b>overflow</b>, if there’s
+                overflow then there’s no storage left in memory to point to.
+              </p>
+              <p class="paragraph">
+                <b>Carry out uses 3 gates: AND, OR,</b> and <b>XOR</b>, in
+                figure 1.2 below, I illustrate carry out using all three gates:
               </p>
               <img
                 src="/dist/images/carry_out_gate.png"
@@ -159,48 +179,75 @@
                 class="carry-out-gate"
               />
               <figcaption class="fig-caption">
-                Carry-out logic of a 1-bit full adder using basic gates. Output
-                is 1 when (A AND B) or (CarryIn AND (A XOR B)) is true.
+                <b>Figure 1.2:</b> Carry-out logic of a 1-bit full adder using
+                basic gates. Output is 1 when (A AND B) or (CarryIn AND (A XOR
+                B)) is true.
               </figcaption>
               <p class="paragraph">
-                We use logic gates in addition because that’s exactly how our
-                CPU communicates: a CPU contains transistors which are the
-                starting point before each logic gate, when enough voltage is
-                received at the transistor it communicates ON, if no voltage,
-                OFF. Then it goes through the logic gate, depending on the gate
-                the right logic is used.
-              </p>
-              <h4 class="sub-post-heading">
-                Full Adder Logic (Sum and Carry Out)
-              </h4>
-              <p class="paragraph">
-                Let’s look at the full adder below using the five elements:
-                Inp_a, Inp_b, Carry_in, Sum and Carry_out.
+                <b>This Carry Out circuit follows the logical expressions:</b>
+                ((a AND b) OR (CarryIn AND (a AND NOT b) OR (b AND NOT a))).
               </p>
               <p class="paragraph">
-                Each row represents a bit-by-bit calculation, starting from
+                Simply put <b>Carry out in logical expressions</b>: ((a AND b)
+                OR (CarryIn AND (a XOR b))).
+              </p>
+              <p class="paragraph">
+                As you’ve seen in the three diagrams above, everything can be
+                built using just <b>three basic gates: AND, NOT</b> and
+                <b>OR</b>.
+              </p>
+              <p class="paragraph">But, why are logic gates used?</p>
+              <h3 class="sub-post-heading">Why Logic Gates are Used</h3>
+              <p class="paragraph">
+                <b
+                  >In addition the CPU in your PC communicates through logic
+                  gates. A CPU contains transistors which are the starting point
+                  before each logic gate, when enough voltage is received at the
+                  transistor it communicates ON, if no voltage is received,
+                  OFF.</b
+                >
+                Then it goes through the logic gate, depending on each gate
+                logic is applied.
+              </p>
+              <p class="paragraph">
+                Let’s look at an 8-bit full adder below using; Input_a, Input_b,
+                Carry_in, Sum and Carry_out.
+              </p>
+              <p class="paragraph">
+                <b>Each row follows a bit-by-bit calculation</b>, starting from
                 least significant bit (LSB) on the right hand side (bit_0 in the
-                full adder execution table) to the most significant bit (MSB)
-                left (bit_7 in the full adder execution table).
+                8-bit full adder) to the most significant bit (MSB) on the left
+                hand side (bit_7 in the 8-bit full adder).
               </p>
-              <h4 class="sub-post-heading">8-bit Addition Trace</h4>
-              <div class="table-wr">
-                <div class="top">Sum: ((a XOR b) XOR Carry in)</div>
+              <div class="table">
+                <div class="top"><b>Sum:</b> ((a XOR b) XOR Carry in)</div>
                 <div class="bottom">
-                  Carry out: ((a AND b) OR (Carry in AND (a XOR b)))
+                  <b>Carry out:</b> ((a AND b) OR (Carry in AND (a XOR b)))
                 </div>
               </div>
-              <figcaption class="fig-caption"></figcaption>
+              <p><b>Note:</b></p>
+              <p class="paragraph">
+                Because computers start counting at Index 0 we will do the same,
+                Bit_0 represents the Least Significant Bit (rightmost) bit in
+                the byte, the one displayed at the top of the full adder.
+              </p>
+              <p class="paragraph">
+                And the Most Significant Bit (leftmost), is displayed at the
+                bottom at Bit_7 of the full adder.
+              </p>
+              <p class="paragraph">
+                In decimal, the total range would be eight bits.
+              </p>
               <br />
               <figure>
                 <div class="table-wrapper">
                   <div class="horizontal-row horizontal-row-top">
-                    <div class="partial-row partial-row-left">Bit position</div>
+                    <div class="partial-row partial-row-left">Bit_position</div>
                     <div class="partial-row">A</div>
                     <div class="partial-row">B</div>
-                    <div class="partial-row">Carry in</div>
+                    <div class="partial-row">Carry_in</div>
                     <div class="partial-row">Sum</div>
-                    <div class="partial-row">Carry out</div>
+                    <div class="partial-row">Carry_out</div>
                   </div>
                   <div class="horizontal-row">
                     <div class="partial-row partial-row-left">Bit_0</div>
@@ -212,104 +259,122 @@
                   </div>
                   <div class="horizontal-row">
                     <div class="partial-row partial-row-left">Bit_1</div>
-                    <div class="partial-row">1</div>
-                    <div class="partial-row">1</div>
-                    <div class="partial-row">0</div>
                     <div class="partial-row">0</div>
                     <div class="partial-row">1</div>
+                    <div class="partial-row">0</div>
+                    <div class="partial-row">1</div>
+                    <div class="partial-row">0</div>
                   </div>
                   <div class="horizontal-row">
                     <div class="partial-row partial-row-left">Bit_2</div>
-                    <div class="partial-row">1</div>
-                    <div class="partial-row">1</div>
-                    <div class="partial-row">1</div>
-                    <div class="partial-row">1</div>
-                    <div class="partial-row">1</div>
+                    <div class="partial-row">0</div>
+                    <div class="partial-row">0</div>
+                    <div class="partial-row">0</div>
+                    <div class="partial-row">0</div>
+                    <div class="partial-row">0</div>
                   </div>
                   <div class="horizontal-row">
                     <div class="partial-row partial-row-left">Bit_3</div>
-                    <div class="partial-row">0</div>
-                    <div class="partial-row">0</div>
                     <div class="partial-row">1</div>
                     <div class="partial-row">1</div>
                     <div class="partial-row">0</div>
+                    <div class="partial-row">0</div>
+                    <div class="partial-row">1</div>
                   </div>
                   <div class="horizontal-row">
                     <div class="partial-row partial-row-left">Bit_4</div>
-                    <div class="partial-row">0</div>
                     <div class="partial-row">1</div>
                     <div class="partial-row">0</div>
                     <div class="partial-row">1</div>
                     <div class="partial-row">0</div>
+                    <div class="partial-row">1</div>
                   </div>
                   <div class="horizontal-row">
                     <div class="partial-row partial-row-left">Bit_5</div>
                     <div class="partial-row">1</div>
                     <div class="partial-row">0</div>
-                    <div class="partial-row">0</div>
                     <div class="partial-row">1</div>
                     <div class="partial-row">0</div>
+                    <div class="partial-row">1</div>
                   </div>
                   <div class="horizontal-row">
                     <div class="partial-row partial-row-left">Bit_6</div>
-                    <div class="partial-row">0</div>
                     <div class="partial-row">1</div>
-                    <div class="partial-row">0</div>
                     <div class="partial-row">1</div>
-                    <div class="partial-row">0</div>
+                    <div class="partial-row">1</div>
+                    <div class="partial-row">1</div>
+                    <div class="partial-row">1</div>
                   </div>
                   <div class="horizontal-row">
                     <div class="partial-row partial-row-left">Bit_7</div>
                     <div class="partial-row">0</div>
                     <div class="partial-row">0</div>
-                    <div class="partial-row">0</div>
-                    <div class="partial-row">0</div>
+                    <div class="partial-row">1</div>
+                    <div class="partial-row">1</div>
                     <div class="partial-row">0</div>
                   </div>
                 </div>
                 <figcaption class="fig-caption">
-                  8-bit full addr carry trace.
+                  8-bit full addr table
                 </figcaption>
               </figure>
               <br />
               <p class="paragraph">
-                Note: Because computers start counting at index 0 we will do
-                that too, bit_0 therefore represents the first bit in the byte,
-                and bit_7 the last bit. In decimal, the total range would be
-                eight bits.
+                <b
+                  >Carry_in is the Carry_out from the previous bit-by-bit
+                  calculation.</b
+                >
+                So each Carry_in is carried from the previous row, and received
+                from Carry_out.
               </p>
               <p class="paragraph">
-                You can read the remaining byte in the sum column. The return
-                value is created by repeating the bit-by-bit addition process 8
-                times.
+                You can read the remaining byte in the Sum column;
+                <b
+                  >a return value is given by repeating a bit-by-bit addition
+                  process 8 times.</b
+                >
               </p>
-              <h4 class="sub-post-heading">The truth table explained</h4>
+              <h3 class="sub-post-heading">Why This Matters for CPUs</h3>
               <p class="paragraph">
-                Carry_in is the overflow of the previous calculation. Once we
-                have a carry_in we know that the previous Carry_out calculation
-                was 1 bit overflow.
-              </p>
-              <p class="paragraph">
-                If we at the end of the truth table end up with one bit overflow
-                then the result may not fit in 8 bits requiring more memory, the
-                CPU adds another byte if memory allows, else the program isn't
-                run.
-              </p>
-              <h4 class="sub-post-heading">
-                Wrap-up: Why This Matters for CPUs
-              </h4>
-              <p class="paragraph">
-                The sum tells the CPU what value to store in the byte after
-                completing the full adder calculation which you will read on
-                your phone after doing the calculation as a decimal number.
+                Carry_in is the overflow of the previous bit-by-bit calculation.
+                Once we Carry_in we know that the previous Carry_out had 1 bit
+                that it couldn’t store, called overflow.
               </p>
               <p class="paragraph">
-                This is part I of a multi-part series exploring how binary logic
-                powers real computing. I’m sharing what I learn as I go, from
-                carry logic to CPUs and memory.
+                <b
+                  >If at the end of the 8-Bit Full Adder, we end up with one bit
+                  overflow</b
+                >, then, the result may not fit in 8 bits,
+                <b>requiring more memory.</b>
               </p>
               <p class="paragraph">
-                If you’re in binary, Rust, or systems thinking, follow me on
+                This means that the program may not compile for the user if
+                memory doesn’t allow, else the CPU adds another byte if memory
+                allows.
+              </p>
+              <p class="paragraph">
+                The <b>Sum tells the CPU which value to store in memory</b>,
+                after the 8-bit full adder completes.
+              </p>
+              <p class="paragraph">
+                After pressing (=) on your calculation app the CPU follows this
+                8-Bit full adder and decimal number 195 is shown.
+              </p>
+              <p class="paragraph">
+                And just like that, you’ve seen how your phone adds 120 + 75,
+                one bit at a time.
+              </p>
+              <h3 class="sub-post-heading">Closure</h3>
+              <p class="paragraph">
+                This is <b>part I</b> of a multi-part series exploring how
+                binary logic powers real computing. I’m sharing what I learn as
+                I go, from carrying logic to CPUs and memory.
+              </p>
+              <p class="paragraph">
+                <b>Part II</b>, covers subtraction and borrow logic.
+              </p>
+              <p class="paragraph">
+                <b>If you want to stay updated</b> follow me on:
                 <a
                   href="https://www.linkedin.com/in/luuk-kessels"
                   class="full-post-link"
@@ -323,12 +388,12 @@
                   target="_blank"
                   >X/Twitter</a
                 >
-                here I’ll post when the next part goes live.
+                here I’ll post when part II goes live.
               </p>
               <hr />
               <p class="paragraph">
-                If you want to see how I simulate logic gates using Rust then
-                check out
+                If you want to see <b>programmed examples</b> where I simulate
+                logic gates using Rust, then check out:
                 <a
                   href="https://github.com/Lmpkessels/binarySeries"
                   class="full-post-link"

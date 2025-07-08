@@ -80,6 +80,19 @@ html:not(.default-mode) .partial-row {
   border-right: 1px solid #ffffff;
 }
 
+/* Small table setting */
+html:not(.default-mode) .table {
+  border-top: 1px solid #ffffff;
+}
+
+html:not(.default-mode) .top {
+  border-left: 1px solid #ffffff;
+}
+
+html:not(.default-mode) .bottom {
+  border-bottom: 1px solid #ffffff;
+}
+
 /* Taking away hover effect tablet/phone */
 @media (max-width: 768px) {
   html.default-mode .post-link,
@@ -107,6 +120,37 @@ article {
   line-height: 1.5;
 }
 
+/* Small table for displaying Sum / Carry out */
+.table {
+  width: 28.125rem;
+  margin-left: 0.75rem;
+  margin-bottom: 18px;
+  border: 1px solid #000000;
+  border-radius: 0.125rem;
+}
+
+.top {
+  border-bottom: 1px solid #000000;
+  width: 28rem;
+  margin-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.bottom {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Image styling for displaying logic gate simulation */
+.xor-gate,
+.sum-gate,
+.carry-out-gate {
+  width: 45.25rem;
+  height: 21.875rem;
+  margin-left: 0.75rem;
+  border-radius: 0.125rem;
+}
+
 .list-item-full-post {
   list-style: none;
   margin-top: 6.75rem;
@@ -122,8 +166,8 @@ article {
 }
 
 .sub-post-heading {
-  margin-top: 2.5rem;
-  margin-bottom: 1.25rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .last-list-item,
@@ -220,7 +264,10 @@ article {
 }
 
 @media (max-width: 768px) {
-  .title-full-post {
+  .title-full-post,
+  .xor-gate,
+  .sum-gate,
+  .carry-out-gate {
     max-width: 94%;
   }
   .unordered-list-post {
@@ -373,7 +420,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 750px;
 }
 
 /* Position light dark toggle header */
@@ -390,6 +437,7 @@ html {
 .post-section {
   margin-top: 2.75rem;
   padding-bottom: 3.75rem;
+  width: 750px;
 }
 
 .post-unordered-list {
@@ -413,12 +461,21 @@ html {
   font-size: 0.875rem;
   color: #666;
   margin-top: 0.375rem;
+  width: 37.5rem;
+  margin-left: 4.688rem;
 }
 
 /* Sight settings media */
-@media (max-width: 480px) {
-  .content-wrapper {
-    max-width: 94%;
+@media (max-width: 768px) {
+  .post-section,
+  .post-unordered-list {
+    max-width: 98%;
+  }
+
+  .fig-caption {
+    width: 94%;
+    margin-left: 0px;
+    text-align: center;
   }
 }
 .whole-header-about-help {
@@ -463,6 +520,7 @@ html {
   margin-left: 0.938rem;
   overflow-x: auto;
   max-width: 43.75rem;
+  border-radius: 0.125rem;
 }
 
 .horizontal-row-top {

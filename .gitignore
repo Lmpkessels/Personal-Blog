@@ -11,7 +11,11 @@ gitIgnore.md
 markdown.md
 
 # Images
-dist/images
+images
 
 # Styling for unifying code
 .prettierignore
+
+# Personal help sheets
+TODO.md
+

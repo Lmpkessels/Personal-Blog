@@ -6,15 +6,16 @@ article {
 }
 
 /* Small table for displaying Sum / Carry out */
-.table-wr {
+.table {
   width: 28.125rem;
   margin-left: 0.75rem;
-  border: 1px solid #ffffff;
+  margin-bottom: 18px;
+  border: 1px solid #000000;
   border-radius: 0.125rem;
 }
 
 .top {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #000000;
   width: 28rem;
   margin-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -148,7 +149,10 @@ article {
 }
 
 @media (max-width: 768px) {
-  .title-full-post {
+  .title-full-post,
+  .xor-gate,
+  .sum-gate,
+  .carry-out-gate {
     max-width: 94%;
   }
   .unordered-list-post {

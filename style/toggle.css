@@ -85,12 +85,8 @@ html body {
 }
 
 /* Icons */
-/* Sun icon */
-.toggle-sun {
-  width: 18px;
-}
-
-/* Moon icon */
+/* Sun && Moon icon */
+.toggle-sun,
 .toggle-moon {
   width: 18px;
 }
