@@ -163,7 +163,12 @@ html {
 /***** 8. COMPONENTS: HEADER / NAVBAR *****/
 .title-header {
   padding-top: 38px;
-  height: 153px;
+  height: 100vh;
+  max-height: 153px;
+}
+.whole-header-about-help {
+  height: 100vh;
+  max-height: 156px;
 }
 .whole-navbar {
   height: 9rem;
