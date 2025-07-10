@@ -1,4 +1,4 @@
-/***** 1. RESET & BASE SETUP *****/
+/***** RESET & BASE SETUP *****/
 *,
 *::before,
 *::after {
@@ -11,7 +11,7 @@ html {
   font-family: "Nunito Sans", sans-serif;
 }
 
-/***** 2. COLOR UTILITIES *****/
+/***** COLOR UTILITIES *****/
 .color-lb {
   color: #4f69c4;
 } /* Light Blue */
@@ -22,7 +22,7 @@ html {
   color: #888;
 } /* Dark Gray */
 
-/***** 3. HOVER EFFECTS *****/
+/***** HOVER EFFECTS *****/
 .hover-g-b {
   color: #dcdcdc;
   transition: 0.3s ease;
@@ -41,15 +41,21 @@ html {
   text-decoration: underline;
 }
 
-/***** 4. BORDER UTILITIES *****/
+/***** BORDER UTILITIES *****/
 .border-1px-gr {
   border: 1px solid #888;
+}
+.border-1px-lg {
+  border: 1px solid #dcdcdc;
 }
 .border-1px-bl {
   border: 1px solid #000;
 }
 .border-1px-top-lg {
   border-top: 1px solid #000;
+}
+.border-1px-top-lg {
+  border-top: 1px solid #dcdcdc;
 }
 .border-1px-bott-lg {
   border-bottom: 1px solid #dcdcdc;
@@ -66,6 +72,9 @@ html {
 .border-1px-right-gr {
   border-right: 1px solid #888;
 }
+.border-1px-right-lg {
+  border-right: 1px solid #dcdcdc;
+}
 .border-1px-right-bl,
 .partial-row {
   border-right: 1px solid #000;
@@ -78,7 +87,20 @@ html {
   border-radius: 4px;
 }
 
-/***** 5. FLEX LAYOUTS *****/
+/***** BORDER UTILITIES - LIGHT/DARK MODE *****/
+html.default-mode .border-1px-top-lg {
+  border-top: 1px solid #000;
+}
+
+html.default-mode .border-1px-lg {
+  border: 1px solid #000;
+}
+
+html.default-mode .border-1px-right-lg {
+  border-right: 1px solid #000;
+}
+
+/***** FLEX LAYOUTS *****/
 .flex-just-cntr {
   display: flex;
   justify-content: center;
@@ -104,7 +126,7 @@ html {
   flex-direction: row;
 }
 
-/***** 6. WIDTH, HEIGHT, SPACING *****/
+/***** WIDTH, HEIGHT, SPACING *****/
 .full-width {
   width: 100%;
 }
@@ -160,7 +182,7 @@ html {
   margin: 1.125rem 0;
 }
 
-/***** 8. COMPONENTS: HEADER / NAVBAR *****/
+/***** COMPONENTS: HEADER / NAVBAR *****/
 .title-header {
   padding-top: 38px;
   height: 100vh;
@@ -184,7 +206,7 @@ html {
   gap: 2rem;
 }
 
-/***** 9. COMPONENTS: MAIN POST *****/
+/***** COMPONENTS: MAIN POST *****/
 .post-section {
   margin-top: 2.75rem;
   padding-bottom: 3.75rem;
@@ -197,7 +219,7 @@ html {
   font-size: 0.875rem;
 }
 
-/***** 10. COMPONENTS: ARTICLE / FULL POST *****/
+/***** COMPONENTS: ARTICLE / FULL POST *****/
 article {
   margin: 0 auto;
   font-size: 1.125rem;
@@ -218,6 +240,7 @@ article {
 }
 .unordered-list-post {
   margin-left: 2.75rem;
+  margin-right: 2.75rem;
   margin-top: 1.25rem;
   margin-bottom: 1rem;
 }
@@ -226,11 +249,12 @@ article {
   font-weight: 400;
 }
 
-/***** 11. COMPONENTS: TABLES & ROWS *****/
+/***** COMPONENTS: TABLES & ROWS *****/
 .table {
   width: 28.125rem;
   margin-left: 0.75rem;
   margin-bottom: 18px;
+  border-radius: 2px;
 }
 .table-w {
   width: 252px;
@@ -238,6 +262,7 @@ article {
 .display-row {
   width: 350px;
 }
+
 .partial-row {
   height: 2.375rem;
 }
@@ -252,7 +277,7 @@ article {
   border-radius: 0.125rem;
 }
 
-/***** 12. COMPONENTS: IMAGES & FIGURES *****/
+/***** COMPONENTS: IMAGES & FIGURES *****/
 .default-img-setting {
   height: 21.875rem;
   width: 100%;
@@ -268,19 +293,19 @@ article {
   margin-left: 4.688rem;
 }
 
-/***** 13. WRAPPERS *****/
+/***** WRAPPERS *****/
 .content-wrapper {
   position: relative;
 }
 
-/***** 14. BASE TOGGLE STYLE *****/
+/***** BASE TOGGLE STYLE *****/
 .whole-toggle {
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
 
-/***** 15. LIGHT/DARK MODE  *****/
+/***** LIGHT/DARK MODE  *****/
 html.default-mode body {
   background-color: #ffffff;
   color: #000;
@@ -307,7 +332,8 @@ html.default-mode .toggle-knob {
 }
 
 html.default-mode .header-link,
-html.default-mode .full-post-link {
+html.default-mode .full-post-link,
+html.default-mode .border-1px-lg {
   color: #000;
   text-decoration: none;
 }
@@ -369,20 +395,20 @@ html:not(.default-mode) .horizontal-row {
   border-color: #fff;
 }
 
-/***** 17. TOGGLE ICONS *****/
+/***** TOGGLE ICONS *****/
 .toggle-sun,
 .toggle-moon {
   width: 18px;
 }
 
-/***** 18. TOGGLE KNOB EXPAND *****/
+/***** TOGGLE KNOB EXPAND *****/
 .toggle-wrapper:active .toggle-knob {
   width: 36px;
   right: 4px;
   border-radius: 99px;
 }
 
-/***** 18. MEDIA QUERIES *****/
+/***** MEDIA QUERIES *****/
 @media (max-width: 768px) {
   .back-hq-link {
     color: #4f69c4;
@@ -405,11 +431,29 @@ html:not(.default-mode) .horizontal-row {
     text-decoration: none;
   }
 
-  .max-750px-width {
-    width: 98%;
+  .media-tbl-size {
+    width: 100%;
+    max-width: 116.66px;
+    font-size: 14px;
+  }
+
+  .table {
+    width: 100%;
+  }
+
+  .max-750px-width,
+  .fig-caption {
+    width: 96%;
   }
 
   .link-list {
     gap: 18px;
+  }
+
+  .fig-caption,
+  .default-img-setting,
+  .table,
+  .table-wrapper {
+    margin: 0;
   }
 }
