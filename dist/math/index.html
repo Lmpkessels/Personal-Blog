@@ -9,8 +9,6 @@
       content="L3 is a blog for future-minded creators mastering Web3, wealth, health, and self-education — with clear, practical, no-fluff insights."
     />
 
-    <link rel="icon" href="/images/white-logo-k3-4.webp" type="icon/webp" />
-
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,151 +17,207 @@
       rel="stylesheet"
     />
 
-    <title>Math</title>
+    <title>Math | Luke blog</title>
+    <!-- Toggle script for light/dark mode -->
+    <script>
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        document.documentElement.classList.remove("default-mode");
+      } else {
+        document.documentElement.classList.add("default-mode");
+      }
+    </script>
 
     <!-- Development links -->
-    <link rel="stylesheet" href="/style/00main.css" />
-
-    <!-- Check link -->
-    <!-- <link rel="stylesheet" href="/dist/main.min.css" /> -->
+    <!-- <link rel="stylesheet" href="/style/main.css" /> -->
 
     <!-- Production link -->
     <link rel="stylesheet" href="/main.min.css" />
   </head>
 
   <body>
-    <div class="page-container">
-      <div class="content-wrapper">
-        <header class="whole-header">
-          <div class="title-toggle-header">
+    <div class="page-container full-width full-height flex-just-cntr">
+      <div class="content-wrapper full-height max-750px-width">
+        <header class="whole-header border-3px-bott-lg">
+          <div class="title-toggle-header flex-just-s-b">
             <div class="title-header">
-              <h1><a href="/index.html" class="luke-heading">Luke</a></h1>
-              <a href="/index.html" class="main-sub-heading">Math</a>
+              <h1>
+                <a href="index.html" class="luke-heading color-lb text-dec-none"
+                  >Luke</a
+                >
+              </h1>
+              <a
+                href="index.html"
+                class="main-sub-heading color-lg text-dec-none f-s-italic"
+                >Mathematics</a
+              >
             </div>
-            <!-- Light - dark, mode toggle -->
-            <div
-              class="light-dark-toggle"
-              aria-label="Toggle light dark mode"
-            ></div>
+            <!-- Light/Dark mode toggle -->
+            <div class="whole-toggle flex-align-cntr" id="theme-toggle">
+              <noscript>
+                Toggle light-dark-mode not shown, your browsers doesn't supper
+                JavaScript.
+              </noscript>
+              <!-- Sun icon -->
+              <svg
+                class="toggle-sun"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                />
+              </svg>
+
+              <!-- Toggle wrapper + toggle knob -->
+              <div class="toggle-wrapper">
+                <div
+                  class="toggle-knob flex-align-cntr flex-direction-row"
+                ></div>
+              </div>
+
+              <!-- Moon icon -->
+              <svg
+                class="toggle-moon"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                />
+              </svg>
+            </div>
           </div>
-          <div>
-            <!-- Whole navbar, contains: subject navbar + socials navbar -->
-            <div class="whole-navbar">
-              <!-- Subject navbar section -->
-              <nav class="subject-navbar" aria-label="Main subject navbar">
-                <ul class="link-list">
-                  <li class="navbar-eye-catcher">Subject:</li>
-                  <li>
-                    <a href="/index.html" class="navbar-link">HQ</a>
-                  </li>
-                  <li>
-                    <a href="index.html" class="navbar-link">Math</a>
-                  </li>
-                  <!-- <li>
-                    <a href="/web3/index.html" class="navbar-link">Web3</a>
-                  </li>
-                  <li>
-                    <a href="/philosophy/index.html" class="navbar-link"
-                      >Philosophy
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/books/index.html" class="navbar-link">Books</a>
-                  </li> -->
-                  <li>
-                    <a href="/about/index.html" class="navbar-link">About me</a>
-                  </li>
-                  <!-- <li>
-                    <a href="/need-help/index.html" class="navbar-link"
-                      >Need help?</a
-                    >
-                  </li> -->
-                </ul>
-              </nav>
-              <!-- Social media navbar section -->
-              <nav class="social-navbar" aria-label="Social media navbar">
-                <ul class="link-list">
-                  <li class="navbar-eye-catcher">Socials:</li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/luuk-kessels"
-                      class="navbar-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >LinkedIn
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://x.com/lukefi_"
-                      class="navbar-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >X/Twitter
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://github.com/Lmpkessels"
-                      class="navbar-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >GitHub
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="mailto:luuk@lukefi.com"
-                      class="navbar-link"
-                      rel="noopener noreferrer"
-                      >E-mail
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+          <!-- Whole navbar, contains: subject navbar + socials navbar -->
+          <div class="whole-navbar flex-just-cntr flex-direction-clmn">
+            <!-- Subject navbar section, with link -->
+            <nav class="subject-navbar" aria-label="Main subject navbar">
+              <ul
+                class="link-list flex-just-cntr border-1px-bott-lg li-style-none padding-btm-1-5rem"
+              >
+                <li class="navbar-eye-catcher color-lb">Subject:</li>
+                <li>
+                  <a
+                    href="/index.html"
+                    class="navbar-link hover-g-b text-dec-none"
+                    >HQ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/math/index.html"
+                    class="navbar-link hover-g-b text-dec-none"
+                    >Math</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/about/index.html"
+                    class="navbar-link hover-g-b text-dec-none"
+                    >About me</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <!-- Social navbar section, with link -->
+            <nav class="social-navbar" aria-label="Social media navbar">
+              <ul
+                class="link-list flex-just-cntr li-style-none padding-top-1-5rem"
+              >
+                <li class="navbar-eye-catcher color-lb">Socials:</li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/luuk-kessels"
+                    class="navbar-link hover-g-b text-dec-none"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://x.com/lukefi_"
+                    class="navbar-link hover-g-b text-dec-none"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >X/Twitter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/Lmpkessels"
+                    class="navbar-link hover-g-b text-dec-none"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="mailto:luuk@lukefi.com"
+                    class="navbar-link hover-g-b text-dec-none"
+                    rel="noopener noreferrer"
+                    >E-mail
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </header>
-        <!-- Post section -->
         <main class="post-section" aria-label="Content section">
-          <ul class="post-unordered-list">
+          <!-- Lead section -->
+          <ul class="post-unordered-list li-style-none">
             <li class="post-list-items">
-              <section class="lead-section">
-                <time datetime="2025-07-05" class="date">2025 Jule 05</time>
+              <section>
+                <time datetime="2025-07-12" class="date color-dg"
+                  >2025 Jule 12</time
+                >
                 <h2 class="header-two">
-                  <a href="math/binary-part-I.html" class="header-link"
-                    >How binary runs your daily life - Part 1
-                  </a>
+                  <a href="/math/binary-part-I.html" class="header-link"
+                    >How binary runs your daily life - Part 1</a
+                  >
                 </h2>
               </section>
             </li>
             <li class="post-list-items">
-              <section class="lead-section">
-                <time datetime="2025-06-28" class="date">2025 June 28</time>
+              <section>
+                <time datetime="2025-06-28" class="date color-dg"
+                  >2025 June 28</time
+                >
                 <h2 class="header-two">
-                  <a href="binary-part-0.html" class="header-link"
+                  <a href="/math/binary-part-0.html" class="header-link"
                     >How binary runs your daily life - Part 0</a
                   >
                 </h2>
               </section>
             </li>
-            <!-- <li class="post-list-items">
-              <section class="lead-section">
-                <time datetime="2025-05-31" class="date">2025 May 31</time>
-                <h2 class="header-two">
-                  <a href="binary-part-I.html" class="header-link"
-                    >Part 1 of the Binary Series: Mastering Binary Addition
-                  </a>
-                </h2>
-              </section>
-            </li> -->
           </ul>
         </main>
       </div>
     </div>
+    <!-- Toggle script for light/dark mode -->
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+
+      toggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("default-mode");
+
+        const mode = document.documentElement.classList.contains("default-mode")
+          ? "light"
+          : "dark";
+
+        localStorage.setItem("theme", mode);
+      });
+    </script>
   </body>
-  <!-- Development link -->
-  <!-- <script src="/script/toggle.js"></script> -->
-  <!-- Production link -->
-  <script src="/script.min.js" defer></script>
 </html>

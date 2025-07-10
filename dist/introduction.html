@@ -19,122 +19,182 @@
       rel="stylesheet"
     />
 
-    <title>About me | Luke blog</title>
+    <title>--snip--</title>
+    <!-- Toggle script for light/dark mode -->
+    <script>
+      const theme = localStorage.getItem("theme");
+      if (theme === "dark") {
+        document.documentElement.classList.remove("default-mode");
+      } else {
+        document.documentElement.classList.add("default-mode");
+      }
+    </script>
 
-    <!-- Development links -->
-    <link rel="stylesheet" href="/style/00main.css" />
+    <!-- <link rel="stylesheet" href="/style/main.css" /> -->
+
+    <!-- Check link -->
+    <!-- <link rel="stylesheet" href="--snip--" /> -->
 
     <!-- Production link -->
-    <link rel="stylesheet" href="/main.min.css" />
+    <link rel="stylesheet" href="main.min.css" />
   </head>
 
   <body>
-    <div class="page-container">
-      <div class="content-wrapper">
-        <header class="whole-header-about-help">
-          <div class="title-toggle-header">
-            <div class="header-full-post">
-              <ul>
-                <li class="list-item-full-post">
-                  <h2 class="title-full-post">
-                    Why you should (or shouldn't) read this blog
-                  </h2>
-                </li>
-              </ul>
+    <div class="page-container flex-just-cntr full-width full-height">
+      <div class="content-wrapper flex-direction-cntr max-750px-width">
+        <header class="whole-header-about-help border-3px-bott-lg">
+          <div>
+            <div class="title-toggle-header flex-align-cntr flex-just-sb">
+              <div class="header-full-post max-750px-width">
+                <ul>
+                  <li class="list-item-full-post li-style-none">
+                    <h2 class="title-full-post">Introduction</h2>
+                  </li>
+                </ul>
+              </div>
+              <!-- Light - dark, mode toggle -->
+              <div
+                class="whole-toggle flex-align-cntr flex-just-fl-end"
+                id="theme-toggle"
+              >
+                <noscript>
+                  Toggle light-dark-mode not shown, your browsers doesn't supper
+                  JavaScript.
+                </noscript>
+                <!-- Sun icon -->
+                <svg
+                  class="toggle-sun"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                  />
+                </svg>
+
+                <!-- Toggle wrapper + toggle knob -->
+                <div class="toggle-wrapper">
+                  <div
+                    class="toggle-knob flex-align-cntr flex-direction-row"
+                  ></div>
+                </div>
+
+                <!-- Moon icon -->
+                <svg
+                  class="toggle-moon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                  />
+                </svg>
+              </div>
             </div>
-            <!-- Light - dark, mode toggle -->
-            <div
-              class="light-dark-toggle"
-              aria-label="Toggle light dark mode"
-            ></div>
           </div>
         </header>
         <div>
-          <ul class="date-back-hq-list">
-            <li><time datetime="2025-05-10" class="date">2025 May 10</time></li>
+          <ul class="date color-dg flex-just-s-b li-style-none">
             <li>
-              <a href="index.html" class="back-hq-link">Back to HQ</a>
+              <time datetime="2025-05-10" class="date">2025 May 10</time>
+            </li>
+            <li>
+              <a href="/index.html" class="back-hq-link hover-g-b text-dec-none"
+                >Back to HQ</a
+              >
             </li>
           </ul>
         </div>
-        <!-- Post section -->
         <main class="post-section" aria-label="Content section">
-          <ul class="post-unordered-list">
-            <li class="post-list-items">
-              <section>
-                <article>
-                  <p class="paragraph">
-                    I write this blog to think clearly, improve through
-                    feedback, and connect with other builders. If that resonates
-                    with you, read on.
-                  </p>
-                  <h4 class="sub-post-heading">
-                    What you’ll find by reading this blog, writings on:
-                  </h4>
-                  <ul class="unordered-list-post">
-                    <li class="list-items-post">
-                      Full-stack development, <b>Web3</b>, and <b>blockchain</b>
-                    </li>
-                    <li class="list-items-post">
-                      Lessons learned through <b>Skin in The Game</b>
-                    </li>
-                    <li>
-                      <b>Mental models</b> gained by doing, thinking, and
-                      refining
-                    </li>
-                  </ul>
-                  <h4 class="sub-post-heading">The purpose is simple:</h4>
-                  <p class="paragraph">
-                    To clarify my thoughts through writing. To build and share
-                    useful ideas, philosophies, and frameworks, I gained by
-                    going through the development process. And to get feedback
-                    from building in public so we can improve. This blog is a
-                    home for stress-tested knowledge — built through action with
-                    intent.
-                  </p>
-                  <h4 class="sub-post-heading">What to expect:</h4>
-                  <ul class="unordered-list-post">
-                    <li class="list-items-post">
-                      Posts grounded in real <b>experience</b>
-                    </li>
-                    <li class="list-items-post">
-                      Ideas improved over time through <b>trial and error</b>
-                    </li>
-                    <li class="last-list-item">
-                      <b>Honest thinking</b> — open to challenge, yours and mine
-                    </li>
-                  </ul>
-                  <p class="paragraph">
-                    If you're also learning to build, or thinking deeply about
-                    how things work, you may find value here.
-                  </p>
-                  <h4 class="sub-post-heading">Feedback is always welcome:</h4>
-                  <p class="paragraph">
-                    If you see a bug in my thinking, or you hold a key-insight I
-                    could expend upon, feel free to reach out on:
-                    <a
-                      href="https://www.linkedin.com/in/luuk-kessels"
-                      class="full-post-link"
-                      >LinkedIn</a
-                    >,
-                    <a href="https://x.com/lukefi_" class="full-post-link"
-                      >X/Twitter</a
-                    >, or leave a simple
-                    <a href="mailto:luuk@lukefi.com" class="full-post-link"
-                      >eMail</a
-                    >
-                    behind.
-                  </p>
-                </article>
-              </section>
-            </li>
-          </ul>
+          <!-- Post section -->
+          <section class="post-unordered-list li-style-none">
+            <article class="post-list-items">
+              <p class="paragraph mrgn-t-b-1-25r">
+                I write this blog to think clearly, improve through feedback,
+                and connect with other builders. If that resonates with you,
+                read on.
+              </p>
+              <h3 class="sub-post-heading">
+                What you'll find by reading this blog:
+              </h3>
+              <ul class="unordered-list-post">
+                <li class="list-items-post">
+                  Full-stack development, <b>Web3</b>, and <b>blockchain</b>
+                </li>
+                <li class="list-items-post">
+                  Lessons learned through <b>Skin in The Game</b>
+                </li>
+                <li>
+                  <b>Mental models</b> gained by doing, thinking, and refining
+                </li>
+              </ul>
+              <p class="paragraph mrgn-t-b-1-25r">
+                To clarify my thoughts through writing. To build and share
+                useful ideas, philosophies, and frameworks, I gained by going
+                through the development process. And to get feedback from
+                building in public so we can improve. This blog is a home for
+                stress-tested knowledge — built through action with intent.
+              </p>
+              <h3 class="sub-post-heading">What to expect:</h3>
+              <ul class="unordered-list-post">
+                <li class="list-items-post">
+                  Posts grounded in real <b>experience</b>
+                </li>
+                <li class="list-items-post">
+                  Ideas improved over time through <b>trial and error</b>
+                </li>
+                <li class="last-list-item">
+                  <b>Honest thinking</b> — open to challenge, yours and mine
+                </li>
+              </ul>
+              <p class="paragraph mrgn-t-b-1-25r">
+                If you're also learning to build, or thinking deeply about how
+                things work, you may find value here.
+              </p>
+              <p class="paragraph">
+                If you see a bug in my thinking, or you hold a key-insight I
+                could expend upon, feel free to reach out on:
+                <a
+                  href="https://www.linkedin.com/in/luuk-kessels"
+                  class="full-post-link"
+                  >LinkedIn</a
+                >,
+                <a href="https://x.com/lukefi_" class="full-post-link"
+                  >X/Twitter</a
+                >, or leave a simple
+                <a href="mailto:luuk@lukefi.com" class="full-post-link"
+                  >eMail</a
+                >
+                behind.
+              </p>
+            </article>
+          </section>
         </main>
       </div>
     </div>
+    <!-- Toggle script for light/dark mode -->
+    <script>
+      const toggle = document.getElementById("theme-toggle");
+
+      toggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("default-mode");
+
+        const mode = document.documentElement.classList.contains("default-mode")
+          ? "light"
+          : "dark";
+
+        localStorage.setItem("theme", mode);
+      });
+    </script>
   </body>
-  <!-- Development link -->
-  <!-- <script src="/script/toggle.js"></script> -->
-  <!-- Production link -->
-  <script src="script.min.js" defer></script>
 </html>

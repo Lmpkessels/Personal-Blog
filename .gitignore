@@ -1,5 +1,6 @@
 # Folders
 archive
+dist/main.min.css
 
 # Templates
 shell-commands.txt
@@ -19,3 +20,5 @@ images
 # Personal help sheets
 TODO.md
 
+# DS_Store
+.DS_Store
