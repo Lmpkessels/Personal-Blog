@@ -165,8 +165,11 @@ html.default-mode .border-1px-right-lg {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
+.post-list-items {
+  margin-top: 24px;
+}
 
-/***** 7. TYPOGRAPHY *****/
+/***** TYPOGRAPHY *****/
 .li-style-none {
   list-style: none;
 }
