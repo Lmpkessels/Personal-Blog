@@ -10,21 +10,6 @@
 html,
 body {
   font-family: "Nunito Sans", sans-serif;
-  height: 100%;
-  margin: 0;
-}
-
-.page-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.content-wrapper {
-  flex: 1;
-  width: 100%;
-  max-width: 750px;
-  margin: 0 auto;
 }
 
 /***** COLOR UTILITIES *****/
@@ -176,6 +161,9 @@ html.default-mode .border-1px-right-lg {
 }
 .padding-2px {
   padding: 2px;
+}
+.padding-btm-6px {
+  padding-bottom: 6px;
 }
 .padding-top-1-5rem {
   padding-top: 1.5rem;
@@ -378,6 +366,10 @@ html:not(.default-mode) .btc-tip code:hover {
   width: 37.5rem;
   margin-left: 4.688rem;
 }
+.qr-img {
+  width: 150px;
+  height: 150px;
+}
 
 /***** WRAPPERS *****/
 .content-wrapper {
@@ -515,6 +507,18 @@ html:not(.default-mode) .horizontal-row {
   html:not(.default-mode) .full-post-link {
     color: #4f69c4;
     text-decoration: none;
+  }
+
+  .qr-img {
+    max-width: 75px;
+    max-height: 75px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .title-scan-me,
+  .title-copy-me {
+    font-size: 18px;
   }
 
   .media-tbl-size {
