@@ -209,6 +209,10 @@ html.default-mode .border-1px-right-lg {
   height: 100vh;
   max-height: 153px;
 }
+.title-toggle-header {
+  max-height: 154px;
+  height: 100%;
+}
 .whole-header-about-help {
   height: 100vh;
   max-height: 156px;
@@ -256,7 +260,7 @@ article {
   margin-bottom: 5.5rem;
 }
 .list-item-full-post {
-  margin-top: 6.75rem;
+  margin-top: 120px;
   margin-bottom: 0.5rem;
 }
 .sub-post-heading {
