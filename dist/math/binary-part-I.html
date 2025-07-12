@@ -658,6 +658,33 @@
         </main>
       </div>
     </div>
+    <footer class="footer-section color-dg align-text-center padding-top-2rem">
+      <section class="btc-tip">
+        <p>© 2025 Luuk Kessels — All rights reserved.</p>
+        <br />
+        <p>Like the blog? Tip me in Bitcoin:</p>
+        <h2>Scan me</h2>
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=bc1qzqzs3h8e2v3r2v0k4fvl3ks7rum5apqhez59mwqrm78q06dyh48q2ep2p3"
+          alt="BTC Tip QR Code"
+          width="150"
+          height="150"
+        />
+        <br /><br />
+        <h2>Copy me</h2>
+        <code id="btc-address" class="hover-dg-b">
+          bc1qzqzs3h8e2v3r2v0k4fvl3ks7rum5apqhez59mwqrm78q06dyh48q2ep2p3 </code
+        ><br />
+      </section>
+    </footer>
+    <!-- Link copy script for tip in btc -->
+    <script>
+      const btc = document.getElementById("btc-address");
+      btc.addEventListener("click", () => {
+        navigator.clipboard.writeText(btc.textContent);
+        alert("Copied!");
+      });
+    </script>
     <!-- Toggle script for light/dark mode -->
     <script>
       const toggle = document.getElementById("theme-toggle");
