@@ -83,9 +83,9 @@
         window.matchMedia("(prefers-color-scheme: dark)").matches;
 
       if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-        document.documentElement.classList.remove("default-mode"); // dark mode
+        document.documentElement.classList.remove("default-mode");
       } else {
-        document.documentElement.classList.add("default-mode"); // light mode
+        document.documentElement.classList.add("default-mode");
       }
     </script>
 
@@ -163,7 +163,7 @@
         <div>
           <ul class="date color-dg flex-just-s-b li-style-none">
             <li>
-              <time datetime="2025-07-10" class="date">2025 June 12</time>
+              <time datetime="2025-07-10" class="date">2025 Jule 12</time>
             </li>
             <li>
               <a href="/index.html" class="back-hq-link hover-g-b text-dec-none"
@@ -662,7 +662,7 @@
               <p>© 2025 Luuk Kessels — All rights reserved.</p>
               <br />
               <p>Like the blog? Tip me in Bitcoin:</p>
-              <h2>Scan me</h2>
+              <h2 class="title-scan-me padding-btm-6px">Scan me</h2>
               <img
                 src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=bc1qzqzs3h8e2v3r2v0k4fvl3ks7rum5apqhez59mwqrm78q06dyh48q2ep2p3"
                 alt="BTC Tip QR Code"
@@ -670,7 +670,7 @@
                 height="150"
               />
               <br /><br />
-              <h2>Copy me</h2>
+              <h2 class="title-copy-me padding-btm-6px">Copy me</h2>
               <code id="btc-address" class="hover-dg-b">
                 bc1qzqzs3h8e2v3r2v0k4fvl3ks7rum5apqhez59mwqrm78q06dyh48q2ep2p3 </code
               ><br />
