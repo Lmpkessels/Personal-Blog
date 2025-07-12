@@ -291,7 +291,6 @@ article {
 }
 
 .btc-tip code {
-  display: inline-block;
   word-break: break-all;
   background: #eee;
   padding: 0.3rem 0.5rem;
