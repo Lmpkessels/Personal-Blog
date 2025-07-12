@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="default-mode">
+<html lang="en">
   <head>
     <!-- Primary Meta Tags -->
     <title>HQ | Luke blog</title>
@@ -52,11 +52,16 @@
 
     <!-- Toggle script for light/dark mode -->
     <script>
-      const theme = localStorage.getItem("theme");
-      if (theme === "dark") {
-        document.documentElement.classList.remove("default-mode");
+      const savedTheme = localStorage.getItem("theme");
+
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+        document.documentElement.classList.remove("default-mode"); // dark mode
       } else {
-        document.documentElement.classList.add("default-mode");
+        document.documentElement.classList.add("default-mode"); // light mode
       }
     </script>
 
