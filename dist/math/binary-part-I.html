@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Binary - Part I",
+        "description": "A clear visual intro to how your phone adds numbers using logic gates, carry bits, and binary — built step-by-step in Rust.",
+        "author": {
+          "@type": "Person",
+          "name": "Luuk Kessels"
+        },
+        "url": "https://www.lukefi.com/math/binary-part-I",
+        "datePublished": "2025-07-12",
+        "image": "https://www.lukefi.com/assets/binary-part-I-thumb.png"
+      }
+    </script>
     <!-- Primary Meta Tags -->
     <title>Binary | Part I</title>
     <meta name="title" content="Binary | Part I" />
@@ -87,7 +102,7 @@
             <div class="header-full-post max-750px-width">
               <ul>
                 <li class="list-item-full-post li-style-none">
-                  <h2 class="title-full-post">Binary - Part I</h2>
+                  <h1 class="title-full-post">Binary - Part I</h1>
                 </li>
               </ul>
             </div>
@@ -157,464 +172,483 @@
           <!-- Post section -->
           <section class="post-unordered-list li-style-none">
             <article class="post-list-items">
-              <p class="paragraph mrgn-t-b-1-25r">
-                Imagine you're about to time block 2 events for tomorrow.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                One takes 120 minutes, the other 75. You want to know exactly
-                how much time it takes, you take your phone, use the calculator
-                app, and add up 120 + 75.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                In binary that’s 01111000 + 01001011.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                At the end of this blog you’ll have a deeper understanding of
-                how computers, and even your phone think, to make bit-by-bit
-                calculations in addition.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                If you’re not familiar with binary check out
-                <a
-                  href="https://www.lukefi.com/math/binary-part-0"
-                  class="full-post-link"
-                  >binary-part-0</a
-                >
-                where we dive into the basics of binary.
-              </p>
-              <h3 class="sub-post-heading">
-                The 5 Parts Used in Binary Addition
-              </h3>
-              <p class="paragraph mrgn-t-b-1-25r">
-                You have input A, input B, and Carry In to calculate the total
-                result. Carry In is the overflow from the previous bit-by-bit
-                calculation.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Then you have sum and carry out both using logic gates. Sum
-                represents the result bit, and Carry out communicates if there’s
-                overflow.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Sum uses the XOR gate twice.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Carry Out uses AND, OR, and XOR.
-              </p>
-              <h3 class="sub-post-heading">How XOR is created</h3>
-              <p class="paragraph mrgn-t-b-1-25r">
-                XOR is created by making use of all three basic gates; AND, NOT,
-                and OR. In figure 1.0 below I show you an example of the XOR
-                logic gate using a diagram:
-              </p>
-              <img
-                src="/assets/carry_out_gate.png"
-                alt="Figure 1.0: XOR logic gate simulation using basic gates"
-                class="default-img-setting"
-              />
-              <figcaption class="fig-caption color-dg f-s-italic">
-                <b>Figure 1.0:</b> XOR gate built using only basic gates: AND,
-                OR, and NOT. Outputs 1 when A and B are different.
-              </figcaption>
-              <p class="paragraph mrgn-t-b-1-25r">
-                This XOR circuit follows the logical expression: ((a AND NOT b)
-                OR (b AND NOT a)).
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Which is the definition of XOR: a is true if b is false, and b
-                is true if a is false, if a is true and b is true then the
-                output is false. Same in, if a is false and b is false then the
-                output is false.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Next, let’s explore how the Sum logic works.
-              </p>
-              <h3 class="sub-post-heading">How Sum works under the hood</h3>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Sum looks a bit more complex under the hood, but its only
-                difference is that it uses the XOR gate twice, as shown in
-                figure 1.1.
-              </p>
-              <img
-                src="/assets/logic_gate_2x_XOR=SUM.png"
-                alt="Figure 1.1: Sum simulation using logic gates"
-                class="default-img-setting"
-              />
-              <figcaption class="fig-caption color-dg f-s-italic">
-                <b>Figure 1.1:</b> This XOR circuit follows the logical
-                expression: ((a AND NOT b) OR (b AND NOT a)).
-              </figcaption>
-              <p class="paragraph mrgn-t-b-1-25r">
-                This Sum circuit follows the logical expression: (a AND NOT b)
-                OR (b AND NOT a) = Output, then (CarryIn AND NOT output) OR (NOT
-                output AND CarryIn).
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                So simply put, the Sum circuit follows 2X the logical
-                expression: ((a XOR b) XOR carry in).
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                When the output of Sum is received it’s stored in memory.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Now, let’s move to the last layer of the full adder.
-              </p>
-              <h3 class="sub-post-heading">Carry out the last layer</h3>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Carry out is used to detect overflow, if there’s overflow then
-                there’s no storage left in memory to point to.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Carry out uses 3 gates: AND, OR, and XOR, in figure 1.2 below, I
-                illustrate carry out using all three gates:
-              </p>
-              <img
-                src="/assets/carry_out_gate.png"
-                alt="Figure 1.2: Carry out simulation using logic gates"
-                class="default-img-setting"
-              />
-              <figcaption class="fig-caption color-dg f-s-italic">
-                <b>Figure 1.2:</b> Carry-out logic of a 1-bit full adder using
-                basic gates. Output is 1 when (A AND B) or (CarryIn AND (A XOR
-                B)) is true.
-              </figcaption>
-              <p class="paragraph mrgn-t-b-1-25r">
-                This Carry Out circuit follows the logical expressions: ((a AND
-                b) OR (CarryIn AND (a AND NOT b) OR (b AND NOT a))).
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Simply put Carry out in logical expressions: ((a AND b) OR
-                (CarryIn AND (a XOR b))).
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                As you’ve seen in the three diagrams above, everything can be
-                built using just three basic gates: AND, NOT and OR.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                But, why are logic gates used?
-              </p>
-              <h3 class="sub-post-heading">Why logic gates are used</h3>
-              <p class="paragraph mrgn-t-b-1-25r">
-                In addition the CPU in your PC communicates through logic gates.
-                A CPU contains transistors which are the starting point before
-                each logic gate, when enough voltage is received at the
-                transistor it communicates ON, if no voltage is received, OFF.
-                Then it goes through the logic gate, depending on each gate
-                logic is applied.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Let’s look at an 8-bit full adder below using; Input_a, Input_b,
-                Carry_in, Sum and Carry_out.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Each row follows a bit-by-bit calculation, starting from least
-                significant bit (LSB) on the right hand side (bit_0 in the 8-bit
-                full adder) to the most significant bit (MSB) on the left hand
-                side (bit_7 in the 8-bit full adder).
-              </p>
-              <div class="table border-1px-bl">
-                <div class="top">Sum = ((A XOR B) XOR Carry_in)</div>
-                <div class="bottom border-1px-top-lg">
-                  Carry_out = ((A AND B ) OR ( Carry_in AND ( A XOR B)))
-                </div>
-              </div>
-              <p class="paragraph mrgn-t-b-1-25r"><b>Note:</b></p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Because computers start counting at Index 0 we will do the same,
-                Bit_0 represents the Least Significant Bit (rightmost) bit in
-                the byte, the one displayed at the top of the full adder.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                And the Most Significant Bit (leftmost), is displayed at the
-                bottom at Bit_7 of the full adder.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                In decimal, the total range would be eight bits.
-              </p>
-              <div class="table-wrapper">
-                <div
-                  class="horizontal-row horizontal-row-top flex-just-s-b .border-1px-top-bl border-1px-bott-bl border-1px-top-lg"
-                >
-                  <div
-                    class="partial-row partial-row-left flex-align-cntr media-tbl-size"
+              <section>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Imagine you're about to time block 2 events for tomorrow.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  One takes 120 minutes, the other 75. You want to know exactly
+                  how much time it takes, you take your phone, use the
+                  calculator app, and add up 120 + 75.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  In binary that’s 01111000 + 01001011.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  At the end of this blog you’ll have a deeper understanding of
+                  how computers, and even your phone think, to make bit-by-bit
+                  calculations in addition.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  If you’re not familiar with binary check out
+                  <a
+                    href="https://www.lukefi.com/math/binary-part-0"
+                    class="full-post-link"
+                    >binary-part-0</a
                   >
-                    Bit Position
+                  where we dive into the basics of binary.
+                </p>
+              </section>
+              <section>
+                <h2 class="sub-post-heading">
+                  The 5 Parts Used in Binary Addition
+                </h2>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  You have input A, input B, and Carry In to calculate the total
+                  result. Carry In is the overflow from the previous bit-by-bit
+                  calculation.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Then you have sum and carry out both using logic gates. Sum
+                  represents the result bit, and Carry out communicates if
+                  there’s overflow.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Sum uses the XOR gate twice.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Carry Out uses AND, OR, and XOR.
+                </p>
+              </section>
+              <section>
+                <h2 class="sub-post-heading">How XOR is created</h2>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  XOR is created by making use of all three basic gates; AND,
+                  NOT, and OR. In figure 1.0 below I show you an example of the
+                  XOR logic gate using a diagram:
+                </p>
+                <img
+                  src="/assets/carry_out_gate.png"
+                  alt="Figure 1.0: XOR logic gate simulation using basic gates"
+                  class="default-img-setting"
+                />
+                <figcaption class="fig-caption color-dg f-s-italic">
+                  <b>Figure 1.0:</b> XOR gate built using only basic gates: AND,
+                  OR, and NOT. Outputs 1 when A and B are different.
+                </figcaption>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  This XOR circuit follows the logical expression: ((a AND NOT
+                  b) OR (b AND NOT a)).
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Which is the definition of XOR: a is true if b is false, and b
+                  is true if a is false, if a is true and b is true then the
+                  output is false. Same in, if a is false and b is false then
+                  the output is false.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Next, let’s explore how the Sum logic works.
+                </p>
+              </section>
+              <section>
+                <h2 class="sub-post-heading">How Sum works under the hood</h2>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Sum looks a bit more complex under the hood, but its only
+                  difference is that it uses the XOR gate twice, as shown in
+                  figure 1.1.
+                </p>
+                <img
+                  src="/assets/logic_gate_2x_XOR=SUM.png"
+                  alt="Figure 1.1: Sum simulation using logic gates"
+                  class="default-img-setting"
+                />
+                <figcaption class="fig-caption color-dg f-s-italic">
+                  <b>Figure 1.1:</b> This XOR circuit follows the logical
+                  expression: ((a AND NOT b) OR (b AND NOT a)).
+                </figcaption>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  This Sum circuit follows the logical expression: (a AND NOT b)
+                  OR (b AND NOT a) = Output, then (CarryIn AND NOT output) OR
+                  (NOT output AND CarryIn).
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  So simply put, the Sum circuit follows 2X the logical
+                  expression: ((a XOR b) XOR carry in).
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  When the output of Sum is received it’s stored in memory.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Now, let’s move to the last layer of the full adder.
+                </p>
+              </section>
+              <section>
+                <h2 class="sub-post-heading">Carry out the last layer</h2>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Carry out is used to detect overflow, if there’s overflow then
+                  there’s no storage left in memory to point to.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Carry out uses 3 gates: AND, OR, and XOR, in figure 1.2 below,
+                  I illustrate carry out using all three gates:
+                </p>
+                <img
+                  src="/assets/carry_out_gate.png"
+                  alt="Figure 1.2: Carry out simulation using logic gates"
+                  class="default-img-setting"
+                />
+                <figcaption class="fig-caption color-dg f-s-italic">
+                  <b>Figure 1.2:</b> Carry-out logic of a 1-bit full adder using
+                  basic gates. Output is 1 when (A AND B) or (CarryIn AND (A XOR
+                  B)) is true.
+                </figcaption>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  This Carry Out circuit follows the logical expressions: ((a
+                  AND b) OR (CarryIn AND (a AND NOT b) OR (b AND NOT a))).
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Simply put Carry out in logical expressions: ((a AND b) OR
+                  (CarryIn AND (a XOR b))).
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  As you’ve seen in the three diagrams above, everything can be
+                  built using just three basic gates: AND, NOT and OR.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  But, why are logic gates used?
+                </p>
+              </section>
+              <section>
+                <h2 class="sub-post-heading">Why logic gates are used</h2>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  In addition the CPU in your PC communicates through logic
+                  gates. A CPU contains transistors which are the starting point
+                  before each logic gate, when enough voltage is received at the
+                  transistor it communicates ON, if no voltage is received, OFF.
+                  Then it goes through the logic gate, depending on each gate
+                  logic is applied.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Let’s look at an 8-bit full adder below using; Input_a,
+                  Input_b, Carry_in, Sum and Carry_out.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Each row follows a bit-by-bit calculation, starting from least
+                  significant bit (LSB) on the right hand side (bit_0 in the
+                  8-bit full adder) to the most significant bit (MSB) on the
+                  left hand side (bit_7 in the 8-bit full adder).
+                </p>
+                <div class="table border-1px-bl">
+                  <div class="top">Sum = ((A XOR B) XOR Carry_in)</div>
+                  <div class="bottom border-1px-top-lg">
+                    Carry_out = ((A AND B ) OR ( Carry_in AND ( A XOR B)))
                   </div>
+                </div>
+                <p class="paragraph mrgn-t-b-1-25r"><b>Note:</b></p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Because computers start counting at Index 0 we will do the
+                  same, Bit_0 represents the Least Significant Bit (rightmost)
+                  bit in the byte, the one displayed at the top of the full
+                  adder.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  And the Most Significant Bit (leftmost), is displayed at the
+                  bottom at Bit_7 of the full adder.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  In decimal, the total range would be eight bits.
+                </p>
+                <div class="table-wrapper">
                   <div
-                    class="partial-row flex-just-cntr flex-align-cntr media-tbl-size"
+                    class="horizontal-row horizontal-row-top flex-just-s-b .border-1px-top-bl border-1px-bott-bl border-1px-top-lg"
                   >
-                    A
+                    <div
+                      class="partial-row partial-row-left flex-align-cntr media-tbl-size"
+                    >
+                      Bit Position
+                    </div>
+                    <div
+                      class="partial-row flex-just-cntr flex-align-cntr media-tbl-size"
+                    >
+                      A
+                    </div>
+                    <div
+                      class="partial-row flex-just-cntr flex-align-cntr media-tbl-size"
+                    >
+                      B
+                    </div>
+                    <div
+                      class="partial-row flex-just-cntr flex-align-cntr media-tbl-size"
+                    >
+                      Carry In
+                    </div>
+                    <div
+                      class="partial-row flex-just-cntr flex-align-cntr media-tbl-size"
+                    >
+                      Sum
+                    </div>
+                    <div
+                      class="partial-row flex-just-cntr flex-align-cntr media-tbl-size"
+                    >
+                      Carry Out
+                    </div>
                   </div>
-                  <div
-                    class="partial-row flex-just-cntr flex-align-cntr media-tbl-size"
+                  <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
+                    <div class="partial-row partial-row-left flex-align-cntr">
+                      Bit_0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                  </div>
+                  <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
+                    <div class="partial-row partial-row-left flex-align-cntr">
+                      Bit_1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                  </div>
+                  <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
+                    <div class="partial-row partial-row-left flex-align-cntr">
+                      Bit_2
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                  </div>
+                  <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
+                    <div class="partial-row partial-row-left flex-align-cntr">
+                      Bit_3
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                  </div>
+                  <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
+                    <div class="partial-row partial-row-left flex-align-cntr">
+                      Bit_4
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                  </div>
+                  <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
+                    <div class="partial-row partial-row-left flex-align-cntr">
+                      Bit_5
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                  </div>
+                  <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
+                    <div class="partial-row partial-row-left flex-align-cntr">
+                      Bit_6
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                  </div>
+                  <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
+                    <div class="partial-row partial-row-left flex-align-cntr">
+                      Bit_7
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      1
+                    </div>
+                    <div class="partial-row flex-just-cntr flex-align-cntr">
+                      0
+                    </div>
+                  </div>
+                </div>
+                <figcaption class="fig-caption color-dg f-s-italic">
+                  8-Bit full adder
+                </figcaption>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Carry_in is the Carry_out from the previous bit-by-bit
+                  calculation. So each Carry_in is carried from the previous
+                  row, and received from Carry_out.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  You can read the remaining byte in the Sum column; a return
+                  value is given by repeating a bit-by-bit addition process 8
+                  times.
+                </p>
+              </section>
+              <section>
+                <h2 class="sub-post-heading">Why This Matters for CPUs</h2>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Carry_in is the overflow of the previous bit-by-bit
+                  calculation. Once we Carry_in we know that the previous
+                  Carry_out had 1 bit that it couldn’t store, called overflow.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  If at the end of the 8-Bit Full Adder, we end up with one bit
+                  overflow, then, the result may not fit in 8 bits, requiring
+                  more memory.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  This means that the program may not compile for the user if
+                  memory doesn’t allow, else the CPU adds another byte if memory
+                  allows.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  The Sum tells the CPU which value to store in memory, after
+                  the 8-bit full adder completes.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  After pressing (=) on your calculation app the CPU follows
+                  this 8-Bit full adder and decimal number 195 is shown.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  And just like that, you’ve seen how your phone adds 120 + 75,
+                  one bit at a time.
+                </p>
+              </section>
+              <section>
+                <h2 class="sub-post-heading">Closure</h2>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  This is part I of a multi-part series exploring how binary
+                  logic powers real computing. I’m sharing what I learn as I go,
+                  from carrying logic to CPUs and memory.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  Part II, covers subtraction and borrow logic.
+                </p>
+              </section>
+              <section>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  If you want to stay updated follow me on:
+                  <a
+                    href="https://www.linkedin.com/in/luuk-kessels"
+                    class="full-post-link"
+                    target="_blank"
+                    >LinkedIn</a
                   >
-                    B
-                  </div>
-                  <div
-                    class="partial-row flex-just-cntr flex-align-cntr media-tbl-size"
+                  or,
+                  <a
+                    href="https://x.com/lukefi_"
+                    class="full-post-link"
+                    target="_blank"
+                    >X/Twitter</a
                   >
-                    Carry In
-                  </div>
-                  <div
-                    class="partial-row flex-just-cntr flex-align-cntr media-tbl-size"
+                  here I’ll post when part II goes live.
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  If you want to see programmed examples where I simulate logic
+                  gates using Rust, then check out:
+                  <a
+                    href="https://github.com/Lmpkessels/binarySeries"
+                    class="full-post-link"
+                    target="_blank"
+                    >binarySeries</a
                   >
-                    Sum
-                  </div>
-                  <div
-                    class="partial-row flex-just-cntr flex-align-cntr media-tbl-size"
+                </p>
+                <p class="paragraph mrgn-t-b-1-25r">
+                  P.S. I used ChatGPT to fact-check, but ChatGPT and I can both
+                  make mistakes. If you spot a mistake, or see an opportunity to
+                  improve, feel free to reach out:
+                  <a
+                    href="mailto:luuk@lukefi.com"
+                    class="full-post-link"
+                    target="_blank"
+                    >Luuk@lukefi.com</a
                   >
-                    Carry Out
-                  </div>
-                </div>
-                <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
-                  <div class="partial-row partial-row-left flex-align-cntr">
-                    Bit_0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                </div>
-                <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
-                  <div class="partial-row partial-row-left flex-align-cntr">
-                    Bit_1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                </div>
-                <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
-                  <div class="partial-row partial-row-left flex-align-cntr">
-                    Bit_2
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                </div>
-                <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
-                  <div class="partial-row partial-row-left flex-align-cntr">
-                    Bit_3
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                </div>
-                <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
-                  <div class="partial-row partial-row-left flex-align-cntr">
-                    Bit_4
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                </div>
-                <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
-                  <div class="partial-row partial-row-left flex-align-cntr">
-                    Bit_5
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                </div>
-                <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
-                  <div class="partial-row partial-row-left flex-align-cntr">
-                    Bit_6
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                </div>
-                <div class="horizontal-row flex-just-s-b border-1px-bott-bl">
-                  <div class="partial-row partial-row-left flex-align-cntr">
-                    Bit_7
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    1
-                  </div>
-                  <div class="partial-row flex-just-cntr flex-align-cntr">
-                    0
-                  </div>
-                </div>
-              </div>
-              <figcaption class="fig-caption color-dg f-s-italic">
-                8-Bit full adder
-              </figcaption>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Carry_in is the Carry_out from the previous bit-by-bit
-                calculation. So each Carry_in is carried from the previous row,
-                and received from Carry_out.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                You can read the remaining byte in the Sum column; a return
-                value is given by repeating a bit-by-bit addition process 8
-                times.
-              </p>
-              <h3 class="sub-post-heading">Why This Matters for CPUs</h3>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Carry_in is the overflow of the previous bit-by-bit calculation.
-                Once we Carry_in we know that the previous Carry_out had 1 bit
-                that it couldn’t store, called overflow.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                If at the end of the 8-Bit Full Adder, we end up with one bit
-                overflow, then, the result may not fit in 8 bits, requiring more
-                memory.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                This means that the program may not compile for the user if
-                memory doesn’t allow, else the CPU adds another byte if memory
-                allows.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                The Sum tells the CPU which value to store in memory, after the
-                8-bit full adder completes.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                After pressing (=) on your calculation app the CPU follows this
-                8-Bit full adder and decimal number 195 is shown.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                And just like that, you’ve seen how your phone adds 120 + 75,
-                one bit at a time.
-              </p>
-              <h3 class="sub-post-heading">Closure</h3>
-              <p class="paragraph mrgn-t-b-1-25r">
-                This is part I of a multi-part series exploring how binary logic
-                powers real computing. I’m sharing what I learn as I go, from
-                carrying logic to CPUs and memory.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                Part II, covers subtraction and borrow logic.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                If you want to stay updated follow me on:
-                <a
-                  href="https://www.linkedin.com/in/luuk-kessels"
-                  class="full-post-link"
-                  target="_blank"
-                  >LinkedIn</a
-                >
-                or,
-                <a
-                  href="https://x.com/lukefi_"
-                  class="full-post-link"
-                  target="_blank"
-                  >X/Twitter</a
-                >
-                here I’ll post when part II goes live.
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                If you want to see programmed examples where I simulate logic
-                gates using Rust, then check out:
-                <a
-                  href="https://github.com/Lmpkessels/binarySeries"
-                  class="full-post-link"
-                  target="_blank"
-                  >binarySeries</a
-                >
-              </p>
-              <p class="paragraph mrgn-t-b-1-25r">
-                P.S. I used ChatGPT to fact-check, but ChatGPT and I can both
-                make mistakes. If you spot a mistake, or see an opportunity to
-                improve, feel free to reach out:
-                <a
-                  href="mailto:luuk@lukefi.com"
-                  class="full-post-link"
-                  target="_blank"
-                  >Luuk@lukefi.com</a
-                >
-              </p>
+                </p>
+              </section>
             </article>
           </section>
         </main>
