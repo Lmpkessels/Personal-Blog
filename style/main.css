@@ -25,9 +25,19 @@ html {
 /***** HOVER EFFECTS *****/
 .hover-g-b {
   color: #dcdcdc;
-  transition: 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 .hover-g-b:hover {
+  color: #4f69c4;
+  text-decoration: underline;
+}
+
+.hover-dg-b {
+  color: #888;
+  transition: 0.3s ease-in-out;
+}
+
+.hover-dg-b:hover {
   color: #4f69c4;
   text-decoration: underline;
 }
@@ -126,6 +136,10 @@ html.default-mode .border-1px-right-lg {
   flex-direction: row;
 }
 
+.align-text-center {
+  text-align: center;
+}
+
 /***** WIDTH, HEIGHT, SPACING *****/
 .full-width {
   width: 100%;
@@ -221,6 +235,12 @@ html.default-mode .border-1px-right-lg {
   margin-top: 0.5rem;
   font-size: 0.875rem;
 }
+.footer-section {
+  font-size: 0.875rem;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+  opacity: 0.7;
+}
 
 /***** COMPONENTS: ARTICLE / FULL POST *****/
 article {
@@ -250,6 +270,55 @@ article {
 .title-full-post {
   margin-bottom: 0.75rem;
   font-weight: 400;
+}
+
+/***** BTC TIP *****/
+.btc-tip {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.btc-tip .qr {
+  width: 180px;
+  height: 180px;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btc-tip code {
+  display: inline-block;
+  word-break: break-all;
+  background: #eee;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.95rem;
+  cursor: pointer;
+  cursor: copy;
+  transition: 0.2s ease;
+}
+
+.btc-tip code:hover {
+  background: #e0e0e0;
+}
+
+/***** DARK MODE - BTC TIP *****/
+html:not(.default-mode) .btc-tip {
+  background-color: #111827;
+}
+
+html:not(.default-mode) .btc-tip code {
+  background: #0a0f1c;
+  transition: 0.2s ease;
+}
+
+html:not(.default-mode) .btc-tip code:hover {
+  background: #060b15;
 }
 
 /***** COMPONENTS: TABLES & ROWS *****/
