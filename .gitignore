@@ -4,21 +4,13 @@ dist/main.min.css
 
 # Templates
 shell-commands.txt
-template
-
-# Cheat sheet
-github.md
-gitIgnore.md
-markdown.md
-
-# Images
-images
+templates
 
 # Styling for unifying code
 .prettierignore
 
-# Personal help sheets
-TODO.md
-
 # DS_Store
 .DS_Store
+
+# .env
+.env.example
